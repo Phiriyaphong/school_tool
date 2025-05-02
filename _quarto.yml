@@ -9,6 +9,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: ratio1.qmd
+        text: อัตราส่วนครั้งที่ 1
   reader-mode: true
   back-to-top-navigation: true
 

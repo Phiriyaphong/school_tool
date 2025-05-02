@@ -1,0 +1,588 @@
+---
+project:
+  output-dir: sheet
+
+#title: "อัตราส่วน สัดส่วน และร้อยละ (อัตราส่วน)"
+author: "พิริยพงศ์ หริ่งรอด"
+date: today
+date-format: "DD MMMM YYYY"
+format:
+  pdf:
+    include-in-header: "thai-preamble.tex"
+    geometry:
+      - top= 1.0in
+      - left= 1.0in
+      - right = 1.0in
+      - bottom = 1.0in
+      - heightrounded
+    papersize: A4
+    linestretch: 1
+    css: mystyle.css
+    engine: xelatex
+    toc: false
+    output-file: "1.อัตราส่วน สัดส่วน ร้อยละ (ครั้งที่ 1) [m2.1.0-ratio.qmd]"
+    downloads: [pdf]
+  html:
+    theme: cosmo
+    toc: true
+    css: mystyle.css
+crossref:
+#  fig-title: Fig     # (default is "Figure")
+#  tbl-title: Tbl     # (default is "Table")
+  title-delim: "-"   # (default is ":”)
+---
+
+
+
+\lhead{}
+\chead{- \thepage \ -}
+\rhead{ม.2 อัตราส่วน สัดส่วน ร้อยละ}
+\renewcommand{\headrulewidth}{0.4pt}
+\lfoot{\today}
+\cfoot{}
+\rfoot{Aj.Prem}
+\renewcommand{\footrulewidth}{0.4pt}
+\newtcolorbox{mybox}{colback=white!5!white,
+colframe=red!30!black}
+
+\definecolor{customblue}{HTML}{07C2F6}
+
+# อัตราส่วน สัดส่วน และร้อยละ
+
+## อัตราส่วน
+
+นักเรียนอาจพบข้อความที่แสดงความสัมพันธ์ของปริมาณสองปริมาณในชีวิตประจำวัน เช่น
+
+\centering
+``ถ้าหุงข้าวกล้องให้อร่อย หากมีข้าวกล้องจำนวน $1$ ถ้วย จะต้องใช้น้ำจำนวน $2$ ถ้วย" 
+
+\flushleft
+ซึ่งเป็นข้อความที่แสดงความสัมพันธ์ของ \makebox[3cm]{\dotfill} กับ ปริมาณของ \makebox[3cm]{\dotfill} 
+
+หรือในตลาดบางครั้งนักเรียนอาจได้ยินแม่ค้าร้องขายของว่่า
+
+\centering
+``ผักทุกอย่าง $3$ กำ $20$ บาท"
+
+\flushleft
+ซึ่งเป็นข้อความที่แสดงความสัมพันธ์ของ \makebox[3cm]{\dotfill} กับ ปริมาณของ \makebox[3cm]{\dotfill} 
+
+<!--comment mybox -->
+\begin{mybox}
+
+ความสัมพันธ์ที่แสดงการเปรียบเทียบปริมาณสองปริมาณ ซึ่งอาจมีหน่วยเดียวกันหรือหน่วยต่างกันก็ได้ เรียกว่า \textbf{\textcolor{NavyBlue}{อัตราส่วน (ratio)}}
+
+\end{mybox}
+
+กล่าวคือ อัตราส่วนของปริมาณ $a$ ต่อปริมาณ $b$ เขียนแทนด้วย $a:b$ อ่านว่า $a:b$ 
+
+<!--comment table -->
+\renewcommand{\arraystretch}{1.5}
+
+\begin{tabular}{lll}
+เรียก    & $a$ & ว่าจำนวนแรกหรือจำนวนที่หนึ่งของอัตราส่วน \\
+และเรียก & $b$ &ว่าจำนวนหลังหรือจำนวนที่สองของอัตราส่วน \\
+\end{tabular}
+
+\vspace{-7pt}
+    โดยเราจะพิจารณาอัตราส่วน $a$ ต่อ $b$ ในกรณีที่ $a$ และ $b$ เป็น\textbf{จำนวนบวก} เท่านั้น 
+
+
+<!--comment table -->
+\begin{tabular}{lp{12cm}}
+
+จากข้อความ & ``ถ้าหุงข้าวกล้องให้อร่อย หากมีข้าวกล้องจำนวน $1$ ถ้วย จะต้องใช้น้ำจำนวน $2$ ถ้วย" \\
+
+          & เขียนให้อยู่ในรูปอัตราส่วนของ\textbf{ปริมาณข้าวกล้อง} ต่อ \textbf{ปริมาณน้ำ}โดยปริมาตร \\
+          & ได้เป็น \dotfill \\
+
+และจากข้อความ  & ``ผักทุกอย่าง $3$ กำ $20$ บาท" \\
+
+          & เขียนให้อยู่ในรูปอัตราส่วนของ\textbf{ปริมาณผักเป็นกำ} ต่อ\textbf{ราคาเป็นบาท}\\
+          & ได้เป็น \dotfill \\
+
+\end{tabular}
+
+<!--comment mybox -->
+\begin{tcolorbox}[colback=white!5!white,
+colframe=red!70!black]
+
+อัตราส่วนที่แสดงการเปรียบเทียบปริมาณสองปริมาณที่มีหน่วยเดียวกัน และมีความชัดเจนว่าเป็นหน่วยของสิ่งใด เช่น น้ำหนักหรือจำนวนคน เราไม่นิยมเขียนหน่วยกำกับไว้
+เช่น อัตราส่วนของน้ำหนักหญ้าสดต่อน้ำหนักมูลไก่เป็น $50:5$
+\tcblower
+อัตราส่วนที่แสดงการเปรียบเทียบปริมาณสองปริมาณที่มีหน่วยต่างกัน เราจะเขียนหน่วยกำกับไว้ที่คำอธิบาย เช่น อัตราส่วนของจำนวนไข่ไก่เป็น \textbf{ฟอง} ต่อราคาเป็น\textbf{บาท} เป็น $10:32$ หรือเขียนหน่วยกำกับไว้ในอัตราส่วน เช่น อัตราส่วนของจำนวนไข่ไก่ต่อราคาเป็น $10$ \textbf{ฟอง} $: 32$ \textbf{บาท}
+\end{tcolorbox}
+
+<!--comment newpage-->
+\newpage
+\centering
+\begin{tcolorbox}[colback=white!5!white,
+colframe=red!70!black,width=5cm]
+\centering \textbf{ลองทำดู}
+\end{tcolorbox}
+
+\flushleft
+
+1.    จงเขียนอัตราส่วนจากข้อความต่อไปนี้
+
+\begin{tabular}[l]{p{0.5cm}lp{12cm}}
+
+&1.1)  & ครู $2$ คน ดูแลนักเรียน $55$ คน \\
+&      &  \dotfill \\
+
+&1.2)  & นักเรียนใช้คอมพิวเตอร์เครื่องละ $3$ คน \\
+&      &  \dotfill \\
+
+&1.3)  & กรรไกร $3$ เล่ม สำหรับนักเรียน $10$ คน \\
+&      &  \dotfill \\
+
+&1.4)  & ราคาทองคำแท่งบาทละ $50,500$ บาท \\
+&      &  \dotfill \\
+
+
+&1.5)  & รถยนต์แล่นได้ระยะทาง $180$ กิโลเมตร ในเวลา $3$ ชั่วโมง \\
+&      &  \dotfill \\
+
+
+&1.6)  & อัตราการเต้นของของหัวใจมนุษย์เป็น $72$ ครั้งต่อนาที \\
+&      &  \dotfill \\
+
+&1.7)  & รูปสี่เหลี่ยมมุมฉาก มีความยาว $6$ เซนติเมตร และมีความกว้าง $4$ เซนติเมตร \\
+&      &  \dotfill \\
+
+
+&1.8)  & เตรียมน้ำเกลือสำหรับแช่ผลไม้โดยใช้เกลือ $2$ ช้อนชาและน้ำ $5$ ลิตร \\
+&      &  \dotfill \\
+
+
+&1.9)  & ชงกาแฟโดยใช้กาแฟ $2$ ช้อนชา และน้ำตาล $1$ ช้อนชา และน้ำตาล $1$ ช้อนชา \\
+&      &  \dotfill \\
+
+
+&1.10)  & แม่ซื้อมะม่วงและชมพู่อย่างละ $3$ กิโลกรัม \\
+&      &  \dotfill \\
+
+\end{tabular}
+
+2.    ช่างปูกระเบื้องใช้กระเบื้องสีขาวและสีชมพูปูพื้นห้อง ดังรูป
+
+\begin{tabular}{p{0.5cm}clp{8cm}}
+& 
+\multirow{5}*{\includegraphics[width=5cm]{images/tile_ratio.png}} & \multicolumn{2}{l}{จงเขียนอัตราส่วนต่อไปนี้} \\
+
+&   & 1)  & อัตราส่วนของจำนวนกระเบื้องสีชมพูต่อจำนวนกระเบื้องสีขาว \\
+&   &     & \dotfill \\
+
+&   & 2)  & อัตราส่วนของจำนวนกระเบื้องสีชมพูต่อจำนวนกระเบื้องทั้งหมด \\
+&   &     & \dotfill \\
+
+\end{tabular}
+
+<!--comment newpage-->
+\newpage
+
+3.    จากตารางแสดงจำนวนคนที่ชอบทานข้าวผัดและก๋วยเตี๋ยว (แต่ละคนชอบทานเพียงอย่างเดียว) ดังนี้
+
+\centering
+
+\begin{tabular}[c]{l|cc|}
+\cline{2-3}
+                                 & \multicolumn{2}{c|}{\textbf{เพศ}} \\ \hline
+\multicolumn{1}{|l|}{\textbf{รายการอาหาร}} & \multicolumn{1}{c|}{\textbf{ชาย (คน)}} & \textbf{หญิง (คน)} \\ \hline
+\multicolumn{1}{|l|}{ข้าวผัด}    & \multicolumn{1}{c|}{100}   & 160  \\ \hline
+\multicolumn{1}{|l|}{ก๋วยเตี๋ยว} & \multicolumn{1}{c|}{720}   & 645  \\ \hline
+\end{tabular}
+
+\flushleft
+
+\begin{tabular}{p{0.5cm}lp{13cm}}
+
+& \multicolumn{2}{l}{จงใช้ข้อมูลในตารางเขียนอัตราส่วนแสดงการเปรียเทียบจำนวนคนต่อไปนี้} \\
+
+& 1) & จำนวนผู้ชายที่ชอบทานข้าวผัดต่อจำนวนผู้ชายที่ชอบทานก๋วยเตี๋ยว \\
+
+&    &  \dotfill \\
+
+& 2) & จำนวนผู้หญิงที่ชอบทานข้าวผัดต่อจำนวนหญิงที่ชอบทานก๋วยเตี๋ยว \\
+
+&    &  \dotfill \\
+
+& 3) & จำนวนผู้ชายที่ชอบทานก๋วยเตี๋ยวต่อจำนวนผู้หญิงที่ชอบทานก๋วยเตี๋ยว \\
+
+&    &  \dotfill \\
+
+& 4) & จำนวนผู้ชายต่อจำนวนผู้หญิง \\
+
+&    &  \dotfill \\
+
+
+
+\end{tabular}
+
+4.  พลอยและแพรสั่งก๋วยเตี๋ยวน้ำมารับประทานคนละ $1$ ชาม แต่ละคนปรุงรสดังนี้
+
+\begin{tabular}{p{0.5cm}llll}
+
+& พลอย  & ใส่น้ำปลา $1$ ช้อนชา & น้ำมะนาว $3$ ช้อนชา & และน้ำตาลทราย $2$ ช้อนชา \\
+
+& แพร  & ใส่น้ำปลา $2$ ช้อนชา & น้ำมะนาว $3$ ช้อนชา & และน้ำตาลทราย $2$ ช้อนชา \\
+
+& \multicolumn{4}{l}{นักเรียนคิดว่าก๋วยเตี๋ยวของใครจะมีรสเค็มมากกว่า}\\
+
+& \multicolumn{4}{p{10cm}}{\dotfill}\\
+
+
+
+\end{tabular}
+
+<!--comment newpage-->
+\newpage
+
+### อัตราส่วนที่เท่ากัน
+
+พิจารณาข้อความต่อไปนี้
+
+\centering
+``ถ้าจะหุงข้าวกล้องให้อร่อย ข้าวกล้อง $1$ ถ้วย จะต้องใช้น้ำ $2$ ถ้วย"
+
+\vspace{-10pt}
+
+\flushleft
+จากข้อความดังกล่าวเราสามารถเขียนอัตราส่วนของปริมาณข้าวกล้องต่อปริมาณน้ำได้เป็น \dotfill
+
+ถ้าต้องการหุงข้าวกล้องตามจำนวนที่กำหนดในตารางด้านล่าง นักเรียนคิดว่า จะต้องใช้น้ำกี่ถ้วย
+
+
+จงเติมปริมาณน้ำที่ใช้ในการหุงข้าวกล้องในตารางให้สมบูรณ์
+
+\centering
+
+\begin{tabular}{c|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}}
+
+\hline
+
+ปริมาณข้าวกล้อง (ถ้วย) & \multicolumn{1}{c|}{$1$} 
+                    & \multicolumn{1}{c|}{$2$}
+                    & \multicolumn{1}{c|}{$3$}
+                    & \multicolumn{1}{c|}{$4$}
+                    & \multicolumn{1}{c}{$5$}\\
+
+
+\hline
+
+ปริมาณน้ำ (ถ้วย) &  
+                    & 
+                    & 
+                    & 
+                    & \\
+
+\hline
+
+
+
+\end{tabular}
+
+เมื่อนักเรียนเติมตารางสมบูรณ์แล้ว สังเกตได้ว่าอัตราส่วนของปริมาณข้าวกล้องต่อปริมาณน้ำเป็น ดังนี้
+
+\centering
+
+\makebox[1.5cm]{\dotfill} หรือ \makebox[1.5cm]{\dotfill} หรือ \makebox[1.5cm]{\dotfill} หรือ \makebox[1.5cm]{\dotfill} หรือ \makebox[1.5cm]{\dotfill}
+
+\flushleft
+
+ซึ่งอัตราส่วนเหล่านี้ ได้มาจากการหุงข้าวกล้องโดยใช้ปริมาณ \textbf{แบบเดียวกัน} คือข้าวกล้อง $1$ ถ้วย จะต้องใช้น้ำ $2$ ถ้วย กล่าวคือ
+
+\begin{tabular}{lcp{10cm}}
+อัตราส่วน $2:4$  & สามารถเขียนได้เป็น & $1\times 2 : 2\times 2$ \\
+อัตราส่วน $3:6$  & สามารถเขียนได้เป็น &  \dotfill                       \\
+อัตราส่วน $4:8$  & สามารถเขียนได้เป็น &    \dotfill                      \\
+อัตราส่วน $5:10$ & สามารถเขียนได้เป็น &   \dotfill                      \\
+\end{tabular}
+
+นอกจากนี้
+
+\begin{tabular}{lcp{10cm}}
+
+อัตราส่วน $1:2$   & สามารถเขียนได้เป็น & $2\div 2 : 4\div 2$ \\
+                & หรือ &  \dotfill                       \\
+                & หรือ &    \dotfill                      \\
+                & หรือ &   \dotfill                      \\
+
+\end{tabular}
+
+พิจารณาการหาเศษส่วนที่เท่ากันโดยใช้วิธีการคูณหรือการหารด้วยจำนวนเดียวกันที่นักเรียนเคยทราบมาแล้ว
+
+\centering
+
+\renewcommand{\arraystretch}{2.5}
+
+\begin{tabular}{c|c}
+
+\hline
+\textbf{คูณด้วยจำนวนเดียวกัน}  & \textbf{หารด้วยจำนวนเดียวกัน} \\
+
+\hline
+$\cfrac{1}{2}=\cfrac{1\times 2}{2\times 2}=\cfrac{2}{4}$ & 
+$\cfrac{2}{4}=\cfrac{2\div 2}{4\div 2}=\cfrac{1}{2}$ \\
+
+\hline
+$\cfrac{1}{2}=\cfrac{1\times 3}{2\times 3}=\cfrac{\phantom{3}}{\phantom{6}}$ & 
+$\cfrac{3}{6}=\cfrac{3\div 3}{6\div 3}=\cfrac{\phantom{1}}{\phantom{2}}$ \\
+
+\hline
+$\cfrac{1}{2}=\cfrac{1\times 4}{2\times 4}=\cfrac{\phantom{4}}{\phantom{8}}$ & 
+$\cfrac{4}{8}=\cfrac{4\div \phantom{4}}{8\div \phantom{4}}=\cfrac{1}{2}$ \\
+
+\hline
+$\cfrac{1}{2}=\cfrac{1\times \phantom{5}}{2\times \phantom{5}}=\cfrac{5}{10}$ & 
+$\cfrac{5}{10}=\cfrac{5\div \phantom{5}}{10\div \phantom{5}}=\cfrac{1}{2}$ \\
+
+\hline
+
+\end{tabular}
+
+\flushleft
+
+จากแนวคิดในการหาเศษส่วนที่เท่ากันข้างต้น กับการเขียนอัตราส่วน $1:2,\ 2:4,\ 3:6,\ 4:8$ และ $5:10$ โดยการนำจำนวนเดียวกันมาคูณแต่ละจำนวนของอัตราส่วน $1:2$ หรือการนำจำนวนเดียวกันมาหารแต่ละจำนวนของอัตราส่วนข้างต้น ทำให้สังเกตได้ว่า อาจเขียนอัตราส่วนให้อยู่ในรูปเศษส่วนได้ ซึ่งการเขียนอัตราส่วนในรูปเศษส่วนนี้ทำให้สะดวกต่อการนำไปคำนวณต่อ
+
+<!--comment tcolorbox mybox-->
+\centering
+\begin{tcolorbox}[colback=white!5!white,
+colframe=red!70!black,width=13cm]
+
+อัตราส่วนของปริมาณ $a$ ต่อปริมาณ $b$ นอกจากเขียนแทนด้วย $a:b$ ยังสามารถเขียนในรูปเศษส่วนได้เป็น $\cfrac{a}{b}$
+
+\end{tcolorbox}
+
+\flushleft
+
+จากแนวคิดข้างต้น อัตราส่วนที่ได้จากการคูณจำนวนแรกและจำนวนหลังของอัตราส่วน $a:b$ ด้วยจำนวนเดียวกันที่ไม่ใช่ศูนย์ หรือการหารจำนวนแรกและจำนวนหลังของอัตราส่วน $a:b$ ด้วยจำนวนเดียวกันที่ไม่ใช่ศูนย์จะเป็น \textbf{\textcolor{NavyBlue}{อัตราส่วนที่เท่ากัน}} กับอัตราส่วน $a:b$ ดังนั้น
+
+\centering
+
+\begin{tabular}{llllllllll}
+
+     & $1:2$          & = & $2:4$ & = & $3:6$ & = & $4:8$ & = & $5:6$ \\
+หรือ & $\cfrac{1}{2}$ & = & \makebox[1.5cm]{\dotfill}      & = & \makebox[1.5cm]{\dotfill}       & = & \makebox[1.5cm]{\dotfill}       & = &     \makebox[1.5cm]{\dotfill} \\
+
+\end{tabular}
+
+\flushleft
+
+### การหาอัตราส่วนที่เท่ากัน
+
+\centering
+
+<!--comment tcolorbox mybox -->
+\begin{tcolorbox}[colback=white!5!white,
+colframe=red!70!black, width=13cm]
+
+\textbf{หลักการคูณ}
+
+เมื่อคูณแต่ละจำนวนในอัตราส่วนใดด้วยจำนวนเดียวกันโดยที่จำนวนนั้นไม่เท่ากับศูนย์จะได้อัตราส่วนใหม่ที่เท่ากับอัตราส่วนเดิม
+
+
+\tcblower
+
+\textbf{หลักการหาร}
+
+เมื่อหารแต่ละจำนวนในอัตราส่วนใดด้วยจำนวนเดียวกันโดยที่จำนวนนั้นไม่เท่ากับศูนย์จะได้อัตราส่วนใหม่ที่เท่ากับอัตราส่วนเดิม
+
+
+\end{tcolorbox}
+
+
+\flushleft
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}[l]{lp{13cm}}
+
+\textbf{ตัวอย่างที่ 1} & จงหาอัตราส่วนที่เท่ากับอัตราส่วน $5:9$ มาอีก $5$ อัตราส่วน โดยใช้หลักการคูณ \\
+\textbf{วิธีทำ}     &   \dotfill        \\
+                  &   \dotfill  \\   
+                  &   \dotfill  \\      
+                  &   \dotfill  \\      
+                  &   \dotfill  \\      
+                  &   \dotfill  \\ 
+                  &   ดังนั้น อัตราส่วนอีก $5$ อัตราส่วนที่เท่ากับอัตราส่วน $5:9$ ได้แก่ \\  
+                  &   \dotfill  \\   
+
+%comment newpage
+\newpage
+
+\textbf{ตัวอย่างที่ 2} & จงหาอัตราส่วนที่เท่ากับอัตราส่วน $\cfrac{144}{180}$ มาอีก $3$ อัตราส่วน โดยใช้หลักการหาร \\
+\textbf{วิธีทำ}     &   \dotfill        \\
+                  &   \dotfill  \\   
+                  &   \dotfill  \\      
+                  &   \dotfill  \\      
+                  &   \dotfill  \\      
+                  &   \dotfill  \\ 
+                  &   ดังนั้น อัตราส่วนอีก $3$ อัตราส่วนที่เท่ากับอัตราส่วน $\cfrac{144}{180}$ ได้แก่ \\  
+                  &   \dotfill  \\  
+                              
+\end{longtable}
+
+\centering
+<!--comment tcolorbox mybox-->
+\begin{tcolorbox}[colback=white!5!white,
+colframe=red!70!black,width=7cm]
+\centering \textbf{ลองทำดู : อัตราส่วนที่เท่ากัน}
+\end{tcolorbox}
+
+\flushleft
+
+\textbf{จงหาอัตราส่วนที่เท่ากับอัตราส่วนที่กำหนดให้ในแต่ละข้อมา $3$ อัตราส่วน โดยแต่ละข้อต้องใช้ทั้งหลักการคูณและหลักการหาร}
+
+\renewcommand{\arraystretch}{2.2}
+
+\begin{longtable}[l]{llp{5.5cm}|llp{5.5cm}}
+
+1.  & $\cfrac{1}{2}$   &           & 2.  & $\cfrac{3}{4}$   & \\
+    & \textbf{วิธีทำ}  &  \dotfill &     & \textbf{วิธีทำ}  & \dotfill\\
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    & \textbf{ตอบ}  &  \dotfill &     & \textbf{ตอบ}  & \dotfill\\        
+
+3.  & $\cfrac{5}{9}$   &           & 4.  & $1:5$   & \\
+    & \textbf{วิธีทำ}  &  \dotfill &     & \textbf{วิธีทำ}  & \dotfill\\
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    & \textbf{ตอบ}  &  \dotfill &     & \textbf{ตอบ}  & \dotfill\\  
+%comment newpage
+
+\newpage
+
+5.  & $8:12$   &           & 6.  & $\cfrac{1.1}{3.3}$   & \\
+    & \textbf{วิธีทำ}  &  \dotfill &     & \textbf{วิธีทำ}  & \dotfill\\
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    & \textbf{ตอบ}  &  \dotfill &     & \textbf{ตอบ}  & \dotfill\\      
+
+7.  & $\cfrac{0.2}{0.05}$   &           & 8.  & $\cfrac{1.5}{2.5}$   & \\
+    & \textbf{วิธีทำ}  &  \dotfill &     & \textbf{วิธีทำ}  & \dotfill\\
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    & \textbf{ตอบ}  &  \dotfill &     & \textbf{ตอบ}  & \dotfill\\   
+
+9.  & $\cfrac{72}{144}$   &           & 10.  & $\cfrac{63}{108}$   & \\
+    & \textbf{วิธีทำ}  &  \dotfill &     & \textbf{วิธีทำ}  & \dotfill\\
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    & \textbf{ตอบ}  &  \dotfill &     & \textbf{ตอบ}  & \dotfill\\  
+%comment newpage
+
+\newpage
+
+11.  & $\cfrac{1}{2}:\cfrac{3}{4}$   &           & 12.  & $\cfrac{2}{3}:\cfrac{5}{9}$   & \\
+    & \textbf{วิธีทำ}  &  \dotfill &     & \textbf{วิธีทำ}  & \dotfill\\
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    & \textbf{ตอบ}  &  \dotfill &     & \textbf{ตอบ}  & \dotfill\\  
+
+\end{longtable}
+
+### การตรวจสอบการเท่ากันของอัตราส่วนโดยใช้การคูณไขว้
+
+นักเรียนเคยทราบมาแล้วว่า เราสามารถใช้การคูณไขว้ในการตรวจสอบการเท่ากันของเศษส่วน ในทำนองเดียวกันเราสามารถใช้การคูณไขว้ในการตรวจสอบการเท่ากันของอัตราส่วนได้
+
+โดยทั่วไปเมื่อ $a,\ b,\ c$ และ $d$ เป็นจำนวนบวก เราสามารถตรวจสอบการเท่ากันของอัตราส่วน $\cfrac{a}{b}$ กับ $\cfrac{c}{d}$ ด้วยการคูณไข้แล้วพิจารณาผลคูณไขว้ $a\times d$ และ $b\times c$ ตามหลักการดังนี้
+
+\centering
+\begin{tcolorbox}[colback=white!5!white,
+colframe=red!70!black,width=8cm]
+
+1. ถ้า $a\times d=b\times c$ แล้ว $\cfrac{a}{b}=\cfrac{c}{d}$
+
+2. ถ้า $a\times d\not= b\times c$ แล้ว $\cfrac{a}{b}\not=\cfrac{c}{d}$
+
+\end{tcolorbox}
+
+\flushleft
+
+จากหลักการข้างต้นทั้ง 2 ข้อ ทำให้ได้ข้อสรุปต่อไปอีกด้วยว่า
+
+\centering
+\begin{tcolorbox}[colback=white!5!white,
+colframe=red!70!black,width=7cm]
+
+ถ้า $\cfrac{a}{b}=\cfrac{c}{d}$ แล้ว $a\times d=b\times c$
+
+\end{tcolorbox}
+
+\flushleft
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}[l]{lp{13cm}}
+
+\textbf{ตัวอย่างที่ 3} & จงพิจารณาว่าอัตราส่วนที่กำหนดให้แต่ละข้อเป็นอัตราส่วนที่เท่ากันหรือไม่ \\
+                  & 1) $\cfrac{2}{6}$ และ $\cfrac{15}{45}$ \\
+                  & 2) $\cfrac{3}{7}$ และ $\cfrac{6}{10}$ \\
+
+\textbf{วิธีทำ}     &   \dotfill  \\   
+                  &   \dotfill  \\      
+                  &   \dotfill  \\      
+                  &   \dotfill  \\ 
+                  &   \dotfill  \\
+                  &   \dotfill  \\  
+          
+                              
+\end{longtable}
+
+\centering
+<!--comment tcolorbox mybox-->
+\begin{tcolorbox}[colback=white!5!white,
+colframe=red!70!black,width=8cm]
+\centering \textbf{ลองทำดู : การตรวจสอบอัตราส่วนที่เท่ากัน}
+\end{tcolorbox}
+
+\flushleft
+
+\textbf{จงพิจารณาอัตราส่วนที่กำหนดให้แต่ละข้อต่อไปนี้ว่าเป็นอัตราส่วนที่เท่ากันหรือไม่ พร้อมทั้งแสดงวิธีคิด}
+
+\renewcommand{\arraystretch}{2.2}
+
+\begin{longtable}[l]{llp{5.5cm}|llp{5.5cm}}
+
+1.  &   \multicolumn{2}{l}{$2:5$ และ $10:25$}           & 2.  & \multicolumn{2}{l}{$15:24$ และ $5:8$} \\
+    & \textbf{วิธีทำ}  &  \dotfill &     & \textbf{วิธีทำ}  & \dotfill\\
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    & \textbf{ตอบ}  &  \dotfill &     & \textbf{ตอบ}  & \dotfill\\        
+
+3.  & \multicolumn{2}{l}{$\cfrac{7}{11}$ และ $\cfrac{49}{121}$}           & 4.  & \multicolumn{2}{l}{$\cfrac{24}{56}$ และ $\cfrac{36}{60}$} \\
+    & \textbf{วิธีทำ}  &  \dotfill &     & \textbf{วิธีทำ}  & \dotfill\\
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    & \textbf{ตอบ}  &  \dotfill &     & \textbf{ตอบ}  & \dotfill\\  
+
+
+5.  & \multicolumn{2}{l}{$\cfrac{4}{1.5}$ และ $\cfrac{8}{3}$}          & 6.  & \multicolumn{2}{l}{$0.3:5$ และ $6:100$} \\
+    & \textbf{วิธีทำ}  &  \dotfill &     & \textbf{วิธีทำ}  & \dotfill\\
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    & \textbf{ตอบ}  &  \dotfill &     & \textbf{ตอบ}  & \dotfill\\      
+
+%comment newpage
+\newpage
+
+7.  & \multicolumn{2}{l}{$7:2$ และ $24.5:7$}            & 8.  & \multicolumn{2}{l}{$3.5:1.5$ และ $5:2$} \\
+    & \textbf{วิธีทำ}  &  \dotfill &     & \textbf{วิธีทำ}  & \dotfill\\
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    &               &  \dotfill &     &                 & \dotfill\\ 
+    & \textbf{ตอบ}  &  \dotfill &     & \textbf{ตอบ}  & \dotfill\\   
+
+ 
+
+\end{longtable}

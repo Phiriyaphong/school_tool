@@ -8,7 +8,13 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 ```{r}
 1 + 1
+
+
 ```
+# HELLO
+
+test \today
+
 
 # H1
 
