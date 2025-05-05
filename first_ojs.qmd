@@ -1,0 +1,366 @@
+---
+title: "My Document"
+execute:
+  echo: true
+format: 
+  html:
+    toc: true
+
+---
+
+# first ojs activity
+
+```{ojs}
+viewof color = Inputs.color({
+    label: "Favorite color",
+    value: "#4682b4"
+})
+
+```
+
+```{ojs}
+//| include: true
+//| echo: false
+
+Plot.plot({
+    marks:[
+        Plot.barX(alphabet,{
+            x: "frequency", 
+            y: "letter",
+            fill: color,
+            sort: {y: "x", reverse: true}}),
+        Plot.ruleX([0])
+    ]
+})
+
+```
+
+
+# ojs activity 2
+
+```{ojs}
+viewof radios = Inputs.radio(alphabet.map((d)=>d.letter),{
+    label: "Select one",
+    value: "A",
+    unique: true
+})
+
+```
+
+
+
+
+```{ojs}
+Plot.plot({
+    marks:[
+        Plot.barX(alphabet,{
+            x: "frequency", 
+            y: "letter",
+            fill: d=>d.letter==radios ? "red": "#ccc",
+            sort: {y: "x", reverse: true}}),
+        Plot.ruleX([0])
+    ]
+})
+
+```
+
+```{ojs}
+
+Plot.plot({
+    marks: [
+        Plot.ruleY([0]),
+      //  Plot.ruleX([0]),
+        Plot.lineY(aapl, {
+            x: "Date",
+            y: "Close"
+        })
+    ]
+})
+
+aapl
+
+```
+
+# Learning observable js
+
+## variable
+
+### object
+
+```{ojs}
+myObject = ({name: "Paul", age: 25})
+
+myObject.name
+
+myObject.age+5
+
+
+```
+
+### array
+```{ojs}
+myArrayOfObjects = [
+  {year: 2022, city: 'New York', population: 8380000},
+  {year: 2021, city: 'New York', population: 8419000},
+  {year: 2020, city: 'New York', population: 8444000},
+]
+
+
+myArrayOfObjects
+
+myArrayOfObjects[0]
+
+myArrayOfObjects[0].city
+```
+
+#### array.filter() and array.map()
+
+(@) Array.filter() allows you to filter an array based on some condition.
+
+```{ojs}
+
+array5 = [0,1,2,3,4,5]
+
+array5.filter(d => d<3)
+
+array5.filter(function(d){
+    return d<2
+})
+
+```
+
+```{ojs}
+myData = [
+  {name: 'Paul', city: 'Denver'},
+  {name: 'Robert', city: 'Denver'},
+  {name: 'Ian', city: 'Boston'},
+  {name: 'Cobus', city: 'Boston'},
+  {name: 'Ayodele', city: 'New York'},
+  {name: 'Mike', city: 'New York'},
+]
+
+myData
+
+myData.filter(c=>c.city == "Boston")
+```
+
+\
+
+
+(@) Array.map() is another very useful method for Array that allows you create a new array, populated with whatever results you specify.
+
+>เราใช้ข้อมูลจาก chunk ด้านบน
+
+```{ojs}
+
+myData.map(d=>d.name)
+```
+
+> ถ้าเราจะทำในลักษณะของการ mutate ข้อมูลของ array ใน chunk บน
+
+```{ojs}
+
+myData.map(d=>({...d, date: new Date()}))
+```
+
+## function
+
+Functions are essentially variables that **do something**. Here's a function.
+
+```{ojs}
+function myFunction() {
+  return 'This is the output of my function!'
+}
+
+
+myFunction()
+```
+
+Functions can take parameters, i.e. an input.
+
+```{ojs}
+function myFunctionWithParameters(firstName, lastName) {
+  return `My first name is ${firstName}, and my last name is ${lastName}.`
+}
+
+
+myFunctionWithParameters("Phiriyaphong","Ringrod")
+```
+
+## conditionals
+If this, then that. In Javascript, setting up a conditional is easy. Here's a simple example.
+
+```{ojs}
+{
+
+if(1 > 2) { 
+    return 'Math is broken' // If this statement is true return this
+  } else { 
+    return 'Math still works!' // If the first statement was false, return this
+  }
+  
+}
+```
+
+Notice that my code is wrapped by curly braces { }. That's because in Observable, if we're running a JavaScript cell that contains more than just a simple variable assignment (like myVariable = 'Hello World'), we need to run a code block. You can read up more about here in our official documentation. Essentially, a code block says that you're going to write multiple lines of JavaScript. You could still have that code set the value for a variable.
+
+## Loop
+
+```{ojs}
+{ 
+  let string = ''
+  for(let i = 0; i <= 5; i++) {
+    string += i 
+  }
+  return string
+}
+```
+
+```{ojs}
+{
+  const width = 300;
+  const height = 100;
+  const r = 30;
+  
+  const svg = d3.create('svg')
+    .attr('width', width)
+    .attr('height', height);
+
+  const circle = svg.append('circle')
+    .attr('r', r)
+    .attr('cy', height / 2)
+    .attr('cx', r);
+
+  let cx = 30;
+  while(true) { // Loop goes on forever
+    yield svg.node();
+    await Promises.delay(2000); // This causes the loop to "wait" 2000 milliseconds
+    cx == r ? cx = width - r : cx = r;
+    circle.transition()
+      .duration(1500)
+      .attr('cx', cx);
+
+  }
+}
+```
+
+# plot
+
+[ดู plot ต่าง ๆ คลิก](https://observablehq.com/plot/marks/axis)
+
+## send r to ojs
+```{r}
+library(dplyr)
+library(jsonlite)
+dat = read.csv('/Users/pahphrame/Library/CloudStorage/OneDrive-ChulalongkornUniversity/ปีการศึกษา 2567/edu_supervision/edu_supervision_2567/summary_3-5.csv')
+
+dat2= read.csv('/Users/pahphrame/Library/CloudStorage/OneDrive-ChulalongkornUniversity/ปีการศึกษา 2567/edu_supervision/edu_supervision_2567/summary_3-5.csv')
+
+names(dat)
+
+dat = dat|>select(major,A,B_temp)
+dat|>head(5)
+
+dat = dat|> group_by(major)|>
+count()
+
+dat = dat|>toJSON(dataframe = "rows",pretty = TRUE, auto_unbox = TRUE)
+
+dat2 = dat2|>toJSON(dataframe = "rows",pretty = TRUE, auto_unbox = TRUE)
+
+
+ojs_define(datojs = dat)
+ojs_define(datojs2 = dat2)
+```
+
+```{ojs}
+
+datojs_2 = JSON.parse(datojs)
+
+datojs_2
+
+
+
+
+datojs_3 = JSON.parse(datojs2)
+
+datojs_3
+
+```
+
+```{ojs}
+Plot.dot(datojs_2,{
+    x: "A",
+    y: "n"
+}).plot()
+
+
+```
+
+```{ojs}
+
+
+Plot.plot({
+    marks:[
+        Plot.barX(datojs_2,{
+            x: "n", 
+            y: "major",
+        //    fill: color,
+        //    sort: {y: "x", reverse: true}
+        }),
+        Plot.ruleX([0])
+    ]
+})
+
+alphabet
+```
+
+
+```{ojs}
+datojs2
+```
+
+```{ojs}
+
+Plot.plot({
+  marks: [
+    Plot.ruleX([10]),
+    Plot.ruleY([0]),
+    Plot.dot(
+      datojs_3,
+      Plot.stackY(Plot.binX({}, { x: "x", z: "A", thresholds: 30, r: 10 }))
+    )
+  ],
+  height: 150
+})
+```
+
+
+```{r}
+dat3= read.csv('/Users/pahphrame/Library/CloudStorage/OneDrive-ChulalongkornUniversity/ปีการศึกษา 2567/edu_supervision/edu_supervision_2567/summary_3-5.csv')
+
+dat3 = dat3|>
+mutate(no2=row_number())
+
+
+dat3 = dat3|>toJSON(dataframe = "rows",pretty = TRUE, auto_unbox = TRUE)
+
+ojs_define(datojs_filter = dat3)
+```
+
+```{ojs}
+
+datojs_filter2 = JSON.parse(datojs_filter)
+
+datojs_filter2
+```
+
+```{ojs}
+viewof number = Inputs.text({label: "Name", placeholder: "your number"})
+
+viewof replay = Inputs.button("show number")
+
+
+replay ? number : md`Awaiting confirmation…`
+
+```

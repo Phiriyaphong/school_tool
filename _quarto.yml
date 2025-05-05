@@ -11,6 +11,8 @@ website:
       - about.qmd
       - href: ratio1.qmd
         text: อัตราส่วนครั้งที่ 1
+      - href: first_ojs.qmd
+        text: ojs
   reader-mode: true
   back-to-top-navigation: true
 
