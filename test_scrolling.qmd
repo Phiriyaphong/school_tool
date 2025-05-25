@@ -1,11 +1,18 @@
 ---
 title: "Scrollytelling"
-format: 
+format:
   closeread-html:
-    css: nytimes.css
+    cr-style:
+      narrative-background-color-overlay: "#FFFEFF"
+      narrative-text-color-overlay: "#000000"
+      narrative-border-radius: "1px"
+      narrative-background-color-sidebar: "FD0000"
+      narrative-text-color-sidebar: "FD0000"
+      narrative-font-size: "2em"
+      section-background-color: "#FFFEFF"
 ---
 
-:::: cr-section
+:::: {.cr-section layout="overlay-center"}
 # A Poem (and a Painting)
 
 @cr-poem I've been reading this short,
@@ -33,5 +40,45 @@ No matter how familiar a poem is
 the position is?
 
 ::::
+
+
+::::{.cr-section layout="sidebar-right"}
+
+:::{.progress-block}
+Check out our graphic @cr-graphic
+
+We can keep referring to it as several triggers scroll by... @cr-graphic
+
+... and have OJS code elsewhere in the document to animate it @cr-graphic
+:::
+
+This is the first limerick ever recorded. @cr-limerick
+
+
+This is the first limerick ever recorded again @cr-limerick
+
+:::{#cr-limerick .scale-to-fill}
+| There was a young rustic named [Mallory]{#cr-mallory},
+| who drew but a very small [salary]{#cr-salary}.
+|   When he went to the show,
+|   his purse made him go
+| to a seat in the uppermost gallery.
+:::
+
+:::{#cr-graphic .scale-to-fill}
+
+$x+y-1=0$
+
+$x+y-1=0$
+
+$x+y-1=0$
+
+$x+y-1=0$
+
+:::
+
+::::
+
+
 
 hello my name is Phiriyaphong Ringrod

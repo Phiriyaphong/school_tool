@@ -104,7 +104,6 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
-<link rel="stylesheet" href="nytimes.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -163,6 +162,19 @@ window.Quarto = {
     
 <!-- main -->
 <main class="content column-page" id="quarto-document-content">
+      <!-- user-provided yaml closeread style options -->
+      <style>
+        :root {
+          --cr-section-background-color: #FFFEFF;
+--cr-narrative-text-color-overlay: #000000;
+--cr-narrative-font-size: 2em;
+--cr-narrative-background-color-sidebar: FD0000;
+--cr-narrative-border-radius: 1px;
+--cr-narrative-background-color-overlay: #FFFEFF;
+--cr-narrative-text-color-sidebar: FD0000;
+        }
+      </style>
+    
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -183,7 +195,7 @@ window.Quarto = {
 </header>
 
 
-<div class="cr-section cr-column-screen sidebar-left">
+<div class="cr-section cr-column-screen overlay-center">
 <div class="narrative-col">
 <section id="a-poem-and-a-painting" class="level1 narrative trigger">
 <h1 class="narrative">A Poem (and a Painting)</h1>
@@ -193,7 +205,7 @@ window.Quarto = {
 <p>I’ve been reading this short,</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-hlz="cr-suffering" data-focus-on="cr-poem">
+<div class="trigger new-trigger" data-focus-on="cr-poem" data-hlz="cr-suffering">
 <div class="narrative">
 <p>wry poem about suffering</p>
 </div>
@@ -221,7 +233,7 @@ window.Quarto = {
 <p>today we are going to talk about monitor scree</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2.7" data-focus-on="cr-monitor" data-pan-to="-70%,70%">
+<div class="trigger new-trigger" data-focus-on="cr-monitor" data-scale-by="2.7" data-pan-to="-70%,70%">
 <div class="narrative">
 <p>we are looking at Q1</p>
 </div>
@@ -240,6 +252,54 @@ window.Quarto = {
 <p><img src="images/empty_grid_yo.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="cr-section cr-column-screen sidebar-right">
+<div class="narrative-col">
+<div class="progress-block">
+<div class="trigger new-trigger" data-focus-on="cr-graphic">
+<div class="narrative">
+<p>Check out our graphic</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-graphic">
+<div class="narrative">
+<p>We can keep referring to it as several triggers scroll by…</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-graphic">
+<div class="narrative">
+<p>… and have OJS code elsewhere in the document to animate it</p>
+</div>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-limerick">
+<div class="narrative">
+<p>This is the first limerick ever recorded.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-limerick">
+<div class="narrative">
+<p>This is the first limerick ever recorded again</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-limerick" class="scale-to-fill sticky">
+<div class="line-block"><span id="lb2-1">There was a young rustic named <span id="cr-mallory">Mallory</span>,</span><br>
+<span id="lb2-2">who drew but a very small <span id="cr-salary">salary</span>.</span><br>
+<span id="lb2-3">&nbsp;&nbsp;When he went to the show,</span><br>
+<span id="lb2-4">&nbsp;&nbsp;his purse made him go</span><br>
+<span id="lb2-5">to a seat in the uppermost gallery.</span></div>
+</div>
+<div id="cr-graphic" class="scale-to-fill sticky">
+<p><span class="math inline">\(x+y-1=0\)</span></p>
+<p><span class="math inline">\(x+y-1=0\)</span></p>
+<p><span class="math inline">\(x+y-1=0\)</span></p>
+<p><span class="math inline">\(x+y-1=0\)</span></p>
 </div>
 </div>
 </div>
