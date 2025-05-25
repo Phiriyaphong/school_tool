@@ -4,17 +4,21 @@ project:
 
 website:
   title: "school_tool"
-  navbar:
-    left:
+  sidebar:
+    style: floating
+    contents:
       - href: index.qmd
-        text: Home
-      - about.qmd
-      - href: ratio1.qmd
-        text: อัตราส่วนครั้งที่ 1
-      - href: first_ojs.qmd
-        text: ojs
-      - href: test_scrolling.qmd
-        text: scrolling telling
+        section: Home
+        contents: 
+          - href: test_scrolling.qmd
+            text: scrolling telling
+          - href: first_ojs.qmd
+            text: ojs
+      - href: about.qmd
+        section: About
+        contents: 
+          - href: first_ojs.qmd
+            text: ojs
   reader-mode: true
   back-to-top-navigation: true
 

@@ -1,5 +1,7 @@
 ---
 title: "school_tool"
+
+
 ---
 
 This is a Quarto website.

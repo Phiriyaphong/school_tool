@@ -1,1 +1,10 @@
 /* css styles */
+/* เมื่อ sidebar ซ่อน ให้เนื้อหากลับมาเต็มพื้นที่ */
+.sidebar-hidden main.content {
+  margin-left: 0 !important;
+}
+
+/* เมื่อ sidebar แสดง ให้เว้นที่สำหรับ sidebar */
+.sidebar-visible main.content {
+  margin-left: 280px !important; /* ปรับตามความกว้าง sidebar จริง */
+}
