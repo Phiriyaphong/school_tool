@@ -12,8 +12,10 @@ format:
       section-background-color: "#FFFEFF"
 ---
 
-:::: {.cr-section layout="overlay-center"}
+:::: {.cr-section layout="overlay-center" #stop-audio-when-out-of-view}
 # A Poem (and a Painting)
+
+
 
 @cr-poem I've been reading this short,
 
@@ -25,7 +27,16 @@ No matter how familiar a poem is
 | [About suffering $f(x) = x^2$]{#cr-suffering} they were never wrong,
 | The Old Master: how well they understood
 | Its human position: how it take place
+
+<audio controls src="test_scrolling.m4a">
+        Your browser does not support the
+        <code>audio</code> element.
+</audio>
 :::
+
+
+
+
 ::::
 
 :::: cr-section
