@@ -1,0 +1,37 @@
+---
+title: "Scrollytelling"
+format: 
+  closeread-html:
+    css: nytimes.css
+---
+
+:::: cr-section
+# A Poem (and a Painting)
+
+@cr-poem I've been reading this short,
+
+[@cr-poem]{hlz="cr-suffering"} wry poem about suffering
+
+No matter how familiar a poem is
+
+::: {#cr-poem}
+| [About suffering $f(x) = x^2$]{#cr-suffering} they were never wrong,
+| The Old Master: how well they understood
+| Its human position: how it take place
+:::
+::::
+
+:::: cr-section
+@cr-monitor today we are going to talk about monitor scree
+
+::: {#cr-monitor}
+![](images/empty_grid_yo.svg){fig-align="center"}
+:::
+
+[@cr-monitor]{pan-to="-70%,70%" scale-by="2.7"} we are looking at Q1
+
+the position is?
+
+::::
+
+hello my name is Phiriyaphong Ringrod

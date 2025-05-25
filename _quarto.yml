@@ -13,6 +13,8 @@ website:
         text: อัตราส่วนครั้งที่ 1
       - href: first_ojs.qmd
         text: ojs
+      - href: test_scrolling.qmd
+        text: scrolling telling
   reader-mode: true
   back-to-top-navigation: true
 
