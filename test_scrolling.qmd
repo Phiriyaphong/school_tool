@@ -12,26 +12,47 @@ format:
       section-background-color: "#FFFEFF"
 ---
 
+  <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScMOk9oN7keYHoEAtNpi6XuQNR3GYz70Vo1SoKJ_A2PuYXEKg/formResponse" method="post" target="hidden_iframe">
+
+
+  
+
+<!--layout="overlay-center"-->
+
 :::: {.cr-section layout="overlay-center" #stop-audio-when-out-of-view}
 # A Poem (and a Painting)
 
+before learning I would like to know who you are 
+
+<!--
+<input placeholder="student_id" type="text" name="entry.1820192421">
+<input placeholder="room" type="text" name="entry.1071070834">
+-->
+
+<input class="form-control mb-2" placeholder="student_id" type="text" name="entry.1820192421">
+<input class="form-control mb-2" placeholder="room" type="text" name="entry.1071070834">
 
 
-@cr-poem I've been reading this short,
+<!--
+</form>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+-->
+
+@cr-poem I've been reading this short, <audio controls src="test_scrolling.m4a"><code>audio</code> element.</audio>
 
 [@cr-poem]{hlz="cr-suffering"} wry poem about suffering
 
 No matter how familiar a poem is
 
 ::: {#cr-poem}
+
+
+| ...
 | [About suffering $f(x) = x^2$]{#cr-suffering} they were never wrong,
 | The Old Master: how well they understood
 | Its human position: how it take place
 
-<audio controls src="test_scrolling.m4a">
-        Your browser does not support the
-        <code>audio</code> element.
-</audio>
+
 :::
 
 
@@ -91,5 +112,39 @@ $x+y-1=0$
 ::::
 
 
-
 hello my name is Phiriyaphong Ringrod
+
+
+
+
+question
+
+<!--  <input placeholder="answer" type="text" name="entry.1739275738"> -->
+
+<!--
+  <select name="entry.1739275738">
+  <option value="" disabled selected>เลือกคำตอบ</option>
+  <option value="a">a</option>
+  <option value="b">b</option>
+  <option value="c">c</option>
+  <option value="d">d</option>
+</select>
+
+
+  <button type="submit">Submit</button>
+-->
+
+<select class="form-select mb-2" name="entry.1739275738">
+  <option value="" disabled selected>เลือกคำตอบ</option>
+  <option value="a">a</option>
+  <option value="b">b</option>
+  <option value="c">c</option>
+  <option value="d">d</option>
+</select>
+
+<button class="btn btn-primary" type="submit">Submit</button>
+
+
+</form>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+

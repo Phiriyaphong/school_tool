@@ -166,12 +166,12 @@ window.Quarto = {
       <style>
         :root {
           --cr-section-background-color: #FFFEFF;
---cr-narrative-border-radius: 1px;
---cr-narrative-background-color-sidebar: FD0000;
---cr-narrative-font-size: 2em;
---cr-narrative-background-color-overlay: #FFFEFF;
 --cr-narrative-text-color-overlay: #000000;
+--cr-narrative-background-color-overlay: #FFFEFF;
+--cr-narrative-background-color-sidebar: FD0000;
 --cr-narrative-text-color-sidebar: FD0000;
+--cr-narrative-font-size: 2em;
+--cr-narrative-border-radius: 1px;
         }
       </style>
     
@@ -195,17 +195,45 @@ window.Quarto = {
 </header>
 
 
+<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScMOk9oN7keYHoEAtNpi6XuQNR3GYz70Vo1SoKJ_A2PuYXEKg/formResponse" method="post" target="hidden_iframe">
+<!--layout="overlay-center"-->
 <div class="cr-section cr-column-screen overlay-center">
 <div class="narrative-col">
 <section id="a-poem-and-a-painting" class="level1 narrative trigger">
 <h1 class="narrative">A Poem (and a Painting)</h1>
 </section>
+<div class="trigger">
+<div class="narrative">
+<p>before learning I would like to know who you are</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<!--
+<input placeholder="student_id" type="text" name="entry.1820192421">
+<input placeholder="room" type="text" name="entry.1071070834">
+-->
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p><input class="form-control mb-2" placeholder="student_id" type="text" name="entry.1820192421"> <input class="form-control mb-2" placeholder="room" type="text" name="entry.1071070834"></p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<!--
+</form>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+-->
+</div>
+</div>
 <div class="trigger new-trigger" data-focus-on="cr-poem">
 <div class="narrative">
-<p>I’ve been reading this short,</p>
+<p>I’ve been reading this short, <audio controls="" src="test_scrolling.m4a"><code>audio</code> element.</audio></p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-poem" data-hlz="cr-suffering">
+<div class="trigger new-trigger" data-hlz="cr-suffering" data-focus-on="cr-poem">
 <div class="narrative">
 <p>wry poem about suffering</p>
 </div>
@@ -219,12 +247,10 @@ window.Quarto = {
 <div class="sticky-col">
 <div class="sticky-col-stack">
 <div id="cr-poem" class="sticky">
-<div class="line-block"><span id="lb1-1"><span id="cr-suffering">About suffering <span class="math inline">\(f(x) = x^2\)</span></span> they were never wrong,</span><br>
-<span id="lb1-2">The Old Master: how well they understood</span><br>
-<span id="lb1-3">Its human position: how it take place</span></div>
-<audio controls="" src="test_scrolling.m4a">
-Your browser does not support the <code>audio</code> element.
-</audio>
+<div class="line-block"><span id="lb1-1">…</span><br>
+<span id="lb1-2"><span id="cr-suffering">About suffering <span class="math inline">\(f(x) = x^2\)</span></span> they were never wrong,</span><br>
+<span id="lb1-3">The Old Master: how well they understood</span><br>
+<span id="lb1-4">Its human position: how it take place</span></div>
 </div>
 </div>
 </div>
@@ -236,7 +262,7 @@ Your browser does not support the <code>audio</code> element.
 <p>today we are going to talk about monitor scree</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-pan-to="-70%,70%" data-focus-on="cr-monitor" data-scale-by="2.7">
+<div class="trigger new-trigger" data-focus-on="cr-monitor" data-pan-to="-70%,70%" data-scale-by="2.7">
 <div class="narrative">
 <p>we are looking at Q1</p>
 </div>
@@ -308,6 +334,27 @@ Your browser does not support the <code>audio</code> element.
 </div>
 </div>
 <p>hello my name is Phiriyaphong Ringrod</p>
+<p>question</p>
+<!--  <input placeholder="answer" type="text" name="entry.1739275738"> -->
+<!--
+  <select name="entry.1739275738">
+  <option value="" disabled selected>เลือกคำตอบ</option>
+  <option value="a">a</option>
+  <option value="b">b</option>
+  <option value="c">c</option>
+  <option value="d">d</option>
+</select>
+
+
+  <button type="submit">Submit</button>
+-->
+<p><select class="form-select mb-2" name="entry.1739275738"> <option value="" disabled="" selected="">เลือกคำตอบ</option> <option value="a">a</option> <option value="b">b</option> <option value="c">c</option> <option value="d">d</option> </select></p>
+<button class="btn btn-primary" type="submit">
+Submit
+</button>
+</form>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;">
+</iframe>
 
 
 
