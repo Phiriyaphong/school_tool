@@ -1,5 +1,6 @@
 ---
 #title: "Scrollytelling"
+sidebar: false
 format:
   closeread-html:
     include-in-header: 
