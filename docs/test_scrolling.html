@@ -121,12 +121,12 @@ window.Quarto = {
       <style>
         :root {
           --cr-narrative-text-color-overlay: #000000;
---cr-narrative-background-color-sidebar: FD0000;
---cr-section-background-color: #FFFEFF;
---cr-narrative-font-size: 2em;
 --cr-narrative-background-color-overlay: #FFFEFF;
 --cr-narrative-border-radius: 1px;
 --cr-narrative-text-color-sidebar: FD0000;
+--cr-narrative-background-color-sidebar: FD0000;
+--cr-narrative-font-size: 2em;
+--cr-section-background-color: #FFFEFF;
         }
       </style>
     
@@ -160,7 +160,7 @@ Before learning, I would like to know who you are.
 </div>
 <div class="trigger" style="display: flex; gap: 0.1rem;">
 <div class="narrative">
-<p><input style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;" class="form-control" name="entry.1820192421" placeholder="รหัสนักเรียน" type="text"> <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1071070834"> <option value="" disabled="" selected="">ห้องเรียน</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> </select> <input style="flex:0 2 70px; min-width:0; max-width:80px; width:70px; display:inline-block;" class="form-control" name="prem" placeholder="test" type="text"></p>
+<p><input style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;" class="form-control" name="entry.1820192421" placeholder="รหัสนักเรียน" type="text" required=""> <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1071070834" required=""> <option value="" disabled="" selected="">ห้องเรียน</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> </select></p>
 </div>
 </div>
 <div class="trigger">
@@ -213,7 +213,7 @@ Before learning, I would like to know who you are.
 <p>today we are going to talk about monitor scree</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2.7" data-pan-to="-70%,70%" data-focus-on="cr-monitor">
+<div class="trigger new-trigger" data-focus-on="cr-monitor" data-pan-to="-70%,70%" data-scale-by="2.7">
 <div class="narrative">
 <p>we are looking at Q1</p>
 </div>
@@ -299,7 +299,7 @@ Before learning, I would like to know who you are.
 
   <button type="submit">Submit</button>
 -->
-<p><select class="form-select mb-2" name="entry.1739275738"> <option value="" disabled="" selected="">เลือกคำตอบ</option> <option value="a">a</option> <option value="b">b</option> <option value="c">c</option> <option value="d">d</option> </select></p>
+<p><select class="form-select mb-2" name="entry.1739275738" required=""> <option value="" disabled="" selected="">เลือกคำตอบ</option> <option value="a">a</option> <option value="b">b</option> <option value="c">c</option> <option value="d">d</option> </select></p>
 <button class="btn btn-primary" type="submit">
 Submit
 </button>

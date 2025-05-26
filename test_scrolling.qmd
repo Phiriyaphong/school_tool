@@ -47,14 +47,16 @@ Before learning, I would like to know who you are. <div style="display: flex; ga
     class="form-control"
     name="entry.1820192421"
     placeholder="รหัสนักเรียน"
-    type="text">
-  <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1071070834">
+    type="text"
+    required>
+  <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1071070834"
+  required>
     <option value="" disabled selected>ห้องเรียน</option>
     <option value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
   </select>
-  <input style="flex:0 2 70px; min-width:0; max-width:80px; width:70px; display:inline-block;" class="form-control" name="prem" placeholder="test" type="text">
+  
 </div>
 
 <!--
@@ -173,7 +175,7 @@ question
   <button type="submit">Submit</button>
 -->
 
-<select class="form-select mb-2" name="entry.1739275738">
+<select class="form-select mb-2" name="entry.1739275738" required>
   <option value="" disabled selected>เลือกคำตอบ</option>
   <option value="a">a</option>
   <option value="b">b</option>
