@@ -106,7 +106,7 @@ $2$ คู่กับ $20$ @cr-diagram2
 
 $3$ คู่กับ $30$ @cr-diagram3
 
-$3$ คู่กับ $40$ @cr-diagram4
+$4$ คู่กับ $40$ @cr-diagram4
 
 
 
@@ -494,7 +494,9 @@ size = 16)
 
 @cr-grid_explore เรียกจุดนี้ว่า **กราฟของคู่อันดับ**
 
-@cr-grid_point เช่น กราฟของ $(2,\ 4)$ เป็นดังรูป
+@cr-grid_point เช่น กราฟของ $(2,\ 3)$ เป็นดังรูป
+
+
 
 
 ::: {#cr-grid_point}
@@ -504,13 +506,13 @@ size = 16)
 #| fig-width: 8
 #| fig-height: 8
 grid_no_with_tick_no(xmin=-4,xmax=4,ymin=-4,ymax=4,
-size_axis_x_no=6,size_axis_y_no=6,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=1,axis_no_y=1,
 minor_grid_linewidth=0,
 x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
 theme_void()+
 theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
-geom_point(aes(x=2,y=4),size = 6, col ="red")+
-annotate("text",x=3.3,y=4,label=TeX(r"($(2, \4)$)",output="character"), parse=TRUE,
+geom_point(aes(x=2,y=3),size = 6, col ="red")+
+annotate("text",x=3.3,y=3,label=TeX(r"($(2, \3)$)",output="character"), parse=TRUE,
 family ="CMU Classical Serif",
 size = 8)
 
@@ -518,7 +520,751 @@ size = 8)
 
 :::
 
+@cr-grid_point2_line เป็นจุดที่ได้จากการลากเส้นตรงให้ตั้งฉากกับแกน $X$ ที่ตำแหน่งของ $2$ 
+
+
+::: {#cr-grid_point2_line}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no_with_tick_no(xmin=-4,xmax=4,ymin=-4,ymax=4,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=1,axis_no_y=1,
+minor_grid_linewidth=0,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=2,y=3),size = 6, col ="red")+
+annotate("text",x=3.3,y=3,label=TeX(r"($(2, \3)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_segment(x=2,y=0,xend=2,yend=4,linetype="dashed",linewidth = 1,col = "#21D15B")
+
+```
+
+:::
+
+@cr-grid_point3_line ไปตัดกับเส้นตรงที่ลากตั้งฉากกับแกน $Y$ ที่ตำแหน่งของ $3$
+
+@cr-grid_point3_line  ซึ่งจะทำให้ได้ว่าจุดนี้อยู่ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.20" required>
+<option value="" disabled selected>เลือก</option>
+<option value="จตุภาคที่ 1">ในจตุภาคที่ 1</option>
+<option value="จตุภาคที่ 2">ในจตุภาคที่ 2</option>
+<option value="จตุภาคที่ 3">ในจตุภาคที่ 3</option>
+<option value="จตุภาคที่ 4">ในจตุภาคที่ 4</option>
+<option value="แกน X">บนแกน X</option>
+<option value="แกน Y">บนแกน Y</option>
+<option value="จุดกำเนิด">ที่จุดกำเนิด</option>
+</select>
+
+::: {#cr-grid_point3_line}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no_with_tick_no(xmin=-4,xmax=4,ymin=-4,ymax=4,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=1,axis_no_y=1,
+minor_grid_linewidth=0,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+annotate("text",x=3.3,y=2.3,label=TeX(r"($(2, \3)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_segment(x=2,y=0,xend=2,yend=4,linetype="dashed",linewidth = 1,col = "#21D15B")+
+geom_segment(x=0,y=3,xend=3.5,yend=3,linetype="dashed",linewidth = 1,col = "#21D15B")+
+geom_point(aes(x=2,y=3),size = 6, col ="red")
+
+```
+
+:::
+
+@cr-grid_point2 ในทำนองเดียวกันกับกราฟของ $(-3,\ 2)$ เป็นดังรูป
+
+@cr-grid_point2 ซึ่งจะทำให้ได้ว่าจุดนี้อยู่ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.21" required>
+<option value="" disabled selected>เลือก</option>
+<option value="จตุภาคที่ 1">ในจตุภาคที่ 1</option>
+<option value="จตุภาคที่ 2">ในจตุภาคที่ 2</option>
+<option value="จตุภาคที่ 3">ในจตุภาคที่ 3</option>
+<option value="จตุภาคที่ 4">ในจตุภาคที่ 4</option>
+<option value="แกน X">บนแกน X</option>
+<option value="แกน Y">บนแกน Y</option>
+<option value="จุดกำเนิด">ที่จุดกำเนิด</option>
+</select>
+
+::: {#cr-grid_point2}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no_with_tick_no(xmin=-4,xmax=4,ymin=-4,ymax=4,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=1,axis_no_y=1,
+minor_grid_linewidth=0,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=-3,y=2),size = 6, col ="red")+
+annotate("text",x=-2,y=2.5,label=TeX(r"($(-3, \2)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)
+
+```
+
+:::
+
+แต่สำหรับกราฟที่มีจุดอยู่ในตำแหน่ง เช่น 
+
+@cr-grid_point_on_axis $(-2,0)$ "จุด $(-2,0)$"
+
+@cr-grid_point_on_axis $(0,3)$ "จุด $(0,3)$"
+
+@cr-grid_point_on_axis หรือ $(0,0)$ "จุด $(0,0)$"
+
+@cr-grid_point_on_axis เราถือว่าจุดนั้นไม่อยู่ในจตุภาคใด ๆ 
+
+::: {#cr-grid_point_on_axis}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no_with_tick_no(xmin=-4,xmax=4,ymin=-4,ymax=4,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=1,axis_no_y=1,
+minor_grid_linewidth=0,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=-2,y=0),size = 6, col ="red")+
+annotate("text",x=-2,y=0.5,label=TeX(r"($(-2, \0)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 5)+
+geom_point(aes(x=0,y=3),size = 6, col ="red")+
+annotate("text",x=1,y=3,label=TeX(r"($(0, \3)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 5)+
+geom_point(aes(x=0,y=0),size = 6, col ="red")+
+annotate("text",x=1,y=0.5,label=TeX(r"($(0, \0)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 5)
+
+```
+
+:::
+
+@cr-grid_point_on_axis1 โดยที่ จุด $(-2,\ 0)$ อยู่ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.22" required>
+<option value="" disabled selected>เลือก</option>
+<option value="จตุภาคที่ 1">ในจตุภาคที่ 1</option>
+<option value="จตุภาคที่ 2">ในจตุภาคที่ 2</option>
+<option value="จตุภาคที่ 3">ในจตุภาคที่ 3</option>
+<option value="จตุภาคที่ 4">ในจตุภาคที่ 4</option>
+<option value="แกน X">บนแกน X</option>
+<option value="แกน Y">บนแกน Y</option>
+<option value="จุดกำเนิด">ที่จุดกำเนิด</option>
+</select>
+
+
+::: {#cr-grid_point_on_axis1}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no_with_tick_no(xmin=-4,xmax=4,ymin=-4,ymax=4,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=1,axis_no_y=1,
+minor_grid_linewidth=0,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=-2,y=0),size = 12, col ="#21D15B")+
+annotate("text",x=-2,y=0.5,label=TeX(r"($(-2, \0)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 5)+
+geom_point(aes(x=0,y=3),size = 6, col ="red")+
+annotate("text",x=1,y=3,label=TeX(r"($(0, \3)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 5)+
+geom_point(aes(x=0,y=0),size = 6, col ="red")+
+annotate("text",x=1,y=0.5,label=TeX(r"($(0, \0)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 5)
+
+```
+
+:::
+
+@cr-grid_point_on_axis2 จุด $(0,\ 3)$ อยู่ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.23" required>
+<option value="" disabled selected>เลือก</option>
+<option value="จตุภาคที่ 1">ในจตุภาคที่ 1</option>
+<option value="จตุภาคที่ 2">ในจตุภาคที่ 2</option>
+<option value="จตุภาคที่ 3">ในจตุภาคที่ 3</option>
+<option value="จตุภาคที่ 4">ในจตุภาคที่ 4</option>
+<option value="แกน X">บนแกน X</option>
+<option value="แกน Y">บนแกน Y</option>
+<option value="จุดกำเนิด">ที่จุดกำเนิด</option>
+</select>
+
+
+::: {#cr-grid_point_on_axis2}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no_with_tick_no(xmin=-4,xmax=4,ymin=-4,ymax=4,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=1,axis_no_y=1,
+minor_grid_linewidth=0,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=-2,y=0),size = 6, col ="red")+
+annotate("text",x=-2,y=0.5,label=TeX(r"($(-2, \0)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 5)+
+geom_point(aes(x=0,y=3),size = 12, col ="#21D15B")+
+annotate("text",x=1,y=3,label=TeX(r"($(0, \3)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 5)+
+geom_point(aes(x=0,y=0),size = 6, col ="red")+
+annotate("text",x=1,y=0.5,label=TeX(r"($(0, \0)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 5)
+
+```
+
+:::
+
+
+@cr-grid_point_on_axis3 และ จุด $(0,\ 0)$ อยู่ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.24" required>
+<option value="" disabled selected>เลือก</option>
+<option value="จตุภาคที่ 1">ในจตุภาคที่ 1</option>
+<option value="จตุภาคที่ 2">ในจตุภาคที่ 2</option>
+<option value="จตุภาคที่ 3">ในจตุภาคที่ 3</option>
+<option value="จตุภาคที่ 4">ในจตุภาคที่ 4</option>
+<option value="แกน X">บนแกน X</option>
+<option value="แกน Y">บนแกน Y</option>
+<option value="จุดกำเนิด">ที่จุดกำเนิด</option>
+</select>
+
+
+::: {#cr-grid_point_on_axis3}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no_with_tick_no(xmin=-4,xmax=4,ymin=-4,ymax=4,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=1,axis_no_y=1,
+minor_grid_linewidth=0,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=-2,y=0),size = 6, col ="red")+
+annotate("text",x=-2,y=0.5,label=TeX(r"($(-2, \0)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 5)+
+geom_point(aes(x=0,y=3),size = 6, col ="red")+
+annotate("text",x=1,y=3,label=TeX(r"($(0, \3)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 5)+
+geom_point(aes(x=0,y=0),size = 12, col ="#21D15B")+
+annotate("text",x=1,y=0.5,label=TeX(r"($(0, \0)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 5)
+
+```
+
+:::
+
+บางครั้งเรามีการตั้งชื่อจุดให้กับกราฟของคู่อันดับ
+
+@cr-grid_point2_1 เช่น จุด $P$ เป็นจุดหนึ่งบนระนาบที่เป็นกราฟของ $(-3, 2)$
+
+เราจะบอกว่า จุด $P$ มีพิกัดคือ $(-3, 2)$
+
+อาจเขียนแทนด้วย $P(-3, 2)$ 
+
+ซึ่งกราฟของจุด $P$ อาจเขียนได้ ดังนี้
+
+@cr-grid_point2_2 หรือ 
+
+::: {#cr-grid_point2_1}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no_with_tick_no(xmin=-4,xmax=4,ymin=-4,ymax=4,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=1,axis_no_y=1,
+minor_grid_linewidth=0,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=-3,y=2),size = 6, col ="red")+
+annotate("text",x=-2,y=2.5,label=TeX(r"($(-3, \2)$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)
+
+```
+
+:::
+
+::: {#cr-grid_point2_2}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no_with_tick_no(xmin=-4,xmax=4,ymin=-4,ymax=4,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=1,axis_no_y=1,
+minor_grid_linewidth=0,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=-3,y=2),size = 6, col ="red")+
+annotate("text",x=-2.5,y=2.5,label=TeX(r"($P$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)
+
+```
+
+:::
+
+@cr-grid_point3 ดังนั้น เมื่อกำหนดจุดบนระนาบมาให้
+
+@cr-grid_point3 เราจึงสามารถหาพิกัดของจุดนั้นได้ด้วย
+
+
+::: {#cr-grid_point3}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no(xmin=-7,xmax=7,ymin=-7,ymax=7,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=2,axis_no_y=2,
+minor_grid_linewidth=0.1,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=4,y=5),size = 4, col ="red")+
+annotate("text",x=4.5,y=5,label=TeX(r"($A$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=0,y=-1),size = 4, col ="red")+
+annotate("text",x=0.5,y=-1,label=TeX(r"($B$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-4,y=0),size = 4, col ="red")+
+annotate("text",x=-4,y=1.5,label=TeX(r"($C$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=5,y=-3),size = 4, col ="red")+
+annotate("text",x=5.5,y=-3,label=TeX(r"($D$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-6,y=-2),size = 4, col ="red")+
+annotate("text",x=-6.5,y=-2,label=TeX(r"($E$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-1,y=5),size = 4, col ="red")+
+annotate("text",x=-0.5,y=5,label=TeX(r"($F$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)
+
+```
+
+:::
+
+@cr-grid_point3_A เช่น จุด $A$ มีพิกัด คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.26" required>
+<option value="" disabled selected>เลือก</option>
+<option value="(4,5)">(4,5)</option>
+<option value="(5,4)">(5,4)</option>
+<option value="(-1,0)">(-1,0)</option>
+<option value="(0,-1)">(0,-1)</option>
+<option value="(-4,0)">(-4,0)</option>
+<option value="(0,-4)">(0,-4)</option>
+<option value="(-3,5)">(-3,5)</option>
+<option value="(5,-3)">(5,-3)</option>
+<option value="(-6,-2)">(-6,-2)</option>
+<option value="(-2,-6)">(-2,-6)</option>
+<option value="(-1,5)">(-1,5)</option>
+<option value="(5,-1)">(5,-1)</option>
+</select>
+
+
+::: {#cr-grid_point3_A}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no(xmin=-7,xmax=7,ymin=-7,ymax=7,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=2,axis_no_y=2,
+minor_grid_linewidth=0.1,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=4,y=5),size = 10, col ="#21D15B")+
+annotate("text",x=4.5,y=5,label=TeX(r"($A$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=0,y=-1),size = 4, col ="red")+
+annotate("text",x=0.5,y=-1,label=TeX(r"($B$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-4,y=0),size = 4, col ="red")+
+annotate("text",x=-4,y=1.5,label=TeX(r"($C$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=5,y=-3),size = 4, col ="red")+
+annotate("text",x=5.5,y=-3,label=TeX(r"($D$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-6,y=-2),size = 4, col ="red")+
+annotate("text",x=-6.5,y=-2,label=TeX(r"($E$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-1,y=5),size = 4, col ="red")+
+annotate("text",x=-0.5,y=5,label=TeX(r"($F$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)
+
+```
+
+:::
+
+@cr-grid_point3_B เช่น จุด $B$ มีพิกัด คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.27" required>
+<option value="" disabled selected>เลือก</option>
+<option value="(4,5)">(4,5)</option>
+<option value="(5,4)">(5,4)</option>
+<option value="(-1,0)">(-1,0)</option>
+<option value="(0,-1)">(0,-1)</option>
+<option value="(-4,0)">(-4,0)</option>
+<option value="(0,-4)">(0,-4)</option>
+<option value="(-3,5)">(-3,5)</option>
+<option value="(5,-3)">(5,-3)</option>
+<option value="(-6,-2)">(-6,-2)</option>
+<option value="(-2,-6)">(-2,-6)</option>
+<option value="(-1,5)">(-1,5)</option>
+<option value="(5,-1)">(5,-1)</option>
+</select>
+
+
+::: {#cr-grid_point3_B}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no(xmin=-7,xmax=7,ymin=-7,ymax=7,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=2,axis_no_y=2,
+minor_grid_linewidth=0.1,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=4,y=5),size = 4, col ="red")+
+annotate("text",x=4.5,y=5,label=TeX(r"($A$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=0,y=-1),size = 10, col ="#21D15B")+
+annotate("text",x=0.5,y=-1,label=TeX(r"($B$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-4,y=0),size = 4, col ="red")+
+annotate("text",x=-4,y=1.5,label=TeX(r"($C$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=5,y=-3),size = 4, col ="red")+
+annotate("text",x=5.5,y=-3,label=TeX(r"($D$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-6,y=-2),size = 4, col ="red")+
+annotate("text",x=-6.5,y=-2,label=TeX(r"($E$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-1,y=5),size = 4, col ="red")+
+annotate("text",x=-0.5,y=5,label=TeX(r"($F$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)
+
+```
+
+:::
+
+
+@cr-grid_point3_C เช่น จุด $C$ มีพิกัด คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.28" required>
+<option value="" disabled selected>เลือก</option>
+<option value="(4,5)">(4,5)</option>
+<option value="(5,4)">(5,4)</option>
+<option value="(-1,0)">(-1,0)</option>
+<option value="(0,-1)">(0,-1)</option>
+<option value="(-4,0)">(-4,0)</option>
+<option value="(0,-4)">(0,-4)</option>
+<option value="(-3,5)">(-3,5)</option>
+<option value="(5,-3)">(5,-3)</option>
+<option value="(-6,-2)">(-6,-2)</option>
+<option value="(-2,-6)">(-2,-6)</option>
+<option value="(-1,5)">(-1,5)</option>
+<option value="(5,-1)">(5,-1)</option>
+</select>
+
+
+::: {#cr-grid_point3_C}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no(xmin=-7,xmax=7,ymin=-7,ymax=7,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=2,axis_no_y=2,
+minor_grid_linewidth=0.1,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=4,y=5),size = 4, col ="red")+
+annotate("text",x=4.5,y=5,label=TeX(r"($A$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=0,y=-1),size = 4, col ="red")+
+annotate("text",x=0.5,y=-1,label=TeX(r"($B$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-4,y=0),size = 10, col ="#21D15B")+
+annotate("text",x=-4,y=1.5,label=TeX(r"($C$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=5,y=-3),size = 4, col ="red")+
+annotate("text",x=5.5,y=-3,label=TeX(r"($D$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-6,y=-2),size = 4, col ="red")+
+annotate("text",x=-6.5,y=-2,label=TeX(r"($E$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-1,y=5),size = 4, col ="red")+
+annotate("text",x=-0.5,y=5,label=TeX(r"($F$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)
+
+```
+
+:::
+
+
+@cr-grid_point3_D เช่น จุด $D$ มีพิกัด คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.29" required>
+<option value="" disabled selected>เลือก</option>
+<option value="(4,5)">(4,5)</option>
+<option value="(5,4)">(5,4)</option>
+<option value="(-1,0)">(-1,0)</option>
+<option value="(0,-1)">(0,-1)</option>
+<option value="(-4,0)">(-4,0)</option>
+<option value="(0,-4)">(0,-4)</option>
+<option value="(-3,5)">(-3,5)</option>
+<option value="(5,-3)">(5,-3)</option>
+<option value="(-6,-2)">(-6,-2)</option>
+<option value="(-2,-6)">(-2,-6)</option>
+<option value="(-1,5)">(-1,5)</option>
+<option value="(5,-1)">(5,-1)</option>
+</select>
+
+
+::: {#cr-grid_point3_D}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no(xmin=-7,xmax=7,ymin=-7,ymax=7,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=2,axis_no_y=2,
+minor_grid_linewidth=0.1,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=4,y=5),size = 4, col ="red")+
+annotate("text",x=4.5,y=5,label=TeX(r"($A$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=0,y=-1),size = 4, col ="red")+
+annotate("text",x=0.5,y=-1,label=TeX(r"($B$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-4,y=0),size = 4, col ="red")+
+annotate("text",x=-4,y=1.5,label=TeX(r"($C$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=5,y=-3),size = 10, col ="#21D15B")+
+annotate("text",x=5.5,y=-3,label=TeX(r"($D$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-6,y=-2),size = 4, col ="red")+
+annotate("text",x=-6.5,y=-2,label=TeX(r"($E$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-1,y=5),size = 4, col ="red")+
+annotate("text",x=-0.5,y=5,label=TeX(r"($F$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)
+
+```
+
+:::
+
+
+@cr-grid_point3_E เช่น จุด $E$ มีพิกัด คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.30" required>
+<option value="" disabled selected>เลือก</option>
+<option value="(4,5)">(4,5)</option>
+<option value="(5,4)">(5,4)</option>
+<option value="(-1,0)">(-1,0)</option>
+<option value="(0,-1)">(0,-1)</option>
+<option value="(-4,0)">(-4,0)</option>
+<option value="(0,-4)">(0,-4)</option>
+<option value="(-3,5)">(-3,5)</option>
+<option value="(5,-3)">(5,-3)</option>
+<option value="(-6,-2)">(-6,-2)</option>
+<option value="(-2,-6)">(-2,-6)</option>
+<option value="(-1,5)">(-1,5)</option>
+<option value="(5,-1)">(5,-1)</option>
+</select>
+
+
+::: {#cr-grid_point3_E}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no(xmin=-7,xmax=7,ymin=-7,ymax=7,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=2,axis_no_y=2,
+minor_grid_linewidth=0.1,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=4,y=5),size = 4, col ="red")+
+annotate("text",x=4.5,y=5,label=TeX(r"($A$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=0,y=-1),size = 4, col ="red")+
+annotate("text",x=0.5,y=-1,label=TeX(r"($B$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-4,y=0),size = 4, col ="red")+
+annotate("text",x=-4,y=1.5,label=TeX(r"($C$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=5,y=-3),size = 4, col ="red")+
+annotate("text",x=5.5,y=-3,label=TeX(r"($D$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-6,y=-2),size = 10, col ="#21D15B")+
+annotate("text",x=-6.5,y=-2,label=TeX(r"($E$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-1,y=5),size = 4, col ="red")+
+annotate("text",x=-0.5,y=5,label=TeX(r"($F$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)
+
+```
+
+:::
+
+
+@cr-grid_point3_F เช่น จุด $F$ มีพิกัด คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.31" required>
+<option value="" disabled selected>เลือก</option>
+<option value="(4,5)">(4,5)</option>
+<option value="(5,4)">(5,4)</option>
+<option value="(-1,0)">(-1,0)</option>
+<option value="(0,-1)">(0,-1)</option>
+<option value="(-4,0)">(-4,0)</option>
+<option value="(0,-4)">(0,-4)</option>
+<option value="(-3,5)">(-3,5)</option>
+<option value="(5,-3)">(5,-3)</option>
+<option value="(-6,-2)">(-6,-2)</option>
+<option value="(-2,-6)">(-2,-6)</option>
+<option value="(-1,5)">(-1,5)</option>
+<option value="(5,-1)">(5,-1)</option>
+</select>
+
+
+::: {#cr-grid_point3_F}
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-height: 8
+grid_no(xmin=-7,xmax=7,ymin=-7,ymax=7,
+size_axis_x_no=6,size_axis_y_no=6,axis_no_x=2,axis_no_y=2,
+minor_grid_linewidth=0.1,
+x_axis_label_size=8,y_axis_label_size=8,family="CMU Classical Serif")+
+theme_void()+
+theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))+
+geom_point(aes(x=4,y=5),size = 4, col ="red")+
+annotate("text",x=4.5,y=5,label=TeX(r"($A$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=0,y=-1),size = 4, col ="red")+
+annotate("text",x=0.5,y=-1,label=TeX(r"($B$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-4,y=0),size = 4, col ="red")+
+annotate("text",x=-4,y=1.5,label=TeX(r"($C$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=5,y=-3),size = 4, col ="red")+
+annotate("text",x=5.5,y=-3,label=TeX(r"($D$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-6,y=-2),size = 4, col ="red")+
+annotate("text",x=-6.5,y=-2,label=TeX(r"($E$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)+
+geom_point(aes(x=-1,y=5),size = 10, col ="#21D15B")+
+annotate("text",x=-0.5,y=5,label=TeX(r"($F$)",output="character"), parse=TRUE,
+family ="CMU Classical Serif",
+size = 8)
+
+```
+
+:::
+
+@cr-relation_intro_end_fig จากการทบทวนเรื่องกราฟและความสัมพันธ์ในครั้งนี้
+
+@cr-relation_intro_end_fig อาจารย์หวังว่าเนื้อหาที่ได้เรียนไปจะช่วยให้นักเรียนเข้าใจและเห็นภาพชัดเจนมากยิ่งขึ้น
+
+@cr-relation_intro_end_fig อย่าลืมติดตามบทเรียนถัดไปด้วยนะครับ 
+
+::: {#cr-relation_intro_end_fig}
+
+![](images/relation_intro_end.png)
+
+:::
+
+
+
 ::::
+
+
+<div id="submit-message" style="display:none; color:blue; font-weight:bold; margin-top:1em;">
+  เราได้บันทึกข้อความของคุณไว้แล้ว
+  
+  นักเรียนสามารถกดที่ tab scrolling telling เพื่อส่งคำตอบเพิ่มเติมได้
+</div>
+
+
+<script>
+  // เมื่อฟอร์มถูก submit
+  document.getElementById('myForm').onsubmit = function() {
+    // ซ่อนฟอร์ม
+    document.getElementById('myForm').style.display = 'none';
+    // แสดงข้อความ
+    document.getElementById('submit-message').style.display = 'block';
+    // ยังให้ฟอร์มส่งข้อมูลไป Google Form ตามปกติ
+    return true;
+  };
+</script>
 
 
 
