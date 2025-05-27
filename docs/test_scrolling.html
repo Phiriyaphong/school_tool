@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>test_scrolling – school_tool</title>
+<title>กราฟและความสัมพันธ์เชิงเส้น – school_tool</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,6 +71,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun&amp;display=swap" rel="stylesheet">
 <meta cr-debug-mode="false">
 <meta cr-remove-header-space="false">
 
@@ -105,6 +108,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/qmd-lab/closeread/closeread.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="quarto-light">
@@ -116,196 +120,963 @@ window.Quarto = {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li><li class="breadcrumb-item"><a href="./test_scrolling.html">scrolling telling</a></li></ol></nav><h1 class="narrative title display-7">A Poem (and a Painting)</h1></header>
+<main class="content column-page" id="quarto-document-content">
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-section-background-color: #FFFEFF;
+          --cr-narrative-border-radius: 3px;
 --cr-narrative-background-color-overlay: #FFFEFF;
---cr-narrative-font-size: 2em;
+--cr-narrative-background-color-sidebar: #D5D8DC;
+--cr-section-background-color: #FFFEFF;
+--cr-narrative-text-color-sidebar: #000000;
 --cr-narrative-text-color-overlay: #000000;
---cr-narrative-text-color-sidebar: FD0000;
---cr-narrative-background-color-sidebar: FD0000;
---cr-narrative-border-radius: 1px;
+--cr-narrative-font-size: 2em;
         }
       </style>
     
 
-
-
-
-<form id="myForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScMOk9oN7keYHoEAtNpi6XuQNR3GYz70Vo1SoKJ_A2PuYXEKg/formResponse" method="post" target="hidden_iframe">
-<!--
-<div style="display: flex; gap: 0.5rem;">
-  <input class="form-control" name="entry.1820192421" placeholder="รหัสนักเรียน" type="text">
-  <select class="form-select" name="entry.1071070834">
-    <option value="" disabled selected>ห้องเรียน</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-  </select>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li><li class="breadcrumb-item"><a href="./test_scrolling.html">scrolling telling</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">กราฟและความสัมพันธ์เชิงเส้น</h1>
 </div>
 
--->
-<!--layout="overlay-center"-->
-<div class="cr-section cr-column-screen overlay-center">
-<div class="narrative-col">
-<section id="a-poem-and-a-painting" class="level1 narrative trigger">
 
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<style>
+            body {
+              font-family: 'Sarabun', sans-serif;
+            }
+
+            h1 {
+              font-family: 'Sarabun', sans-serif;
+            }
+          </style>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<section id="คอนดบและกราฟ" class="level1 narrative trigger">
+<h1 class="narrative">คู่อันดับและกราฟ</h1>
 </section>
 <div class="trigger">
 <div class="narrative">
-Before learning, I would like to know who you are.
+<form id="myForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfpVJ4b_HKboLHrkqxB3BhOZGO3Nylcfm1JL7meknH_rpjJ6A/formResponse" method="post" target="hidden_iframe">
+</form></div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>วันนี้เราจะมาทบทวนเรื่องคู่อันและกราฟ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>โดยก่อนที่เราจะเริ่มทบทวนบทเรียนกันในวันนี้</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>อาจารย์อยากทราบข้อมูลส่วนตัวของนักเรียนสักหน่อย</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>รหัสนักเรียน <input style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;" class="form-control" name="entry.1066291048" placeholder="6 ตัวท้าย" type="text" required=""></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>เป็นนักเรียน ม.<span class="math inline">\(2\)</span> ห้อง<select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1627216010" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option> <option value="6">6</option> <option value="7">7</option> <option value="8">8</option> <option value="9">9</option> <option value="10">10</option> <option value="11">11</option> <option value="12">12</option> <option value="13">13</option> <option value="14">14</option> <option value="15">15</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>คำนำหน้าชื่อ<select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.0.3" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="เด็กชาย">เด็กชาย</option> <option value="เด็กหญิง">เด็กหญิง</option> <option value="นาย">นาย</option> <option value="นางสาว">นางสาว</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>ชื่อ - นามสกุล</p>
 </div>
 </div>
 <div class="trigger" style="display: flex; gap: 0.1rem;">
 <div class="narrative">
-<p><input style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;" class="form-control" name="entry.1820192421" placeholder="รหัสนักเรียน" type="text" required=""> <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1071070834" required=""> <option value="" disabled="" selected="">ห้องเรียน</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> </select></p>
+<p><input style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;" class="form-control" name="entry.0.4" placeholder="ชื่อ" type="text" required=""> <input style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;" class="form-control" name="entry.0.5" placeholder="นามสกุล" type="text" required=""></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>เรามาเริ่มกันเลยดีกว่า</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-intro_fig">
+<div class="narrative">
+<p>ในชีวิตประจำวันเราพบสิ่งที่มีความเกี่ยวข้องกันอยู่เสมอ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-intro_fig">
+<div class="narrative">
+<p>เช่น สินค้ากับราคาสินค้า ดังสถานการณ์ต่อไปนี้</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-intro_fig">
+<div class="narrative">
+<p>ในวันสถาปนาโรงเรียนแห่งหนึ่ง นักเรียนชั้น ม.1 กับจุ๊บแจง ช่วยกันเปิดร้านขายลูกชิ้นปิ้ง โดยตกลงจะขายในราคาไม้ละ <span class="math inline">\(10\)</span> บาท</p>
 </div>
 </div>
 <div class="trigger">
 <div class="narrative">
-<!--
-<input placeholder="student_id" type="text" name="entry.1820192421">
-<input placeholder="room" type="text" name="entry.1071070834">
--->
+<p>จุ๊บแจงจึงเขียนตารางแสดง</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-table1">
+<div class="narrative">
+<p>จำนวนลูกชิ้นเป็นไม้ และราคาเป็นบาท ได้ดังนี้</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="2.5" data-pan-to="-70%,-70%" data-focus-on="cr-table1">
+<div class="narrative">
+<p>แต่จากราคาที่จุ๊บแจงเขียนมีอยู่ช่องหนึ่งที่ไม่ทราบว่าราคาเท่าใด</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-table1">
+<div class="narrative">
+<p>นักเรียนช่วยจุ๊บแจงเติมตารางให้สมบูรณ์หน่อยนะ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-table1">
+<div class="narrative">
+<p>ค่าของ ❓ คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="35">\(35\)</option> <option value="40">\(40\)</option> <option value="45">\(45\)</option> <option value="50">\(50\)</option> </select></p>
 </div>
 </div>
 <div class="trigger">
 <div class="narrative">
-<!--
-</form>
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
--->
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-poem">
-<div class="narrative">
-<p>I’ve been reading this short, <audio controls="" src="test_scrolling.m4a"><code>audio</code> element.</audio></p>
-</div>
-</div>
-<div class="trigger new-trigger" data-hlz="cr-suffering" data-focus-on="cr-poem">
-<div class="narrative">
-<p>wry poem about suffering</p>
+<p>ตารางข้างต้นนี้ แสดงความสัมพันธ์ระหว่างปริมาณสองปริมาณ คือ</p>
 </div>
 </div>
 <div class="trigger">
 <div class="narrative">
-<p>No matter how familiar a poem is</p>
+<p>จำนวนลูกชิ้นปิ้งกับราคาขาย</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>ซึ่งถ้าจับคู่ระหว่างจำนวนลูกชิ้นปิ้งกับราคาขาย จะได้</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="2.5" data-pan-to="0%,100%" data-focus-on="cr-table1">
+<div class="narrative">
+<p><span class="math inline">\(1\)</span> คู่กับ <span class="math inline">\(10\)</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="2.5" data-pan-to="0%,80%" data-focus-on="cr-table1">
+<div class="narrative">
+<p><span class="math inline">\(2\)</span> คู่กับ <span class="math inline">\(20\)</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="2.5" data-pan-to="0%,-80%" data-focus-on="cr-table1">
+<div class="narrative">
+<p><span class="math inline">\(3\)</span> คู่กับ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.2" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="20">\(20\)</option> <option value="30">\(30\)</option> <option value="40">\(40\)</option> <option value="50">\(50\)</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="2.5" data-pan-to="0%,-100%" data-focus-on="cr-table1">
+<div class="narrative">
+<p>และ&nbsp;<span class="math inline">\(4\)</span> คู่กับ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.3" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="20">\(20\)</option> <option value="30">\(30\)</option> <option value="40">\(40\)</option> <option value="50">\(50\)</option> </select></p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>เราอาจเขียนแผนภาพการจับคู่ระหว่างปริมาณทั้งสองได้ ดังนี้</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-diagram1">
+<div class="narrative">
+<p><span class="math inline">\(1\)</span> คู่กับ <span class="math inline">\(10\)</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-diagram2">
+<div class="narrative">
+<p><span class="math inline">\(2\)</span> คู่กับ <span class="math inline">\(20\)</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-diagram3">
+<div class="narrative">
+<p><span class="math inline">\(3\)</span> คู่กับ <span class="math inline">\(30\)</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-diagram4">
+<div class="narrative">
+<p><span class="math inline">\(4\)</span> คู่กับ <span class="math inline">\(40\)</span></p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>นอกจากนี้เรายังสามารถเขียนแสดงการจับคู่ดังกล่าวโดยใช้สัญลักษณ์ ได้เป็น</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-coor1">
+<div class="narrative">
+<p><span class="math inline">\(1\)</span> คู่กับ <span class="math inline">\(10\)</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-coor2">
+<div class="narrative">
+<p><span class="math inline">\(2\)</span> คู่กับ <span class="math inline">\(20\)</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-coor3">
+<div class="narrative">
+<p><span class="math inline">\(3\)</span> คู่กับ <span class="math inline">\(30\)</span></p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>และ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-coor4">
+<div class="narrative">
+<p><span class="math inline">\(4\)</span> คู่กับ <span class="math inline">\(40\)</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-pan-to="-80%,0%" data-focus-on="cr-coor4">
+<div class="narrative">
+<p>❓ คือคู่อันดับ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.4" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="(40,4)">\((40,\ 4)\)</option> <option value="(4,40)">\((4,\ 40)\)</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-co-ab">
+<div class="narrative">
+<p>สัญลักษณ์</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="4" data-focus-on="cr-co-ab">
+<div class="narrative">
+<p>เมื่อ <span class="math inline">\(a\)</span> และ <span class="math inline">\(b\)</span> แทนจำนวนใด ๆ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-hlz="3" data-focus-on="cr-co-ab2">
+<div class="narrative">
+<p>เรียกว่า</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-hlz="4" data-focus-on="cr-co-ab2">
+<div class="narrative">
+<p>อ่านว่า</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="5" data-pan-to="-100%,0%" data-focus-on="cr-co-ab">
+<div class="narrative">
+<p>เมื่อ <span class="math inline">\(a\)</span> คือ <strong>สมาชิกตัวที่หนึ่ง</strong> ของคู่อันดับ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="5" data-pan-to="100%,0%" data-focus-on="cr-co-ab">
+<div class="narrative">
+<p><span class="math inline">\(b\)</span> คือ <strong>สมาชิกตัวที่สอง</strong> ของคู่อันดับ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-co-ab">
+<div class="narrative">
+<p>เมื่อต้องการแสดงการจับคู่ระหว่างสมาชิกของกลุ่มสองกลุ่ม</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-co-ab">
+<div class="narrative">
+<p>จะต้องมีข้อตกลงว่า</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-co-ab">
+<div class="narrative">
+<p>สมาชิกตัวที่หนึ่งและสมาชิกตัวที่สองของคู่อันดับมาจากกลุ่มใด</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-co-ab">
+<div class="narrative">
+<p>จากตัวอย่างที่ผ่านมา</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-co-ab">
+<div class="narrative">
+<p>สมาชิกตัวที่หนึ่งของคู่อันดับมาจากกลุ่มของจำนวนลูกชิ้นปิ้ง</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-co-ab">
+<div class="narrative">
+<p>สมาชิกตัวที่สองของคู่อันดับมาจากกลุ่มของราคาขาย</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>เช่น</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="2" data-focus-on="cr-co-1-10">
+<div class="narrative">
+<p>มีความหมายว่า</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="2" data-focus-on="cr-co-1-10">
+<div class="narrative">
+<p><select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.5" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="ลูกชิ้นปิ้ง">ลูกชิ้นปิ้ง</option> <option value="ขายในราคา">ขายในราคา</option> </select> <span class="math inline">\(\ 1\ \)</span> <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.6" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="ไม้">ไม้</option> <option value="บาท">บาท</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="2" data-focus-on="cr-co-1-10">
+<div class="narrative">
+<p><select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.7" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="ลูกชิ้นปิ้ง">ลูกชิ้นปิ้ง</option> <option value="ขายในราคา">ขายในราคา</option> </select> <span class="math inline">\(\ 10\ \)</span> <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.8" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="ไม้">ไม้</option> <option value="บาท">บาท</option> </select></p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>แต่</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="2" data-focus-on="cr-co-10-1">
+<div class="narrative">
+<p>มีความหมายว่า</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="2" data-focus-on="cr-co-10-1">
+<div class="narrative">
+<p><select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.9" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="ลูกชิ้นปิ้ง">ลูกชิ้นปิ้ง</option> <option value="ขายในราคา">ขายในราคา</option> </select> <span class="math inline">\(\ 10\ \)</span> <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.10" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="ไม้">ไม้</option> <option value="บาท">บาท</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="2" data-focus-on="cr-co-10-1">
+<div class="narrative">
+<p><select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.11" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="ลูกชิ้นปิ้ง">ลูกชิ้นปิ้ง</option> <option value="ขายในราคา">ขายในราคา</option> </select> <span class="math inline">\(\ 1\ \)</span> <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.12" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="ไม้">ไม้</option> <option value="บาท">บาท</option> </select></p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>นอกจากนี้เรายังสามารถ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore">
+<div class="narrative">
+<p>เขียนแสดงความสัมพันธ์เหล่านี้ในรูปกราฟได้ด้วย</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore">
+<div class="narrative">
+<p>ในการใช้กราฟแสดงความสัมพันธ์</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore">
+<div class="narrative">
+<p>เราเขียนเส้นจำนวนในแนวนอนและแนวตั้งให้ตัดกันเป็นมุมฉากที่ตำแหน่งของจุดที่แทนศูนย์ (<span class="math inline">\(0\)</span>) บนเส้นจำนวนแต่ละเส้น</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore_origin">
+<div class="narrative">
+<p>จุดที่เส้นจำนวนทั้งสองตัดกัน เรียกว่า <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.13" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จุดศูนย์กลาง">จุดศูนย์กลาง</option> <option value="จุดยอด">จุดยอด</option> <option value="จุดกำเนิด">จุดกำเนิด</option> <option value="จุดปลาย">จุดปลาย</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore_X_axis">
+<div class="narrative">
+<p>เส้นจำนวนในแนวนอน เรียกว่า <strong>แกนนอน (horizotal axis)</strong></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore_X_axis">
+<div class="narrative">
+<p>หรือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.14" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="แกน X">แกน X</option> <option value="แกน Y">แกน Y</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore_X_axis">
+<div class="narrative">
+<p>และ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore_Y_axis">
+<div class="narrative">
+<p>เส้นจำนวนในแนวตั้ง เรียกว่า แกนตั้ง (<strong>vertical axis</strong>)</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore_Y_axis">
+<div class="narrative">
+<p>หรือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.15" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="แกน X">แกน X</option> <option value="แกน Y">แกน Y</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore">
+<div class="narrative">
+<p>แกน <span class="math inline">\(X\)</span> และแกน <span class="math inline">\(Y\)</span> อยู่บนระนาบเดียวกัน</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore_quadrant">
+<div class="narrative">
+<p>และแบ่งระนาบออกเป็นสี่ส่วน ดังนี้</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>เรียกแต่ละส่วนว่า <strong>จตุภาค (quadrant)</strong></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="-50%,50%" data-focus-on="cr-grid_explore_quadrant">
+<div class="narrative">
+<p>โดยส่วนที่ <span class="math inline">\(1\)</span> เรียกว่า <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.16" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">จตุภาคที่ 1</option> <option value="จตุภาคที่ 2">จตุภาคที่ 2</option> <option value="จตุภาคที่ 3">จตุภาคที่ 3</option> <option value="จตุภาคที่ 4">จตุภาคที่ 4</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="50%,50%" data-focus-on="cr-grid_explore_quadrant">
+<div class="narrative">
+<p>ส่วนที่ <span class="math inline">\(2\)</span> เรียกว่า <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.17" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">จตุภาคที่ 1</option> <option value="จตุภาคที่ 2">จตุภาคที่ 2</option> <option value="จตุภาคที่ 3">จตุภาคที่ 3</option> <option value="จตุภาคที่ 4">จตุภาคที่ 4</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="50%,-50%" data-focus-on="cr-grid_explore_quadrant">
+<div class="narrative">
+<p>ส่วนที่ <span class="math inline">\(3\)</span> เรียกว่า <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.18" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">จตุภาคที่ 1</option> <option value="จตุภาคที่ 2">จตุภาคที่ 2</option> <option value="จตุภาคที่ 3">จตุภาคที่ 3</option> <option value="จตุภาคที่ 4">จตุภาคที่ 4</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="-50%,-50%" data-focus-on="cr-grid_explore_quadrant">
+<div class="narrative">
+<p>และส่วนที่ <span class="math inline">\(4\)</span> เรียกว่า <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.19" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">จตุภาคที่ 1</option> <option value="จตุภาคที่ 2">จตุภาคที่ 2</option> <option value="จตุภาคที่ 3">จตุภาคที่ 3</option> <option value="จตุภาคที่ 4">จตุภาคที่ 4</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore">
+<div class="narrative">
+<p>ซึ่งระบบที่แสดงตำแหน่งของจุดต่าง ๆ นี้ เรียกว่า <strong>ระบบพิกัดฉาก (rectangular system)</strong></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore">
+<div class="narrative">
+<p>ซึ่งในระบบพิกัดฉาก เราสามารถแทนคู่อันดับแต่ละคู่อันดับด้วยจุดบนระนาบ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_explore">
+<div class="narrative">
+<p>เรียกจุดนี้ว่า <strong>กราฟของคู่อันดับ</strong></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point">
+<div class="narrative">
+<p>เช่น กราฟของ <span class="math inline">\((2,\ 3)\)</span> เป็นดังรูป</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point2_line">
+<div class="narrative">
+<p>เป็นจุดที่ได้จากการลากเส้นตรงให้ตั้งฉากกับแกน <span class="math inline">\(X\)</span> ที่ตำแหน่งของ <span class="math inline">\(2\)</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point3_line">
+<div class="narrative">
+<p>ไปตัดกับเส้นตรงที่ลากตั้งฉากกับแกน <span class="math inline">\(Y\)</span> ที่ตำแหน่งของ <span class="math inline">\(3\)</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point3_line">
+<div class="narrative">
+<p>ซึ่งจะทำให้ได้ว่าจุดนี้อยู่ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.20" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">ในจตุภาคที่ 1</option> <option value="จตุภาคที่ 2">ในจตุภาคที่ 2</option> <option value="จตุภาคที่ 3">ในจตุภาคที่ 3</option> <option value="จตุภาคที่ 4">ในจตุภาคที่ 4</option> <option value="แกน X">บนแกน X</option> <option value="แกน Y">บนแกน Y</option> <option value="จุดกำเนิด">ที่จุดกำเนิด</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point2">
+<div class="narrative">
+<p>ในทำนองเดียวกันกับกราฟของ <span class="math inline">\((-3,\ 2)\)</span> เป็นดังรูป</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point2">
+<div class="narrative">
+<p>ซึ่งจะทำให้ได้ว่าจุดนี้อยู่ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.21" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">ในจตุภาคที่ 1</option> <option value="จตุภาคที่ 2">ในจตุภาคที่ 2</option> <option value="จตุภาคที่ 3">ในจตุภาคที่ 3</option> <option value="จตุภาคที่ 4">ในจตุภาคที่ 4</option> <option value="แกน X">บนแกน X</option> <option value="แกน Y">บนแกน Y</option> <option value="จุดกำเนิด">ที่จุดกำเนิด</option> </select></p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>แต่สำหรับกราฟที่มีจุดอยู่ในตำแหน่ง เช่น</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point_on_axis">
+<div class="narrative">
+<p><span class="math inline">\((-2,0)\)</span> “จุด <span class="math inline">\((-2,0)\)</span>”</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point_on_axis">
+<div class="narrative">
+<p><span class="math inline">\((0,3)\)</span> “จุด <span class="math inline">\((0,3)\)</span>”</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point_on_axis">
+<div class="narrative">
+<p>หรือ <span class="math inline">\((0,0)\)</span> “จุด <span class="math inline">\((0,0)\)</span>”</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point_on_axis">
+<div class="narrative">
+<p>เราถือว่าจุดนั้นไม่อยู่ในจตุภาคใด ๆ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point_on_axis1">
+<div class="narrative">
+<p>โดยที่ จุด <span class="math inline">\((-2,\ 0)\)</span> อยู่ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.22" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">ในจตุภาคที่ 1</option> <option value="จตุภาคที่ 2">ในจตุภาคที่ 2</option> <option value="จตุภาคที่ 3">ในจตุภาคที่ 3</option> <option value="จตุภาคที่ 4">ในจตุภาคที่ 4</option> <option value="แกน X">บนแกน X</option> <option value="แกน Y">บนแกน Y</option> <option value="จุดกำเนิด">ที่จุดกำเนิด</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point_on_axis2">
+<div class="narrative">
+<p>จุด <span class="math inline">\((0,\ 3)\)</span> อยู่ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.23" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">ในจตุภาคที่ 1</option> <option value="จตุภาคที่ 2">ในจตุภาคที่ 2</option> <option value="จตุภาคที่ 3">ในจตุภาคที่ 3</option> <option value="จตุภาคที่ 4">ในจตุภาคที่ 4</option> <option value="แกน X">บนแกน X</option> <option value="แกน Y">บนแกน Y</option> <option value="จุดกำเนิด">ที่จุดกำเนิด</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point_on_axis3">
+<div class="narrative">
+<p>และ จุด <span class="math inline">\((0,\ 0)\)</span> อยู่ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.24" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">ในจตุภาคที่ 1</option> <option value="จตุภาคที่ 2">ในจตุภาคที่ 2</option> <option value="จตุภาคที่ 3">ในจตุภาคที่ 3</option> <option value="จตุภาคที่ 4">ในจตุภาคที่ 4</option> <option value="แกน X">บนแกน X</option> <option value="แกน Y">บนแกน Y</option> <option value="จุดกำเนิด">ที่จุดกำเนิด</option> </select></p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>บางครั้งเรามีการตั้งชื่อจุดให้กับกราฟของคู่อันดับ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point2_1">
+<div class="narrative">
+<p>เช่น จุด <span class="math inline">\(P\)</span> เป็นจุดหนึ่งบนระนาบที่เป็นกราฟของ <span class="math inline">\((-3, 2)\)</span></p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>เราจะบอกว่า จุด <span class="math inline">\(P\)</span> มีพิกัดคือ <span class="math inline">\((-3, 2)\)</span></p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>อาจเขียนแทนด้วย <span class="math inline">\(P(-3, 2)\)</span></p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>ซึ่งกราฟของจุด <span class="math inline">\(P\)</span> อาจเขียนได้ ดังนี้</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point2_2">
+<div class="narrative">
+<p>หรือ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point3">
+<div class="narrative">
+<p>ดังนั้น เมื่อกำหนดจุดบนระนาบมาให้</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point3">
+<div class="narrative">
+<p>เราจึงสามารถหาพิกัดของจุดนั้นได้ด้วย</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point3_A">
+<div class="narrative">
+<p>เช่น จุด <span class="math inline">\(A\)</span> มีพิกัด คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.26" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="(4,5)">(4,5)</option> <option value="(5,4)">(5,4)</option> <option value="(-1,0)">(-1,0)</option> <option value="(0,-1)">(0,-1)</option> <option value="(-4,0)">(-4,0)</option> <option value="(0,-4)">(0,-4)</option> <option value="(-3,5)">(-3,5)</option> <option value="(5,-3)">(5,-3)</option> <option value="(-6,-2)">(-6,-2)</option> <option value="(-2,-6)">(-2,-6)</option> <option value="(-1,5)">(-1,5)</option> <option value="(5,-1)">(5,-1)</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point3_B">
+<div class="narrative">
+<p>จุด <span class="math inline">\(B\)</span> มีพิกัด คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.27" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="(4,5)">(4,5)</option> <option value="(5,4)">(5,4)</option> <option value="(-1,0)">(-1,0)</option> <option value="(0,-1)">(0,-1)</option> <option value="(-4,0)">(-4,0)</option> <option value="(0,-4)">(0,-4)</option> <option value="(-3,5)">(-3,5)</option> <option value="(5,-3)">(5,-3)</option> <option value="(-6,-2)">(-6,-2)</option> <option value="(-2,-6)">(-2,-6)</option> <option value="(-1,5)">(-1,5)</option> <option value="(5,-1)">(5,-1)</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point3_C">
+<div class="narrative">
+<p>จุด <span class="math inline">\(C\)</span> มีพิกัด คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.28" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="(4,5)">(4,5)</option> <option value="(5,4)">(5,4)</option> <option value="(-1,0)">(-1,0)</option> <option value="(0,-1)">(0,-1)</option> <option value="(-4,0)">(-4,0)</option> <option value="(0,-4)">(0,-4)</option> <option value="(-3,5)">(-3,5)</option> <option value="(5,-3)">(5,-3)</option> <option value="(-6,-2)">(-6,-2)</option> <option value="(-2,-6)">(-2,-6)</option> <option value="(-1,5)">(-1,5)</option> <option value="(5,-1)">(5,-1)</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point3_D">
+<div class="narrative">
+<p>จุด <span class="math inline">\(D\)</span> มีพิกัด คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.29" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="(4,5)">(4,5)</option> <option value="(5,4)">(5,4)</option> <option value="(-1,0)">(-1,0)</option> <option value="(0,-1)">(0,-1)</option> <option value="(-4,0)">(-4,0)</option> <option value="(0,-4)">(0,-4)</option> <option value="(-3,5)">(-3,5)</option> <option value="(5,-3)">(5,-3)</option> <option value="(-6,-2)">(-6,-2)</option> <option value="(-2,-6)">(-2,-6)</option> <option value="(-1,5)">(-1,5)</option> <option value="(5,-1)">(5,-1)</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point3_E">
+<div class="narrative">
+<p>จุด <span class="math inline">\(E\)</span> มีพิกัด คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.30" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="(4,5)">(4,5)</option> <option value="(5,4)">(5,4)</option> <option value="(-1,0)">(-1,0)</option> <option value="(0,-1)">(0,-1)</option> <option value="(-4,0)">(-4,0)</option> <option value="(0,-4)">(0,-4)</option> <option value="(-3,5)">(-3,5)</option> <option value="(5,-3)">(5,-3)</option> <option value="(-6,-2)">(-6,-2)</option> <option value="(-2,-6)">(-2,-6)</option> <option value="(-1,5)">(-1,5)</option> <option value="(5,-1)">(5,-1)</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-grid_point3_F">
+<div class="narrative">
+<p>จุด <span class="math inline">\(F\)</span> มีพิกัด คือ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.31" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="(4,5)">(4,5)</option> <option value="(5,4)">(5,4)</option> <option value="(-1,0)">(-1,0)</option> <option value="(0,-1)">(0,-1)</option> <option value="(-4,0)">(-4,0)</option> <option value="(0,-4)">(0,-4)</option> <option value="(-3,5)">(-3,5)</option> <option value="(5,-3)">(5,-3)</option> <option value="(-6,-2)">(-6,-2)</option> <option value="(-2,-6)">(-2,-6)</option> <option value="(-1,5)">(-1,5)</option> <option value="(5,-1)">(5,-1)</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-relation_intro_end_fig">
+<div class="narrative">
+<p>หลังจากเรียนแล้ว</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-relation_intro_end_fig">
+<div class="narrative">
+<p>ช่วยให้คะแนนตนเองด้วยนะ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-relation_intro_end_fig">
+<div class="narrative">
+<p>ถ้า <span class="math inline">\(1\)</span> คะแนน หมายถึง ยังไม่ค่อยเข้าใจ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-relation_intro_end_fig">
+<div class="narrative">
+<p>ถ้า <span class="math inline">\(5\)</span> คะแนน หมายถึง เข้าใจเป็นอย่างมาก</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p><label for="points">คะแนนที่ให้ตนเอง คือ</label> <input type="range" id="points" name="points" min="1" max="5" step="1" value="5" oninput="document.getElementById('points-value').innerText = this.value"> <span id="points-value">5</span> คะแนน</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-relation_intro_end_fig">
+<div class="narrative">
+<p>จากการทบทวนเรื่องกราฟและความสัมพันธ์ในครั้งนี้</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-relation_intro_end_fig">
+<div class="narrative">
+<p>อาจารย์หวังว่าเนื้อหาที่ได้เรียนไปจะช่วยให้นักเรียนเข้าใจและเห็นภาพชัดเจนมากยิ่งขึ้น</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-relation_intro_end_fig">
+<div class="narrative">
+<p>อย่าลืมติดตามบทเรียนถัดไปด้วยนะครับ</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+ยืนยันรหัสนักเรียน แล้วค่อยกดส่งนะ<input style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;" class="form-control" name="entry.0.1" placeholder="6 ตัวท้าย" type="text" required=""> <button class="btn btn-primary" type="submit">ส่งคำตอบ</button>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;">
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+</iframe>
 </div>
 </div>
 </div>
 <div class="sticky-col">
 <div class="sticky-col-stack">
-<div id="cr-poem" class="sticky">
+<div id="cr-teacher_talk" class="sticky">
+<p><img src="images/teacher_intro.png" class="img-fluid"></p>
+</div>
+<div id="cr-intro_fig" class="sticky">
+<p><img src="images/relation_graph_intro.png" class="img-fluid"></p>
+</div>
+<div id="cr-table1" class="sticky">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>จำนวนลูกชิ้น (ไม้)</strong></th>
+<th style="text-align: center;"><strong>ราคาขาย (บาท)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(10\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(20\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(3\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(30\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(4\)</span></td>
+<td style="text-align: center;">❓</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="cr-diagram1" class="sticky">
+<p><img src="images/diagram1_label.svg" class="img-fluid"></p>
+</div>
+<div id="cr-diagram2" class="sticky">
+<p><img src="images/diagram2_label.svg" class="img-fluid"></p>
+</div>
+<div id="cr-diagram3" class="sticky">
+<p><img src="images/diagram3_label.svg" class="img-fluid"></p>
+</div>
+<div id="cr-diagram4" class="sticky">
+<p><img src="images/diagram4_label.svg" class="img-fluid"></p>
+</div>
+<div id="cr-coor1" class="sticky">
+<p><span class="math inline">\((1,\ 10)\)</span></p>
+</div>
+<div id="cr-coor2" class="sticky">
+<p><span class="math inline">\((1,\ 10),\ (2,\ 20)\)</span></p>
+</div>
+<div id="cr-coor3" class="sticky">
+<p><span class="math inline">\((1,\ 10),\ (2,\ 20),\ (3,\ 30)\)</span></p>
+</div>
+<div id="cr-coor4" class="sticky">
+<p><span class="math inline">\((1,\ 10),\ (2,\ 20), \ (3,\ 30)\)</span> และ ❓</p>
+</div>
+<div id="cr-co-ab" class="sticky">
+<p><span class="math inline">\((a,\ b)\)</span></p>
+</div>
+<div id="cr-co-ab2" class="sticky">
 <div class="line-block"><span id="lb1-1">…</span><br>
-<span id="lb1-2"><span id="cr-suffering">About suffering <span class="math inline">\(f(x) = x^2\)</span></span> they were never wrong,</span><br>
-<span id="lb1-3">The Old Master: how well they understood</span><br>
-<span id="lb1-4">Its human position: how it take place</span></div>
+<span id="lb1-2"><span class="math inline">\((a,\ b)\)</span></span><br>
+<span id="lb1-3">คู่อันดับ (ordered pare)</span><br>
+<span id="lb1-4">“คู่อันดับ เอ บี”</span></div>
 </div>
+<div id="cr-co-1-10" class="sticky">
+<p><span class="math inline">\((1,\ 10)\)</span></p>
 </div>
+<div id="cr-co-10-1" class="sticky">
+<p><span class="math inline">\((10,\ 1)\)</span></p>
 </div>
-</div>
-<div class="cr-section cr-column-screen sidebar-left">
-<div class="narrative-col">
-<div class="trigger new-trigger" data-focus-on="cr-monitor">
-<div class="narrative">
-<p>today we are going to talk about monitor scree</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-pan-to="-70%,70%" data-focus-on="cr-monitor" data-scale-by="2.7">
-<div class="narrative">
-<p>we are looking at Q1</p>
-</div>
-</div>
-<div class="trigger">
-<div class="narrative">
-<p>the position is?</p>
-</div>
-</div>
-</div>
-<div class="sticky-col">
-<div class="sticky-col-stack">
-<div id="cr-monitor" class="sticky">
-<div class="quarto-figure quarto-figure-center">
+<div id="cr-grid_explore" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
 <figure class="figure">
-<p><img src="images/empty_grid_yo.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="768"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="cr-section cr-column-screen sidebar-right">
-<div class="narrative-col">
-<div class="progress-block">
-<div class="trigger new-trigger" data-focus-on="cr-graphic">
-<div class="narrative">
-<p>Check out our graphic</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-graphic">
-<div class="narrative">
-<p>We can keep referring to it as several triggers scroll by…</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-graphic">
-<div class="narrative">
-<p>… and have OJS code elsewhere in the document to animate it</p>
-</div>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-limerick">
-<div class="narrative">
-<p>This is the first limerick ever recorded.</p>
-</div>
-</div>
-<div class="trigger new-trigger" data-focus-on="cr-limerick">
-<div class="narrative">
-<p>This is the first limerick ever recorded again</p>
-</div>
-</div>
-</div>
-<div class="sticky-col">
-<div class="sticky-col-stack">
-<div id="cr-limerick" class="scale-to-fill sticky">
-<div class="line-block"><span id="lb2-1">There was a young rustic named <span id="cr-mallory">Mallory</span>,</span><br>
-<span id="lb2-2">who drew but a very small <span id="cr-salary">salary</span>.</span><br>
-<span id="lb2-3">&nbsp;&nbsp;When he went to the show,</span><br>
-<span id="lb2-4">&nbsp;&nbsp;his purse made him go</span><br>
-<span id="lb2-5">to a seat in the uppermost gallery.</span></div>
-</div>
-<div id="cr-graphic" class="scale-to-fill sticky">
-<p><span class="math inline">\(x+y-1=0\)</span></p>
-<p><span class="math inline">\(x+y-1=0\)</span></p>
-<p><span class="math inline">\(x+y-1=0\)</span></p>
-<p><span class="math inline">\(x+y-1=0\)</span></p>
+<div id="cr-grid_explore_origin" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
 </div>
 </div>
 </div>
 </div>
-<p>hello my name is Phiriyaphong Ringrod</p>
-<p>question</p>
-<!--  <input placeholder="answer" type="text" name="entry.1739275738"> -->
-<!--
-  <select name="entry.1739275738">
-  <option value="" disabled selected>เลือกคำตอบ</option>
-  <option value="a">a</option>
-  <option value="b">b</option>
-  <option value="c">c</option>
-  <option value="d">d</option>
-</select>
-
-
-  <button type="submit">Submit</button>
--->
-<p><select class="form-select mb-2" name="entry.1739275738" required=""> <option value="" disabled="" selected="">เลือกคำตอบ</option> <option value="a">a</option> <option value="b">b</option> <option value="c">c</option> <option value="d">d</option> </select></p>
-<button class="btn btn-primary" type="submit">
-Submit
-</button>
-</form>
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;">
-</iframe>
+<div id="cr-grid_explore_X_axis" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_explore_Y_axis" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_explore_quadrant" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point2_line" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point3_line" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point2" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point_on_axis" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point_on_axis1" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point_on_axis2" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point_on_axis3" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point2_1" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point2_2" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point3" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point3_A" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point3_B" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point3_C" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point3_D" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point3_E" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-grid_point3_F" class="sticky">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="test_scrolling_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-relation_intro_end_fig" class="sticky">
+<p><img src="images/relation_intro_end.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</div>
 <div id="submit-message" style="display:none; color:blue; font-weight:bold; margin-top:1em;">
 <p>เราได้บันทึกข้อความของคุณไว้แล้ว</p>
 <p>นักเรียนสามารถกดที่ tab scrolling telling เพื่อส่งคำตอบเพิ่มเติมได้</p>
