@@ -124,13 +124,13 @@ window.Quarto = {
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-narrative-text-color-overlay: #000000;
---cr-narrative-border-radius: 3px;
---cr-narrative-background-color-sidebar: #D5D8DC;
---cr-narrative-text-color-sidebar: #000000;
+          --cr-narrative-background-color-sidebar: #D5D8DC;
 --cr-narrative-background-color-overlay: #FFFEFF;
+--cr-narrative-text-color-overlay: #000000;
 --cr-section-background-color: #FFFEFF;
+--cr-narrative-border-radius: 3px;
 --cr-narrative-font-size: 2em;
+--cr-narrative-text-color-sidebar: #000000;
         }
       </style>
     
@@ -183,6 +183,36 @@ window.Quarto = {
 <p>อาจารย์อยากทราบข้อมูลส่วนตัวของนักเรียนสักหน่อย</p>
 </div>
 </div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>รหัสนักเรียน <input style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;" class="form-control" name="entry.1820192421" placeholder="6 ตัวท้าย" type="text" required=""></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>เป็นนักเรียน ม.<span class="math inline">\(2\)</span> ห้อง<select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1071070834" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="4">4</option> <option value="5">5</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>คำนำหน้าชื่อ<select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1071070834" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="เด็กชาย">เด็กชาย</option> <option value="เด็กหญิง">เด็กหญิง</option> <option value="นาย">นาย</option> <option value="นางสาว">นางสาว</option> </select></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>ชื่อ - นามสกุล</p>
+</div>
+</div>
+<div class="trigger" style="display: flex; gap: 0.1rem;">
+<div class="narrative">
+<p><input style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;" class="form-control" name="entry.1820192421" placeholder="ชื่อ" type="text" required=""> <input style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;" class="form-control" name="entry.1820192421" placeholder="นามสกุล" type="text" required=""></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-teacher_talk">
+<div class="narrative">
+<p>เรามาเริ่มกันเลยดีกว่า</p>
+</div>
+</div>
 <div class="trigger new-trigger" data-focus-on="cr-intro_fig">
 <div class="narrative">
 <p>ในชีวิตประจำวันเราพบสิ่งที่มีความเกี่ยวข้องกันอยู่เสมอ</p>
@@ -208,7 +238,7 @@ window.Quarto = {
 <p>จำนวนลูกชิ้นเป็นไม้ และราคาเป็นบาท ได้ดังนี้</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2.5" data-pan-to="-70%,-70%" data-focus-on="cr-table1">
+<div class="trigger new-trigger" data-pan-to="-70%,-70%" data-scale-by="2.5" data-focus-on="cr-table1">
 <div class="narrative">
 <p>แต่จากราคาที่จุ๊บแจงเขียนมีอยู่ช่องหนึ่งที่ไม่ทราบว่าราคาเท่าใด</p>
 </div>
@@ -238,22 +268,22 @@ window.Quarto = {
 <p>ซึ่งถ้าจับคู่ระหว่างจำนวนลูกชิ้นปิ้งกับราคาขาย จะได้</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2.5" data-pan-to="0%,100%" data-focus-on="cr-table1">
+<div class="trigger new-trigger" data-pan-to="0%,100%" data-scale-by="2.5" data-focus-on="cr-table1">
 <div class="narrative">
 <p><span class="math inline">\(1\)</span> คู่กับ <span class="math inline">\(10\)</span></p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2.5" data-pan-to="0%,80%" data-focus-on="cr-table1">
+<div class="trigger new-trigger" data-pan-to="0%,80%" data-scale-by="2.5" data-focus-on="cr-table1">
 <div class="narrative">
 <p><span class="math inline">\(2\)</span> คู่กับ <span class="math inline">\(20\)</span></p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2.5" data-pan-to="0%,-80%" data-focus-on="cr-table1">
+<div class="trigger new-trigger" data-pan-to="0%,-80%" data-scale-by="2.5" data-focus-on="cr-table1">
 <div class="narrative">
 <p><span class="math inline">\(3\)</span> คู่กับ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.2" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="20">\(20\)</option> <option value="30">\(30\)</option> <option value="40">\(40\)</option> <option value="50">\(50\)</option> </select></p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="2.5" data-pan-to="0%,-100%" data-focus-on="cr-table1">
+<div class="trigger new-trigger" data-pan-to="0%,-100%" data-scale-by="2.5" data-focus-on="cr-table1">
 <div class="narrative">
 <p>และ&nbsp;<span class="math inline">\(4\)</span> คู่กับ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.3" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="20">\(20\)</option> <option value="30">\(30\)</option> <option value="40">\(40\)</option> <option value="50">\(50\)</option> </select></p>
 </div>
@@ -313,7 +343,7 @@ window.Quarto = {
 <p><span class="math inline">\(4\)</span> คู่กับ <span class="math inline">\(40\)</span></p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="3" data-pan-to="-80%,0%" data-focus-on="cr-coor4">
+<div class="trigger new-trigger" data-pan-to="-80%,0%" data-scale-by="3" data-focus-on="cr-coor4">
 <div class="narrative">
 <p>❓ คือคู่อันดับ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.4" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="(40,4)">\((40,\ 4)\)</option> <option value="(4,40)">\((4,\ 40)\)</option> </select></p>
 </div>
@@ -338,12 +368,12 @@ window.Quarto = {
 <p>อ่านว่า</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="5" data-pan-to="-100%,0%" data-focus-on="cr-co-ab">
+<div class="trigger new-trigger" data-pan-to="-100%,0%" data-scale-by="5" data-focus-on="cr-co-ab">
 <div class="narrative">
 <p>เมื่อ <span class="math inline">\(a\)</span> คือ <strong>สมาชิกตัวที่หนึ่ง</strong> ของคู่อันดับ</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="5" data-pan-to="100%,0%" data-focus-on="cr-co-ab">
+<div class="trigger new-trigger" data-pan-to="100%,0%" data-scale-by="5" data-focus-on="cr-co-ab">
 <div class="narrative">
 <p><span class="math inline">\(b\)</span> คือ <strong>สมาชิกตัวที่สอง</strong> ของคู่อันดับ</p>
 </div>
@@ -483,22 +513,22 @@ window.Quarto = {
 <p>เรียกแต่ละส่วนว่า <strong>จตุภาค (quadrant)</strong></p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="-50%,50%" data-focus-on="cr-grid_explore_quadrant">
+<div class="trigger new-trigger" data-pan-to="-50%,50%" data-scale-by="1.5" data-focus-on="cr-grid_explore_quadrant">
 <div class="narrative">
 <p>โดยส่วนที่ <span class="math inline">\(1\)</span> เรียกว่า <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.16" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">จตุภาคที่ 1</option> <option value="จตุภาคที่ 2">จตุภาคที่ 2</option> <option value="จตุภาคที่ 3">จตุภาคที่ 3</option> <option value="จตุภาคที่ 4">จตุภาคที่ 4</option> </select></p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="50%,50%" data-focus-on="cr-grid_explore_quadrant">
+<div class="trigger new-trigger" data-pan-to="50%,50%" data-scale-by="1.5" data-focus-on="cr-grid_explore_quadrant">
 <div class="narrative">
 <p>ส่วนที่ <span class="math inline">\(2\)</span> เรียกว่า <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.17" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">จตุภาคที่ 1</option> <option value="จตุภาคที่ 2">จตุภาคที่ 2</option> <option value="จตุภาคที่ 3">จตุภาคที่ 3</option> <option value="จตุภาคที่ 4">จตุภาคที่ 4</option> </select></p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="50%,-50%" data-focus-on="cr-grid_explore_quadrant">
+<div class="trigger new-trigger" data-pan-to="50%,-50%" data-scale-by="1.5" data-focus-on="cr-grid_explore_quadrant">
 <div class="narrative">
 <p>ส่วนที่ <span class="math inline">\(3\)</span> เรียกว่า <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.18" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">จตุภาคที่ 1</option> <option value="จตุภาคที่ 2">จตุภาคที่ 2</option> <option value="จตุภาคที่ 3">จตุภาคที่ 3</option> <option value="จตุภาคที่ 4">จตุภาคที่ 4</option> </select></p>
 </div>
 </div>
-<div class="trigger new-trigger" data-scale-by="1.5" data-pan-to="-50%,-50%" data-focus-on="cr-grid_explore_quadrant">
+<div class="trigger new-trigger" data-pan-to="-50%,-50%" data-scale-by="1.5" data-focus-on="cr-grid_explore_quadrant">
 <div class="narrative">
 <p>และส่วนที่ <span class="math inline">\(4\)</span> เรียกว่า <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.19" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="จตุภาคที่ 1">จตุภาคที่ 1</option> <option value="จตุภาคที่ 2">จตุภาคที่ 2</option> <option value="จตุภาคที่ 3">จตุภาคที่ 3</option> <option value="จตุภาคที่ 4">จตุภาคที่ 4</option> </select></p>
 </div>

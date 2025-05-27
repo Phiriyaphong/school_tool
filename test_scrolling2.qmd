@@ -40,6 +40,54 @@ format:
 
 @cr-teacher_talk  อาจารย์อยากทราบข้อมูลส่วนตัวของนักเรียนสักหน่อย
 
+@cr-teacher_talk รหัสนักเรียน <input
+    style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;"
+    class="form-control"
+    name="entry.1820192421"
+    placeholder="6 ตัวท้าย"
+    type="text"
+    required> 
+
+@cr-teacher_talk เป็นนักเรียน ม.$2$ ห้อง<select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1071070834"
+  required>
+    <option value="" disabled selected>เลือก</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+
+@cr-teacher_talk คำนำหน้าชื่อ<select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1071070834"
+  required>
+    <option value="" disabled selected>เลือก</option>
+    <option value="เด็กชาย">เด็กชาย</option>
+    <option value="เด็กหญิง">เด็กหญิง</option>
+    <option value="นาย">นาย</option>
+    <option value="นางสาว">นางสาว</option>
+  </select> 
+
+@cr-teacher_talk ชื่อ - นามสกุล 
+
+<div style="display: flex; gap: 0.1rem;">
+  <input
+    style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;"
+    class="form-control"
+    name="entry.1820192421"
+    placeholder="ชื่อ"
+    type="text"
+    required>
+  <input
+    style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;"
+    class="form-control"
+    name="entry.1820192421"
+    placeholder="นามสกุล"
+    type="text"
+    required>
+</div>
+
+
+@cr-teacher_talk เรามาเริ่มกันเลยดีกว่า
 
 
 ::: {#cr-teacher_talk}
