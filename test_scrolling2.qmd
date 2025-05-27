@@ -34,6 +34,10 @@ format:
 :::: {.cr-section}
 # คู่อันดับและกราฟ
 
+<form id="myForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfpVJ4b_HKboLHrkqxB3BhOZGO3Nylcfm1JL7meknH_rpjJ6A/formResponse" method="post" target="hidden_iframe">
+
+
+
 @cr-teacher_talk วันนี้เราจะมาทบทวนเรื่องคู่อันและกราฟ
 
 @cr-teacher_talk  โดยก่อนที่เราจะเริ่มทบทวนบทเรียนกันในวันนี้
@@ -43,12 +47,12 @@ format:
 @cr-teacher_talk รหัสนักเรียน <input
     style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;"
     class="form-control"
-    name="entry.1820192421"
+    name="entry.0.1"
     placeholder="6 ตัวท้าย"
     type="text"
     required> 
 
-@cr-teacher_talk เป็นนักเรียน ม.$2$ ห้อง<select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1071070834"
+@cr-teacher_talk เป็นนักเรียน ม.$2$ ห้อง<select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.0.2"
   required>
     <option value="" disabled selected>เลือก</option>
     <option value="1">1</option>
@@ -58,7 +62,7 @@ format:
     <option value="5">5</option>
   </select>
 
-@cr-teacher_talk คำนำหน้าชื่อ<select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1071070834"
+@cr-teacher_talk คำนำหน้าชื่อ<select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.0.3"
   required>
     <option value="" disabled selected>เลือก</option>
     <option value="เด็กชาย">เด็กชาย</option>
@@ -73,14 +77,14 @@ format:
   <input
     style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;"
     class="form-control"
-    name="entry.1820192421"
+    name="entry.0.4"
     placeholder="ชื่อ"
     type="text"
     required>
   <input
     style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;"
     class="form-control"
-    name="entry.1820192421"
+    name="entry.0.5"
     placeholder="นามสกุล"
     type="text"
     required>
@@ -1300,14 +1304,22 @@ size = 8)
 @cr-relation_intro_end_fig อย่าลืมติดตามบทเรียนถัดไปด้วยนะครับ 
 
 ::: {#cr-relation_intro_end_fig}
-
 ![](images/relation_intro_end.png)
-
 :::
 
-
+<input
+    style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;"
+    class="form-control"
+    name="entry.0.1"
+    placeholder="ยืนยันรหัสนักเรียน"
+    type="text"
+    required>
+<button class="btn btn-primary" type="submit">ส่งคำตอบ</button>
+</form>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
 ::::
+
 
 
 <div id="submit-message" style="display:none; color:blue; font-weight:bold; margin-top:1em;">
