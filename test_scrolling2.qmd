@@ -3,6 +3,7 @@
 sidebar: false
 format:
   closeread-html:
+    theme: morph
     css: styles.css
     include-in-header: 
       - text: |
@@ -18,7 +19,7 @@ format:
       narrative-text-color-sidebar: "#000000"
       narrative-font-size: "2em"
       section-background-color: "#FFFEFF"
- #     section-background-color: "#F2F2F2"
+ #     section-background-color: "#000000"
       
 ---
 
@@ -1353,6 +1354,13 @@ size = 8)
 
 ::::
 
+::: {.callout-warning}
+
+ถ้ากดปุ่ม "ส่งคำตอบ" แล้วไม่มีการตอบสนอง แสดงว่ายังตอบไม่ครบ ให้กลับไปดูใหม่นะครับ
+
+
+:::
+
 
 </form>
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
@@ -1412,4 +1420,9 @@ size = 8)
 
 
 -->
+
+
+
+
+
 
