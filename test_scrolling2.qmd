@@ -17,8 +17,8 @@ format:
       narrative-background-color-sidebar: "#90D1CA"
       narrative-text-color-sidebar: "#000000"
       narrative-font-size: "2em"
- #     section-background-color: "#FFFEFF"
-      section-background-color: "#F2F2F2"
+      section-background-color: "#FFFEFF"
+ #     section-background-color: "#F2F2F2"
       
 ---
 
@@ -32,7 +32,10 @@ format:
             }
           </style>
 
+# คู่อันดับและกราฟ
+
 <form id="myForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdW_nq2BFNCjxIcdt8rYXAhfW9FmLLjSiOxOTvkqsVpajyfxA/formResponse" method="post" target="hidden_iframe">
+
 
 ::: {.callout-note icon="true"}
 ## คำชี้แจง
@@ -44,9 +47,7 @@ format:
 ขอให้สนุกกับการเรียนรู้ครับ!
 :::
 
-:::: {.cr-section}
-# คู่อันดับและกราฟ
-
+:::: {.cr-section layout="overlay-center"}
 @cr-teacher_talk วันนี้เราจะมาทบทวนเรื่องคู่อันดับและกราฟ
 
 @cr-teacher_talk  โดยก่อนที่เราจะเริ่มทบทวนบทเรียนกันในวันนี้
@@ -1378,5 +1379,37 @@ size = 8)
 </script>
 
 
+<!--ถ้าจะตั้งเวลาปิดรับฟอร์ม-->
 
+
+<!--
+
+<script>
+  // กำหนดเวลาปิดรับ (เช่น 2025-05-29 17:00:00 +07:00)
+  const closeTime = new Date("2025-05-28T13:00:00+07:00");
+
+  document.getElementById('myForm').onsubmit = function(e) {
+    const now = new Date();
+    if (now > closeTime) {
+      // ถ้าเลยเวลาปิดรับ
+      e.preventDefault(); // ไม่ให้ส่งฟอร์ม
+      document.getElementById('myForm').style.display = 'none';
+      document.getElementById('submit-message').style.display = 'block';
+      document.getElementById('submit-message').innerHTML = "ขออภัย ฟอร์มนี้ปิดรับคำตอบแล้ว";
+      return false;
+    } else {
+      // ยังไม่หมดเวลา ส่งฟอร์มตามปกติ
+      document.getElementById('myForm').style.display = 'none';
+      document.getElementById('submit-message').style.display = 'block';
+      // ข้อความที่แสดงหลังส่งฟอร์ม
+      document.getElementById('submit-message').innerHTML = "เราได้บันทึกคำตอบของคุณไว้แล้ว<br>
+      คุณสามารถกดย้อนกลับ แล้วเข้ามาที่เมนูเดิม <br>
+      เพื่อทบทวนและส่งคำตอบเพิ่มเติมได้ ";
+      return true;
+    }
+  };
+</script>
+
+
+-->
 
