@@ -364,3 +364,64 @@ viewof replay = Inputs.button("show number")
 replay ? number : md`Awaiting confirmation…`
 
 ```
+
+
+
+# sheets
+
+
+
+
+
+```{ojs}
+url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRANmfymGVndEqbW0mMToqL8OOdbuoU8JcIwi-j4LDzD5HYAvtebQtbaxxhibdRr2Pad0_WgqZp-zj-/pub?gid=482593500&single=true&output=csv"
+
+
+sheet = await d3.csv(url)
+
+sheet.filter(d=>d.รหัสนักเรียน == "27255")
+
+
+
+
+sheet.filter( function(d){
+  return d.รหัสนักเรียน == "27255"
+}).map(function(d){
+  return "คะแนนที่ได้ "+ d.score 
+})
+```
+
+
+# search stu_id
+
+```{ojs}
+// กำหนดค่าเริ่มต้นให้ search เป็น 0
+search = 0
+
+// ปุ่มค้นหา (กดแล้วค่า search จะเพิ่มขึ้น)
+viewof searchButton = Inputs.button("ค้นหา", {
+  reduce: () => search + 1 // เพิ่มค่า search ทุกครั้งที่กด
+})
+
+// Input ที่ซ่อนเมื่อกดค้นหา
+viewof stu_id = Generators.input(
+  html`<div style="display: ${search > 0 ? 'none' : 'block'}">
+    ${Inputs.text({label: "รหัสนักเรียน", placeholder: "กรอกรหัสนักเรียน"})}
+  </div>`
+)
+```
+
+
+```{ojs}
+
+sheet.filter(function(d){
+  if(search>0){
+      return d.รหัสนักเรียน == stu_id
+  } else {
+    return true
+  }
+
+})
+
+```
+

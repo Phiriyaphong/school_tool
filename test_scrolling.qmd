@@ -197,7 +197,7 @@ question
   นักเรียนสามารถกดที่ tab scrolling telling เพื่อส่งคำตอบเพิ่มเติมได้
 </div>
 
-
+<!--
 <script>
   // เมื่อฟอร์มถูก submit
   document.getElementById('myForm').onsubmit = function() {
@@ -209,4 +209,34 @@ question
     return true;
   };
 </script>
+-->
+
+
+<script>
+  // กำหนดเวลาปิดรับ (เช่น 2025-05-29 17:00:00 +07:00)
+  const closeTime = new Date("2025-05-28T13:00:00+07:00");
+
+  document.getElementById('myForm').onsubmit = function(e) {
+    const now = new Date();
+    if (now > closeTime) {
+      // ถ้าเลยเวลาปิดรับ
+      e.preventDefault(); // ไม่ให้ส่งฟอร์ม
+      document.getElementById('myForm').style.display = 'none';
+      document.getElementById('submit-message').style.display = 'block';
+      document.getElementById('submit-message').innerHTML = "ขออภัย ฟอร์มนี้ปิดรับคำตอบแล้ว";
+      return false;
+    } else {
+      // ยังไม่หมดเวลา ส่งฟอร์มตามปกติ
+      document.getElementById('myForm').style.display = 'none';
+      document.getElementById('submit-message').style.display = 'block';
+      // ข้อความที่แสดงหลังส่งฟอร์ม
+      document.getElementById('submit-message').innerHTML = "เราได้บันทึกข้อความของคุณไว้แล้ว<br>นักเรียนสามารถกดที่ tab scrolling telling เพื่อส่งคำตอบเพิ่มเติมได้";
+      return true;
+    }
+  };
+</script>
+
+
+
+
 
