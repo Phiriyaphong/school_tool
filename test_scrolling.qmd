@@ -238,5 +238,12 @@ question
 
 
 
+[<button class="btn btn-primary">ไปยังหน้า กราฟและความสัมพันธ์เชิงเส้น</button>](test_scrolling2.qmd)
+
+หรือ
+
+[ไปยังหน้า "กราฟและความสัมพันธ์เชิงเส้น"](test_scrolling2.qmd)
+
+
 
 

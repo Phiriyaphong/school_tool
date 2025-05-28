@@ -10,8 +10,8 @@ website:
       - href: index.qmd
         section: Home
         contents: 
-#          - href: test_scrolling.qmd
-#            text: scrolling telling
+          - href: test_scrolling.qmd
+            text: scrolling telling
           - href: test_scrolling2.qmd
             text: กราฟและความสัมพันธ์เชิงเส้น
           - href: first_ojs.qmd
