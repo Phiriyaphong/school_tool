@@ -14,6 +14,8 @@ website:
             text: scrolling telling
           - href: test_scrolling2.qmd
             text: กราฟและความสัมพันธ์เชิงเส้น
+          - href: test_scrolling3.qmd
+            text: กราฟ(ต่อ)
           - href: first_ojs.qmd
             text: ojs
       - href: about.qmd
