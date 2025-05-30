@@ -1610,10 +1610,56 @@ A -- จัดรูป --> B
 
 :::
 
+เช่น @cr_simplify_equation1
+
+::: {#cr_simplify_equation1}
+
+$2x-y=3$
 
 :::::
 
+สามารถจัดรูปได้ดังนี้
 
+@cr_simplify_equation2 เราต้องการให้สัมประสิทธิ์หน้าตัว $y$ เป็นบวกจึงได้
+
+::: {#cr_simplify_equation2}
+\begin{align}
+
+2x-y &= 3\\
+2x   &= 3+y\\
+
+\end{align}
+
+:::
+
+@cr_simplify_equation3 จากนั้น ต้องการให้ $y$ อยู่ตัวเดียว จึงได้
+
+::: {#cr_simplify_equation3}
+\begin{align}
+
+2x-y &= 3\\
+2x   &= 3+y\\
+2x-3   &= y\\
+
+\end{align}
+
+:::
+
+@cr_simplify_equation4 หรือบางครั้งเราเขียน 
+
+::: {#cr_simplify_equation4}
+\begin{align}
+
+2x-y &= 3\\
+2x   &= 3+y\\
+y   &= 2x-3\\
+
+\end{align}
+
+:::
+
+
+:::::
 
 
 
