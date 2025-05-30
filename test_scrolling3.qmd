@@ -1610,7 +1610,7 @@ A -- จัดรูป --> B
 
 :::
 
-เช่น @cr_simplify_equation1
+เช่น [@cr_simplify_equation1]{scale-by="3"}
 
 ::: {#cr_simplify_equation1}
 
@@ -1620,7 +1620,7 @@ $2x-y=3$
 
 สามารถจัดรูปได้ดังนี้
 
-@cr_simplify_equation2 เราต้องการให้สัมประสิทธิ์หน้าตัว $y$ เป็นบวกจึงได้
+[@cr_simplify_equation2]{scale-by="3"} เราต้องการให้สัมประสิทธิ์หน้าตัว $y$ เป็นบวกจึงได้
 
 ::: {#cr_simplify_equation2}
 \begin{align}
@@ -1632,7 +1632,7 @@ $2x-y=3$
 
 :::
 
-@cr_simplify_equation3 จากนั้น ต้องการให้ $y$ อยู่ตัวเดียว จึงได้
+[@cr_simplify_equation3]{scale-by="3"} จากนั้น ต้องการให้ $y$ อยู่ตัวเดียว จึงได้
 
 ::: {#cr_simplify_equation3}
 \begin{align}
@@ -1645,23 +1645,397 @@ $2x-y=3$
 
 :::
 
-@cr_simplify_equation4 หรือบางครั้งเราเขียน 
+[@cr_simplify_equation4]{scale-by="3"} หรือบางครั้งเราเขียน 
 
 ::: {#cr_simplify_equation4}
 \begin{align}
 
 2x-y &= 3\\
 2x   &= 3+y\\
+2x-3   &= y\\
 y   &= 2x-3\\
 
 \end{align}
 
 :::
 
+ดังนั้น [@cr_simplify_equation5]{scale-by="3"}
+
+::: {#cr_simplify_equation5}
+
+```{mermaid}
+
+flowchart TD
+A[$$2x-y=3$$]
+B[$$y=2x-3$$]
+
+A -- จัดรูปใหม่ได้เป็น --> B
+
+```
+
+:::
+
+@cr-teacher_talk2 ต่อไปเราจะทบทวนเกี่ยวกับการเขียนกราฟของสมการเชิงเส้นสองตัวแปรกัน
+
+@cr-teacher_talk2 เนื่องจากเราได้เรียนรู้เกี่ยวกับกราฟของคู่อันดับมาแล้ว
+
+@cr-teacher_talk2 อีกทั้งยังได้เรียนเกี่ยวกับกราฟของสมการเชิงเส้นสองตัวแปรแล้ว ซึ่งกราฟจะต้องเป็นเส้นตรง
+
+@cr-teacher_talk2 แบบฝึกหัดนี้จึงเป็นแบบฝึกหัดสุดท้ายที่อาจารย์อยากให้พวกเราช่วยอาจารย์นะครับ
+
+@cr-teacher_talk2 อาจารย์อยากทราบว่าจากสมการที่กำหนดให้จะมีกราฟตรงกับข้อใด
+
+::: {cr_graph_q1_draw}
+
+**ข้อที่ 1** กราฟของสมการ $y=2x+1$ ตรงกับตัวเลือกใด 
+
+:::
+
+@cr_1choice_a ตัวเลือก ก.
+
+
+::: {#cr_1choice_a}
+
+```{r}
+#| echo: false
+#| include: true
+#| class: plain
+#| warning: false
+#| fig-align: center
+#| fig-width: 4
+#| fig-height: 4
+
+
+dat_rain = data.frame(
+  day = seq(1,10,1),
+  rain = c(25,35,40,55,60,50,45,70,65,45)
+)
+
+dat_rain|>
+ggplot(aes(x=day,y=rain))+
+#geom_point(size = 2, col = "red")+
+scale_y_continuous(limits =c(-10,10),breaks =seq(-10,10,1))+
+scale_x_continuous(limits =c(-10,10),breaks =seq(-10,10,1))+
+geom_function(
+    fun = function(x){2*x+3}, 
+    xlim = c(-8, 3.5),
+    size = 1,
+    col = "steelblue",
+    arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both")
+  )+
+geom_segment(x=-9,y=0,xend=9,yend=0,
+size=0.8,
+col = "black",
+arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both")
+)+
+geom_segment(x=0,y=-9,xend=0,yend=9,
+size=0.8,
+col = "black",
+arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both")
+)+
+annotate("text",x=9.5,y=0,label="X",
+family = "CMU Classical Serif",size = 6)+
+annotate("text",x=0,y=9.5,label="Y",
+family = "CMU Classical Serif",size = 6)+
+#theme_void()+
+theme_bw()+
+theme(plot.margin = margin(t=10,b=0,l=10,r=10,unit="pt"),
+text = element_text(family="CMU Classical Serif",size = 12),
+legend.text = element_text(family="TH SarabunPSK", size = 16),
+axis.title = element_blank(),
+plot.title = element_text(
+    family = "TH SarabunPSK",  # ใส่ชื่อฟอนต์ที่ต้องการ
+    size = 16
+  ),
+  panel.grid.minor = element_blank())
+```
+
+
+:::
+
+@cr_1choice_b ตัวเลือก ข.
+
+::: {#cr_1choice_b}
+
+```{r}
+#| echo: false
+#| include: true
+#| class: plain
+#| warning: false
+#| fig-align: center
+#| fig-width: 4
+#| fig-height: 4
+
+
+dat_rain = data.frame(
+  day = seq(1,10,1),
+  rain = c(25,35,40,55,60,50,45,70,65,45)
+)
+
+dat_rain|>
+ggplot(aes(x=day,y=rain))+
+#geom_point(size = 2, col = "red")+
+scale_y_continuous(limits =c(-10,10),breaks =seq(-10,10,1))+
+scale_x_continuous(limits =c(-10,10),breaks =seq(-10,10,1))+
+geom_function(
+    fun = function(x){-2*x}, 
+    xlim = c(-6, 5),
+    size = 1,
+    col = "steelblue",
+    arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both")
+  )+
+geom_segment(x=-9,y=0,xend=9,yend=0,
+size=0.8,
+col = "black",
+arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both")
+)+
+geom_segment(x=0,y=-9,xend=0,yend=9,
+size=0.8,
+col = "black",
+arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both")
+)+
+annotate("text",x=9.5,y=0,label="X",
+family = "CMU Classical Serif",size = 6)+
+annotate("text",x=0,y=9.5,label="Y",
+family = "CMU Classical Serif",size = 6)+
+#theme_void()+
+theme_bw()+
+theme(plot.margin = margin(t=10,b=0,l=10,r=10,unit="pt"),
+text = element_text(family="CMU Classical Serif",size = 12),
+legend.text = element_text(family="TH SarabunPSK", size = 16),
+axis.title = element_blank(),
+plot.title = element_text(
+    family = "TH SarabunPSK",  # ใส่ชื่อฟอนต์ที่ต้องการ
+    size = 16
+  ),
+  panel.grid.minor = element_blank())
+
+```
+
+
+:::
+
+
+@cr_1choice_c ตัวเลือก ค.
+
+::: {#cr_1choice_c}
+
+```{r}
+#| echo: false
+#| include: true
+#| class: plain
+#| warning: false
+#| fig-align: center
+#| fig-width: 4
+#| fig-height: 4
+
+
+dat_rain = data.frame(
+  day = seq(1,10,1),
+  rain = c(25,35,40,55,60,50,45,70,65,45)
+)
+
+dat_rain|>
+ggplot(aes(x=day,y=rain))+
+#geom_point(size = 2, col = "red")+
+scale_y_continuous(limits =c(-10,10),breaks =seq(-10,10,1))+
+scale_x_continuous(limits =c(-10,10),breaks =seq(-10,10,1))+
+geom_function(
+    fun = function(x){2*x+1}, 
+    xlim = c(-6, 5),
+    size = 1,
+    col = "steelblue",
+    arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both")
+  )+
+geom_segment(x=-9,y=0,xend=9,yend=0,
+size=0.8,
+col = "black",
+arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both")
+)+
+geom_segment(x=0,y=-9,xend=0,yend=9,
+size=0.8,
+col = "black",
+arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both")
+)+
+annotate("text",x=9.5,y=0,label="X",
+family = "CMU Classical Serif",size = 6)+
+annotate("text",x=0,y=9.5,label="Y",
+family = "CMU Classical Serif",size = 6)+
+#theme_void()+
+theme_bw()+
+theme(plot.margin = margin(t=10,b=0,l=10,r=10,unit="pt"),
+text = element_text(family="CMU Classical Serif",size = 12),
+legend.text = element_text(family="TH SarabunPSK", size = 16),
+axis.title = element_blank(),
+plot.title = element_text(
+    family = "TH SarabunPSK",  # ใส่ชื่อฟอนต์ที่ต้องการ
+    size = 16
+  ),
+  panel.grid.minor = element_blank())
+
+```
+
+
+:::
+
+
+@cr_1choice_d ตัวเลือก ง.
+
+::: {#cr_1choice_d}
+
+```{r}
+#| echo: false
+#| include: true
+#| class: plain
+#| warning: false
+#| fig-align: center
+#| fig-width: 4
+#| fig-height: 4
+
+
+dat_rain = data.frame(
+  day = seq(1,10,1),
+  rain = c(25,35,40,55,60,50,45,70,65,45)
+)
+
+dat_rain|>
+ggplot(aes(x=day,y=rain))+
+#geom_point(size = 2, col = "red")+
+scale_y_continuous(limits =c(-10,10),breaks =seq(-10,10,1))+
+scale_x_continuous(limits =c(-10,10),breaks =seq(-10,10,1))+
+geom_function(
+    fun = function(x){x+1}, 
+    xlim = c(-9, 7),
+    size = 1,
+    col = "steelblue",
+    arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both")
+  )+
+geom_segment(x=-9,y=0,xend=9,yend=0,
+size=0.8,
+col = "black",
+arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both")
+)+
+geom_segment(x=0,y=-9,xend=0,yend=9,
+size=0.8,
+col = "black",
+arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both")
+)+
+annotate("text",x=9.5,y=0,label="X",
+family = "CMU Classical Serif",size = 6)+
+annotate("text",x=0,y=9.5,label="Y",
+family = "CMU Classical Serif",size = 6)+
+#theme_void()+
+theme_bw()+
+theme(plot.margin = margin(t=10,b=0,l=10,r=10,unit="pt"),
+text = element_text(family="CMU Classical Serif",size = 12),
+legend.text = element_text(family="TH SarabunPSK", size = 16),
+axis.title = element_blank(),
+plot.title = element_text(
+    family = "TH SarabunPSK",  # ใส่ชื่อฟอนต์ที่ต้องการ
+    size = 16
+  ),
+  panel.grid.minor = element_blank())
+
+```
+
+
+:::
+
+@cr-teacher_talk2 **ตอบ** <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.506245557"
+  required>
+    <option value="" disabled selected>เลือก</option>
+    <option value="ก">ก.</option>
+    <option value="ข">ข.</option>
+    <option value="ค">ค.</option>
+    <option value="ง">ง.</option>
+  </select> 
+
+
+@cr-teacher_talk2 จบบทเรียนนี้แล้ว 
+
+@cr-teacher_talk2 หวังว่าทุกคนจะเข้าใจเนื้อหาและสามารถนำความรู้ไปประยุกต์ใช้ได้จริง 
+
+@cr-teacher_talk2 หากมีข้อสงสัยหรืออยากฝึกฝนเพิ่มเติม อย่าลืมกลับมาทบทวนเนื้อหาหรือสอบถามอาจารย์ได้เสมอ
+
+@cr-teacher_talk2 สำหรับบทเรียนถัดไป เราจะได้เรียนรู้เนื้อหาที่น่าสนใจและท้าทายมากขึ้น 
+
+@cr-teacher_talk2 อย่าลืมติดตามและเตรียมตัวให้พร้อม แล้วพบกันใหม่ในบทเรียนหน้า!
+
+@cr-teacher_talk2 และสุดท้าย อยากให้นักเรียนลองประเมินตนเองดูนะครับ
+
+@cr-teacher_talk2 ว่า
+"วันนี้ฉันเข้าใจบทเรียนนี้มากน้อยแค่ไหน?"
+
+@cr-teacher_talk2 ให้คะแนนตนเองในระดับ 1-5
+
+@cr-teacher_talk2 1 = ยังไม่เข้าใจเลย
+
+@cr-teacher_talk2 3 = พอเข้าใจบ้าง
+
+@cr-teacher_talk2 5 = เข้าใจดีมากและสามารถอธิบายให้เพื่อนฟังได้
+
+@cr-teacher_talk2 การประเมินตนเองจะช่วยให้ทุกคนรู้จุดที่ควรกลับไปทบทวน และเตรียมพร้อมสำหรับบทเรียนถัดไป
+
+@cr-teacher_talk2 <label for="points">คะแนนที่ให้ตนเอง คือ</label>
+<input type="range" id="points" name="entry.1377473037" min="1" max="5" step="1" value="5" oninput="document.getElementById('points-value').innerText = this.value">
+<span id="points-value">5</span> คะแนน
+
+@cr-teacher_talk2 ยืนยันรหัสนักเรียน แล้วค่อยกดส่งนะ
+
+@cr-teacher_talk2 <input
+    style="flex:0 2 70px; min-width:0; max-width:200px; width:200px; display:inline-block;"
+    class="form-control"
+    name="entry.2050578665"
+    placeholder="เช่น 023143"
+    type="text"
+    required>
+<button class="btn btn-primary" type="submit">ส่งคำตอบ</button>
+
 
 :::::
 
+::: {.callout-warning style="font-size: 1.5em;"}
 
+ถ้ากดปุ่ม "ส่งคำตอบ" แล้วไม่มีการตอบสนอง แสดงว่ายังตอบไม่ครบ ให้กลับไปดูใหม่นะครับ
+
+
+:::
 
 
 </form>
