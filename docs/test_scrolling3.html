@@ -70,6 +70,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
 <script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
@@ -80,8 +83,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
 <link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
 <script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
-<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -136,13 +137,13 @@ window.Quarto = {
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-narrative-background-color-sidebar: #90D1CA;
---cr-narrative-background-color-overlay: #FFFBDE;
+          --cr-narrative-border-radius: 5px;
 --cr-narrative-text-color-overlay: #000000;
+--cr-narrative-text-color-sidebar: #000000;
+--cr-narrative-background-color-overlay: #FFFBDE;
+--cr-narrative-background-color-sidebar: #90D1CA;
 --cr-section-background-color: #FFFEFF;
 --cr-narrative-font-size: 2em;
---cr-narrative-text-color-sidebar: #000000;
---cr-narrative-border-radius: 5px;
         }
       </style>
     
@@ -591,16 +592,16 @@ window.Quarto = {
 <div id="cr-egg" class="sticky">
 <div class="cell plain">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-176a2da3e5fd0af275a6" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-176a2da3e5fd0af275a6">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง) <\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-273debb0b36136ced569" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-273debb0b36136ced569">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง) <\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
 <div id="cr-egg1_plot" class="sticky">
 <div class="cell plain">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-d8db69178b247631645d" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-d8db69178b247631645d">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง)<\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"rowCallback":"function(row, data, index) {\n  if(index === 0) {\n    $(row).css({'background-color': '#ffe066', 'font-weight': 'bold'});\n  }\n}","order":[],"orderClasses":false}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-fb7e1eaaeb0b2f4b92d7" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-fb7e1eaaeb0b2f4b92d7">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง)<\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"rowCallback":"function(row, data, index) {\n  if(index === 0) {\n    $(row).css({'background-color': '#ffe066', 'font-weight': 'bold'});\n  }\n}","order":[],"orderClasses":false}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
 <div>
@@ -614,8 +615,8 @@ window.Quarto = {
 <div id="cr-egg2_plot" class="sticky">
 <div class="cell plain">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-38fc8ba92f3cbc4872e1" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-38fc8ba92f3cbc4872e1">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง)<\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"rowCallback":"function(row, data, index) {\n  if(index === 1) {\n    $(row).css({'background-color': '#ffe066', 'font-weight': 'bold'});\n  }\n}","order":[],"orderClasses":false}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-f6a7129c4baec15d6ce7" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-f6a7129c4baec15d6ce7">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง)<\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"rowCallback":"function(row, data, index) {\n  if(index === 1) {\n    $(row).css({'background-color': '#ffe066', 'font-weight': 'bold'});\n  }\n}","order":[],"orderClasses":false}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
 <div>
@@ -629,8 +630,8 @@ window.Quarto = {
 <div id="cr-egg3_plot" class="sticky">
 <div class="cell plain">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-f9738316b7717adc8701" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-f9738316b7717adc8701">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง)<\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"rowCallback":"function(row, data, index) {\n  if(index === 2) {\n    $(row).css({'background-color': '#ffe066', 'font-weight': 'bold'});\n  }\n}","order":[],"orderClasses":false}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-0b10524a175eb3e5cb78" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0b10524a175eb3e5cb78">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง)<\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"rowCallback":"function(row, data, index) {\n  if(index === 2) {\n    $(row).css({'background-color': '#ffe066', 'font-weight': 'bold'});\n  }\n}","order":[],"orderClasses":false}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
 <div>
@@ -644,8 +645,8 @@ window.Quarto = {
 <div id="cr-egg4_plot" class="sticky">
 <div class="cell plain">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-fdc9c3f4f674e31de8f1" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-fdc9c3f4f674e31de8f1">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง)<\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"rowCallback":"function(row, data, index) {\n  if(index === 3) {\n    $(row).css({'background-color': '#ffe066', 'font-weight': 'bold'});\n  }\n}","order":[],"orderClasses":false}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-8d182e48b0228b1f6b3a" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-8d182e48b0228b1f6b3a">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง)<\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"rowCallback":"function(row, data, index) {\n  if(index === 3) {\n    $(row).css({'background-color': '#ffe066', 'font-weight': 'bold'});\n  }\n}","order":[],"orderClasses":false}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
 <div>
@@ -659,8 +660,8 @@ window.Quarto = {
 <div id="cr-egg5_plot" class="sticky">
 <div class="cell plain">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-402a083e8199ccb8ead7" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-402a083e8199ccb8ead7">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง)<\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"rowCallback":"function(row, data, index) {\n  if(index === 4) {\n    $(row).css({'background-color': '#ffe066', 'font-weight': 'bold'});\n  }\n}","order":[],"orderClasses":false}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-eadde0e1c555a75fc522" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-eadde0e1c555a75fc522">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง)<\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"rowCallback":"function(row, data, index) {\n  if(index === 4) {\n    $(row).css({'background-color': '#ffe066', 'font-weight': 'bold'});\n  }\n}","order":[],"orderClasses":false}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
 <div>
@@ -674,8 +675,8 @@ window.Quarto = {
 <div id="cr-egg6_plot" class="sticky">
 <div class="cell plain">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-5d004668077193ad64fd" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-5d004668077193ad64fd">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง)<\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"rowCallback":"function(row, data, index) {\n  if(index === 5) {\n    $(row).css({'background-color': '#ffe066', 'font-weight': 'bold'});\n  }\n}","order":[],"orderClasses":false}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-644ff5f4b91632baf8ac" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-644ff5f4b91632baf8ac">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง)<\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"rowCallback":"function(row, data, index) {\n  if(index === 5) {\n    $(row).css({'background-color': '#ffe066', 'font-weight': 'bold'});\n  }\n}","order":[],"orderClasses":false}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
 <div>
@@ -689,8 +690,8 @@ window.Quarto = {
 <div id="cr-egg_total1_plot" class="sticky">
 <div class="cell plain">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-1183f7a0eed9b3a8b8ab" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-1183f7a0eed9b3a8b8ab">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง) <\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-1d05b761999ce56f8afa" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1d05b761999ce56f8afa">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง) <\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
 <div>
@@ -704,8 +705,8 @@ window.Quarto = {
 <div id="cr-egg_total2_plot" class="sticky">
 <div class="cell plain">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-a78236e6ae9047108bcd" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-a78236e6ae9047108bcd">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง) <\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-75cc4cff87a0230faf28" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-75cc4cff87a0230faf28">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[5,10,15,20,25,30]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>จำนวนไข่ไก่ (ฟอง) <\/th>\n      <th>ราคาไข่ไก่ (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"egg","targets":0},{"name":"price","targets":1}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
 <div>
@@ -733,8 +734,8 @@ window.Quarto = {
 <div id="cr-oil_table" class="sticky">
 <div class="cell plain">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-ec0951a9e617f13b1950" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-ec0951a9e617f13b1950">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[30,60,90,120,150,180]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>ปริมาณน้ำมัน (ลิตร)<\/th>\n      <th>ราคาน้ำมัน (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"oil","targets":0},{"name":"price","targets":1}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-275a9138ae3d9d1372d7" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-275a9138ae3d9d1372d7">{"x":{"filter":"none","vertical":false,"data":[[1,2,3,4,5,6],[30,60,90,120,150,180]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>ปริมาณน้ำมัน (ลิตร)<\/th>\n      <th>ราคาน้ำมัน (บาท)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"100px","targets":0},{"width":"140px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"oil","targets":0},{"name":"price","targets":1}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -882,19 +883,199 @@ window.Quarto = {
 <p>เมื่อกำหนดค่า <span class="math inline">\(x\)</span> บางค่า และหาค่า <span class="math inline">\(y\)</span> ที่ทำให้สมการ <span class="math inline">\(3x-y=5\)</span> เป็นจริง จะได้ค่า <span class="math inline">\(x\)</span> และ <span class="math inline">\(y\)</span> ดังตารางนี้</p>
 </div>
 </div>
+<div class="trigger">
+<div class="narrative">
+<p>แต่ก่อนที่เราจะได้ตาราง อาจารย์อยากให้นักเรียนช่วยคำนวณหาของ <span class="math inline">\(y\)</span> เมื่ออาจารย์กำหนดค่าของ <span class="math inline">\(x\)</span> มาให้นะ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-equation" data-scale-by="3">
+<div class="narrative">
+<p>เมื่อกำหนดให้ <span class="math inline">\(x=-10\)</span> จะได้ <span class="math inline">\(y\)</span> = <input style="flex:0 2 70px; min-width:0; max-width:200px; width:180px; display:inline-block;" class="form-control" name="entry.460492632" placeholder="จำนวนเต็ม" type="number" step="1" required=""></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-equation" data-scale-by="3">
+<div class="narrative">
+<p>เมื่อกำหนดให้ <span class="math inline">\(x=-5\)</span> จะได้ <span class="math inline">\(y\)</span> = <input style="flex:0 2 70px; min-width:0; max-width:200px; width:180px; display:inline-block;" class="form-control" name="entry.460492632" placeholder="จำนวนเต็ม" type="number" step="1" required=""></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-equation" data-scale-by="3">
+<div class="narrative">
+<p>เมื่อกำหนดให้ <span class="math inline">\(x=0\)</span> จะได้ <span class="math inline">\(y\)</span> = <input style="flex:0 2 70px; min-width:0; max-width:200px; width:180px; display:inline-block;" class="form-control" name="entry.460492632" placeholder="จำนวนเต็ม" type="number" step="1" required=""></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-equation" data-scale-by="3">
+<div class="narrative">
+<p>เมื่อกำหนดให้ <span class="math inline">\(x=5\)</span> จะได้ <span class="math inline">\(y\)</span> = <input style="flex:0 2 70px; min-width:0; max-width:200px; width:180px; display:inline-block;" class="form-control" name="entry.460492632" placeholder="จำนวนเต็ม" type="number" step="1" required=""></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-equation" data-scale-by="3">
+<div class="narrative">
+<p>เมื่อกำหนดให้ <span class="math inline">\(x=10\)</span> จะได้ <span class="math inline">\(y\)</span> = <input style="flex:0 2 70px; min-width:0; max-width:200px; width:180px; display:inline-block;" class="form-control" name="entry.460492632" placeholder="จำนวนเต็ม" type="number" step="1" required=""></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-simple_equation_table" data-scale-by="1.5">
+<div class="narrative">
+<p>จากการกำหนดค่าของ <span class="math inline">\(x\)</span> และคำนวณค่าของ <span class="math inline">\(y\)</span> เราจะได้ตารางเป็นดังนี้่</p>
+</div>
+</div>
 <div class="trigger new-trigger" data-focus-on="cr-situation_linear_table">
 <div class="narrative">
-<p>test</p>
+<p>แต่จากบทเรียนในครั้ง อาจารย์จะเขียนตารางในลักษณะแบบนี้แทนนะครับ</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-math">
+<div class="trigger new-trigger" data-focus-on="cr-cr-situation_linear_table_pair">
 <div class="narrative">
-<p>test math</p>
+<p>ซึ่งในแต่ละค่าของ <span class="math inline">\(x\)</span> และ <span class="math inline">\(y\)</span> ทำให้เราได้คู่อันดับ ดังนี้</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-math" data-hlz="2">
+<div class="trigger new-trigger" data-focus-on="cr-equation_graph">
 <div class="narrative">
-<p>test math hlz</p>
+<p>เมื่อเรานำคู่อันดับที่ได้มาเขียนกราฟ จะได้กราฟ ดังนี้</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>เพื่อให้นักเรียนมองเห็นภาพได้ชัดเจนยิ่งขึ้น</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-equation_graph2">
+<div class="narrative">
+<p>อาจารย์จะเพิ่มเติมแกน <span class="math inline">\(X\)</span> และแกน <span class="math inline">\(Y\)</span> ลงในรูปให้นะครับ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-equation_graph2">
+<div class="narrative">
+<p>จะเห็นว่า กราฟที่ได้เป็นจุดที่เรียงอยู่ในแนวเส้นตรงเดียวกัน</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-equation_graph2">
+<div class="narrative">
+<p>ความสัมพันธ์ของจำนวนเต็มทั้งสองนี้จึงเป็นความสัมพันธ์เชิงเส้น</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-equation">
+<div class="narrative">
+<p>และสมการของความสัมพันธ์เชิงเส้นที่แสดงความเกี่ยวข้องระหว่างปริมาณสองปริมาณ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-equation" data-scale-by="3">
+<div class="narrative">
+<p>จะเรียกว่า <strong>สมการเชิงเส้นสองตัวแปร (two-variable linear equation)</strong></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-linear-equation_def" data-hlz="1-3">
+<div class="narrative">
+<p>ลักษณะสำคัญของสมการเชิงเส้นสองตัวแปร <span class="math inline">\(Ax+By+C=0\)</span> คือ</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-linear-equation_def" data-hlz="4">
+<div class="narrative">
+<p>มีตัวแปรสองตัว</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-linear-equation_def">
+<div class="narrative">
+<p>และต้องไม่มีการคูณกันของตัวแปร</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-linear-equation_def">
+<div class="narrative">
+<p>เลขชี้กำลังของตัวแปรแต่ละตัวต้องเป็นหนึ่ง</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-linear-equation_def" data-hlz="6">
+<div class="narrative">
+<p><span class="math inline">\(A\)</span> และ <span class="math inline">\(B\)</span> ตัวใดตัวหนึ่งเป็นศูนย์ได้ แต่ต้องไม่เป็นศูนย์พร้อมกัน</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>เมื่อนักเรียนรู้จักสมการเชิงเส้นสองตัวแปรแล้ว</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>นักเรียนช่วยตอบคำถามให้อาจารย์หน่อยนะ</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>ว่าสมการที่กำหนดให้ต่อไปนี้ เป็นสมการเชิงเส้นสองตัวแปร หรือไม่</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-example_equation">
+<div class="narrative">
+<p>เมื่ออาจารย์กำหนดตัวอย่างของสมการมาดังนี้</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-example_equation" data-hlz="1">
+<div class="narrative">
+<p><span class="math inline">\(5x+y+3=0\)</span> <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.506245557" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="เป็นสมการเชิงเส้นสองตัวแปร">เป็น</option> <option value="ไม่เป็นสมการเชิงเส้นสองตัวแปร">ไม่เป็น</option> </select> สมการเชิงเส้นสองตัวแปร</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-example_equation" data-hlz="2">
+<div class="narrative">
+<p><span class="math inline">\(y-1.5x-3=0\)</span> <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.506245557" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="เป็นสมการเชิงเส้นสองตัวแปร">เป็น</option> <option value="ไม่เป็นสมการเชิงเส้นสองตัวแปร">ไม่เป็น</option> </select> สมการเชิงเส้นสองตัวแปร</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-example_equation" data-hlz="3">
+<div class="narrative">
+<p><span class="math inline">\(x+xy=1\)</span> <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.506245557" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="เป็นสมการเชิงเส้นสองตัวแปร">เป็น</option> <option value="ไม่เป็นสมการเชิงเส้นสองตัวแปร">ไม่เป็น</option> </select> สมการเชิงเส้นสองตัวแปร</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-example_equation" data-hlz="4">
+<div class="narrative">
+<p><span class="math inline">\(x^2-2x+1=y\)</span> <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.506245557" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="เป็นสมการเชิงเส้นสองตัวแปร">เป็น</option> <option value="ไม่เป็นสมการเชิงเส้นสองตัวแปร">ไม่เป็น</option> </select> สมการเชิงเส้นสองตัวแปร</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-example_equation" data-hlz="5">
+<div class="narrative">
+<p><span class="math inline">\(y=-4\)</span> <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.506245557" required=""> <option value="" disabled="" selected="">เลือก</option> <option value="เป็นสมการเชิงเส้นสองตัวแปร">เป็น</option> <option value="ไม่เป็นสมการเชิงเส้นสองตัวแปร">ไม่เป็น</option> </select> สมการเชิงเส้นสองตัวแปร</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr_equation_def" data-pan-to="0%,-80%" data-scale-by="3">
+<div class="narrative">
+<p>กรณีที่กำหนดสมการเชิงเส้นสองตัวแปรในรูปแบบนี้</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr_equation_def" data-pan-to="0%,-80%" data-scale-by="3">
+<div class="narrative">
+<p>ถ้าไม่ระบุเงื่อนไขของ <span class="math inline">\(x\)</span> และ <span class="math inline">\(y\)</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr_equation_def" data-pan-to="0%,-80%" data-scale-by="3">
+<div class="narrative">
+<p>ให้ถือว่า <span class="math inline">\(x\)</span> และ <span class="math inline">\(y\)</span> แทนจำนวนใด ๆ และกราฟของสมการเชิงเส้นสองตัวแปรนี้</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr_equation_def" data-pan-to="0%,-80%" data-scale-by="3">
+<div class="narrative">
+<p>จะเป็นเส้นตรงที่เรียกว่า <strong>กราฟเส้นตรง</strong></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr_equation_def" data-pan-to="0%,-80%" data-scale-by="3">
+<div class="narrative">
+<p>ในกรณีทั่ว ๆ ไป</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr_equation_def" data-pan-to="0%,-80%" data-scale-by="3">
+<div class="narrative">
+<p>เราสามารถเขียนกราฟของสมการนี้ เมื่อ <span class="math inline">\(B\not= 0\)</span></p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p>โดยจัดสมการให้อยู่ในรูปที่สะดวกต่อการแทนค่า <span class="math inline">\(x\)</span> เพื่อหาค่า <span class="math inline">\(y\)</span></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr_equation_def_y_mx" data-pan-to="0%,-80%" data-scale-by="3">
+<div class="narrative">
+<p>ได้ดังรูปนี้</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr_equation_def2" data-scale-by="3">
+<div class="narrative">
+<p>หรือกล่าวโดยสรุป</p>
 </div>
 </div>
 </div>
@@ -932,38 +1113,141 @@ window.Quarto = {
 <span id="lb1-8">เขียนข้อความข้างต้นในรูปสมการได้เป็น</span><br>
 <span id="lb1-9"><span class="math inline">\(3x-y=5\)</span></span></div>
 </div>
-<div id="cr-situation_linear_table" class="sticky">
-<div class="cell plain">
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-2b92a0354a446564afe5" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-2b92a0354a446564afe5">{"x":{"filter":"none","vertical":false,"data":[["x","y"],["-10","-35"],["-5","-20"],["0","-5"],["5","10"],["10","25"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"50px","targets":3},{"width":"50px","targets":4},{"width":"50px","targets":5},{"className":"dt-center","targets":"_all"},{"name":"V1","targets":0},{"name":"V2","targets":1},{"name":"V3","targets":2},{"name":"V4","targets":3},{"name":"V5","targets":4},{"name":"V6","targets":5}],"headerCallback":"function(thead, data, start, end, display){\n  $(thead).css('display', 'none');\n}","initComplete":"function(settings, json) {\n  if(window.MathJax){ MathJax.typesetPromise(); }\n}","order":[],"orderClasses":false}},"evals":["options.headerCallback","options.initComplete"],"jsHooks":[]}</script>
+<div id="cr-equation" class="sticky">
+<p><span class="math inline">\(3x-y=5\)</span></p>
 </div>
-</div>
-</div>
-<div id="cr-math" class="sticky">
-<div class="cell plain">
-<div class="cell-output-display">
-<table class="lightable-paper caption-top table" data-quarto-postprocess="true">
+<div id="cr-simple_equation_table" class="sticky">
+<table class="caption-top">
 <thead>
 <tr class="header">
-<th style="text-align: right;" data-quarto-table-cell-role="th"></th>
-<th style="text-align: center;" data-quarto-table-cell-role="th"></th>
-<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th>เมื่อ <span class="math inline">\(3x-y=5\)</span></th>
 </tr>
 </thead>
 <tbody>
+</tbody>
+</table>
+<table class="caption-top table">
+<tbody>
 <tr class="odd">
-<td style="text-align: right; font-weight: bold; color: white !important; background-color: rgba(215, 38, 30, 255) !important;">\(a+b\)</td>
-<td style="text-align: center; font-weight: bold; color: white !important; background-color: rgba(215, 38, 30, 255) !important;">\(=\)</td>
-<td style="text-align: left; font-weight: bold; color: white !important; background-color: rgba(215, 38, 30, 255) !important;">\(a\)</td>
+<td style="text-align: center;"><span class="math inline">\(x\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-10\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-5\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(5\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(10\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">\(a\)</td>
-<td style="text-align: center;">\(=\)</td>
-<td style="text-align: left;">\(3-b\)</td>
+<td style="text-align: center;"><span class="math inline">\(y\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-35\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-20\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-5\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(10\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(25\)</span></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="cr-situation_linear_table" class="sticky">
+<div class="cell plain">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-47b27ce2250f2f301099" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-47b27ce2250f2f301099">{"x":{"filter":"none","vertical":false,"data":[[-10,-5,0,5,10],[-35,-20,-5,10,25]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>\\(x\\)<\/th>\n      <th>\\(y\\)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"className":"dt-center","targets":"_all"},{"name":"x","targets":0},{"name":"y","targets":1}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="cr-cr-situation_linear_table_pair" class="sticky">
+<div class="cell plain">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-0bbe57b27da8187a98ad" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0bbe57b27da8187a98ad">{"x":{"filter":"none","vertical":false,"data":[[-10,-5,0,5,10],[-35,-20,-5,10,25],["-->","-->","-->","-->","-->"],["(-10,-35)","(-5,-20)","(0,-5)","(5,10)","(10,25)"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>\\(x\\)<\/th>\n      <th>\\(y\\)<\/th>\n      <th><\/th>\n      <th>คู่อันดับ<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"autoWidth":true,"dom":"t","columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"50px","targets":3},{"className":"dt-center","targets":"_all"},{"name":"x","targets":0},{"name":"y","targets":1},{"name":"arrow","targets":2},{"name":"pair","targets":3}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="cr-equation_graph" class="sticky">
+<div class="cell plain" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="test_scrolling3_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-equation_graph2" class="sticky">
+<div class="cell plain" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="test_scrolling3_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="cr-linear-equation_def" class="sticky">
+<div class="line-block"><span id="lb2-1">สมการเชิงเส้นสองตัวแปร</span><br>
+<span id="lb2-2">เป็นสมการที่เขียนอยู่ในรูปทั่วไปได้เป็น</span><br>
+<span id="lb2-3"><span class="math inline">\(Ax+By+C=0\)</span></span><br>
+<span id="lb2-4">เมื่อ <span class="math inline">\(x,\ y\)</span> เป็นตัวแปร</span><br>
+<span id="lb2-5"><span class="math inline">\(A,\ B\)</span> และ <span class="math inline">\(C\)</span> เป็นค่าคงตัว</span><br>
+<span id="lb2-6">โดยที่ <span class="math inline">\(A\)</span> และ <span class="math inline">\(B\)</span> ไม่เป็นศูนย์พร้อมกัน</span></div>
+</div>
+<div id="cr-example_equation" class="sticky">
+<div class="line-block"><span id="lb3-1">1. <span class="math inline">\(5x+y+3=0\)</span></span><br>
+<span id="lb3-2">2. <span class="math inline">\(y-1.5x-3=0\)</span></span><br>
+<span id="lb3-3">3. <span class="math inline">\(x+xy=1\)</span></span><br>
+<span id="lb3-4">4. <span class="math inline">\(x^2-2x+1=y\)</span></span><br>
+<span id="lb3-5">5. <span class="math inline">\(y=-4\)</span></span></div>
+</div>
+<div id="cr_equation_def" class="sticky">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+A[$$Ax+By+C=0$$]
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<div id="cr_equation_def_y_mx" class="sticky">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+A[$$y=mx+b$$]
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<div id="cr_equation_def2" class="sticky">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+A[$$Ax+By+C=0$$]
+B[$$y=mx+b$$]
+
+A -- จัดรูป --&gt; B
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
 </div>
 </div>
 </div>

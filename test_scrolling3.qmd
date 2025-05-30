@@ -1218,8 +1218,73 @@ p1
 
 :::
 
-@cr-situation_linear_table test
+แต่ก่อนที่เราจะได้ตาราง อาจารย์อยากให้นักเรียนช่วยคำนวณหาของ $y$ เมื่ออาจารย์กำหนดค่าของ $x$ มาให้นะ
 
+เมื่อกำหนดให้ $x=-10$ จะได้ $y$ = <input
+    style="flex:0 2 70px; min-width:0; max-width:200px; width:180px; display:inline-block;"
+    class="form-control"
+    name="entry.460492632"
+    placeholder="จำนวนเต็ม"
+    type="number"
+    step="1"
+    required> [@cr-equation]{scale-by="3"}
+
+เมื่อกำหนดให้ $x=-5$ จะได้ $y$ = <input
+    style="flex:0 2 70px; min-width:0; max-width:200px; width:180px; display:inline-block;"
+    class="form-control"
+    name="entry.460492632"
+    placeholder="จำนวนเต็ม"
+    type="number"
+    step="1"
+    required> [@cr-equation]{scale-by="3"}
+
+เมื่อกำหนดให้ $x=0$ จะได้ $y$ = <input
+    style="flex:0 2 70px; min-width:0; max-width:200px; width:180px; display:inline-block;"
+    class="form-control"
+    name="entry.460492632"
+    placeholder="จำนวนเต็ม"
+    type="number"
+    step="1"
+    required> [@cr-equation]{scale-by="3"}
+
+เมื่อกำหนดให้ $x=5$ จะได้ $y$ = <input
+    style="flex:0 2 70px; min-width:0; max-width:200px; width:180px; display:inline-block;"
+    class="form-control"
+    name="entry.460492632"
+    placeholder="จำนวนเต็ม"
+    type="number"
+    step="1"
+    required> [@cr-equation]{scale-by="3"}
+
+เมื่อกำหนดให้ $x=10$ จะได้ $y$ = <input
+    style="flex:0 2 70px; min-width:0; max-width:200px; width:180px; display:inline-block;"
+    class="form-control"
+    name="entry.460492632"
+    placeholder="จำนวนเต็ม"
+    type="number"
+    step="1"
+    required> [@cr-equation]{scale-by="3"}
+
+::: {#cr-equation}
+
+$3x-y=5$ 
+
+:::
+
+จากการกำหนดค่าของ $x$ และคำนวณค่าของ $y$ เราจะได้ตารางเป็นดังนี้่ [@cr-simple_equation_table]{scale-by="1.5"}
+
+::: {#cr-simple_equation_table}
+| เมื่อ $3x-y=5$
+| ----
+
+
+| | | | | | |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+| $x$ | $-10$ | $-5$ | $0$ | $5$ | $10$ |
+| $y$ | $-35$ | $-20$ | $-5$ | $10$ | $25$ |
+:::
+
+@cr-situation_linear_table แต่จากบทเรียนในครั้ง อาจารย์จะเขียนตารางในลักษณะแบบนี้แทนนะครับ
 
 ::: {#cr-situation_linear_table}
 
@@ -1239,14 +1304,11 @@ dat_egg = data.frame(
 )
 
 
-dat_egg_t= data.frame(x=c("x"),y=c("y"))|>bind_rows(dat_egg|>mutate(x=x|>as.character(),
-y=y|>as.character()))
-
 #dat_egg|>kable(booktabs= FALSE)
 
 datatable(
-  t(dat_egg_t),
-  colnames = NULL,
+  dat_egg,
+  colnames = c("\\(x\\)","\\(y\\)"),
   escape = FALSE,
   options = list(
     autoWidth = TRUE,
@@ -1254,21 +1316,7 @@ datatable(
     columnDefs = list(
       list(width = '50px', targets = 0),
       list(width = '50px', targets = 1),
-      list(width = '50px', targets = 2),
-      list(width = '50px', targets = 3),
-      list(width = '50px', targets = 4),
-      list(width = '50px', targets = 5),
       list(className = 'dt-center', targets = "_all")
-    ),
-    headerCallback = JS(
-      "function(thead, data, start, end, display){",
-      "  $(thead).css('display', 'none');",
-      "}"
-    ),
-    initComplete = JS(
-      "function(settings, json) {",
-      "  if(window.MathJax){ MathJax.typesetPromise(); }",
-      "}"
     )
   ),
   rownames = FALSE
@@ -1283,31 +1331,282 @@ datatable(
 
 :::
 
-test math @cr-math
+@cr-cr-situation_linear_table_pair ซึ่งในแต่ละค่าของ $x$ และ $y$ ทำให้เราได้คู่อันดับ ดังนี้
 
-test math hlz [@cr-math]{hlz="2"}
-
-::: {#cr-math}
-
-
+::: {#cr-cr-situation_linear_table_pair}
 
 ```{r}
+#| echo: false
+#| include: true
 #| class: plain
- 
-dat_math = data.frame(
-  lh = c("\\(a+b\\)", "\\(a\\)"),
-  eq = c("\\(=\\)", "\\(=\\)"),
-  rh = c("\\(a\\)", "\\(3-b\\)")
+#| warning: false
+
+library(kableExtra)
+library(DT)
+library(dplyr)
+
+dat_egg = data.frame(
+  x = c(-10,-5,0,5,10),
+  y = c(-35,-20,-5,10,25),
+  arrow =rep("-->",5)
 )
 
-kable(dat_math, escape = FALSE,
-col.names = NULL,
-align = "rcl",
-booktabs = TRUE)|>
-kable_paper(full_width = F)|>
-row_spec(1, bold = T, color = "white", background = "#D7261E")
+dat_egg = dat_egg |>
+mutate(pair = paste0("(",x,",",y,")"))
+
+
+#dat_egg|>kable(booktabs= FALSE)
+
+datatable(
+  dat_egg,
+  colnames = c("\\(x\\)","\\(y\\)","","คู่อันดับ"),
+  escape = FALSE,
+  options = list(
+    autoWidth = TRUE,
+    dom = 't',
+    columnDefs = list(
+      list(width = '50px', targets = 0),
+      list(width = '50px', targets = 1),
+      list(width = '50px', targets = 2),
+      list(width = '50px', targets = 3),
+      list(className = 'dt-center', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+
+#"t" = table only (ไม่มี search, ไม่มี pagination, ไม่มี info)
+#ถ้าอยากได้ table กับ info (จำนวนแถว) ใช้ "ti"
+#ถ้าอยากได้เฉพาะ table กับ search ใช้ "tf"
+
 ```
 
+:::
+
+เมื่อเรานำคู่อันดับที่ได้มาเขียนกราฟ จะได้กราฟ ดังนี้ @cr-equation_graph
+
+::: {#cr-equation_graph}
+
+```{r}
+#| echo: false
+#| include: true
+#| class: plain
+#| warning: false
+#| fig-align: center
+#| fig-width: 4
+#| fig-height: 4
+
+dat_egg = data.frame(
+  x = c(-10,-5,0,5,10),
+  y = c(-35,-20,-5,10,25),
+  arrow =rep("-->",5)
+)
+
+dat_egg|>
+ggplot(aes(x=x,y=y))+
+geom_point(size = 1.5, col = "steelblue")+
+scale_y_continuous(limits =c(-50,50),breaks =seq(-50,50,10))+
+scale_x_continuous(limits =c(-20,20),breaks =seq(-20,20,5))+
+#theme_void()+
+theme_bw()+
+theme(plot.margin = margin(t=0,b=0,l=10,r=10,unit="pt"),
+text = element_text(family="CMU Classical Serif",size = 12),
+legend.text = element_text(family="TH SarabunPSK", size = 16),
+axis.title = element_text(family="CMU Classical Serif", size = 14))+
+labs(x="X",
+y="Y")
+```
+
+:::
+
+เพื่อให้นักเรียนมองเห็นภาพได้ชัดเจนยิ่งขึ้น
+
+@cr-equation_graph2 อาจารย์จะเพิ่มเติมแกน $X$ และแกน $Y$ ลงในรูปให้นะครับ
+
+::: {#cr-equation_graph2}
+
+```{r}
+#| echo: false
+#| include: true
+#| class: plain
+#| warning: false
+#| fig-align: center
+#| fig-width: 4
+#| fig-height: 4
+
+library(ggplot2)
+
+dat_egg = data.frame(
+  x = c(-10,-5,0,5,10),
+  y = c(-35,-20,-5,10,25),
+  arrow =rep("-->",5)
+)
+
+dat_egg|>
+ggplot(aes(x=x,y=y))+
+scale_y_continuous(limits =c(-50,50),breaks =seq(-50,50,10))+
+scale_x_continuous(limits =c(-20,20),breaks =seq(-20,20,5))+
+geom_segment(x=-18,y=0,xend=18,yend=0,arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both"),
+                             size = 0.8,
+                             col = "black")+
+geom_segment(x=0,y=-45,xend=0,yend=45,arrow = arrow(angle = 10,
+                             type = "closed",
+                             length = unit(0.3,"cm"),
+                             ends = "both"),
+                             size = 0.8,
+                             col = "black")+
+geom_point(size = 3, col = "steelblue")+
+annotate("text",x=20,y=0,label="X",family="CMU Classical Serif",size = 6)+
+annotate("text",x=0,y=50,label="Y",
+family="CMU Classical Serif",size = 6)+
+#theme_void()+
+theme_bw()+
+theme(plot.margin = margin(t=0,b=0,l=10,r=10,unit="pt"),
+text = element_text(family="CMU Classical Serif",size = 12),
+legend.text = element_text(family="TH SarabunPSK", size = 16),
+axis.title = element_blank())
+```
+
+:::
+
+@cr-equation_graph2 จะเห็นว่า กราฟที่ได้เป็นจุดที่เรียงอยู่ในแนวเส้นตรงเดียวกัน
+
+@cr-equation_graph2 ความสัมพันธ์ของจำนวนเต็มทั้งสองนี้จึงเป็นความสัมพันธ์เชิงเส้น
+
+@cr-equation และสมการของความสัมพันธ์เชิงเส้นที่แสดงความเกี่ยวข้องระหว่างปริมาณสองปริมาณ
+
+[@cr-equation]{scale-by="3"} จะเรียกว่า **สมการเชิงเส้นสองตัวแปร (two-variable linear equation)**
+
+[@cr-linear-equation_def]{hlz="1-3"} ลักษณะสำคัญของสมการเชิงเส้นสองตัวแปร $Ax+By+C=0$ คือ
+
+[@cr-linear-equation_def]{hlz="4"}  มีตัวแปรสองตัว
+
+@cr-linear-equation_def และต้องไม่มีการคูณกันของตัวแปร
+
+@cr-linear-equation_def เลขชี้กำลังของตัวแปรแต่ละตัวต้องเป็นหนึ่ง
+
+[@cr-linear-equation_def]{hlz="6"}  $A$ และ $B$ ตัวใดตัวหนึ่งเป็นศูนย์ได้ แต่ต้องไม่เป็นศูนย์พร้อมกัน
+
+
+::: {#cr-linear-equation_def}
+
+| สมการเชิงเส้นสองตัวแปร
+| เป็นสมการที่เขียนอยู่ในรูปทั่วไปได้เป็น
+| $Ax+By+C=0$
+| เมื่อ $x,\ y$ เป็นตัวแปร
+| $A,\ B$ และ $C$ เป็นค่าคงตัว
+| โดยที่ $A$ และ $B$ ไม่เป็นศูนย์พร้อมกัน
+
+:::
+
+เมื่อนักเรียนรู้จักสมการเชิงเส้นสองตัวแปรแล้ว
+
+นักเรียนช่วยตอบคำถามให้อาจารย์หน่อยนะ
+
+ว่าสมการที่กำหนดให้ต่อไปนี้ เป็นสมการเชิงเส้นสองตัวแปร หรือไม่
+
+@cr-example_equation เมื่ออาจารย์กำหนดตัวอย่างของสมการมาดังนี้
+
+[@cr-example_equation]{hlz="1"} $5x+y+3=0$ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.506245557"
+  required>
+    <option value="" disabled selected>เลือก</option>
+    <option value="เป็นสมการเชิงเส้นสองตัวแปร">เป็น</option>
+    <option value="ไม่เป็นสมการเชิงเส้นสองตัวแปร">ไม่เป็น</option>
+  </select> สมการเชิงเส้นสองตัวแปร
+
+[@cr-example_equation]{hlz="2"} $y-1.5x-3=0$ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.506245557"
+  required>
+    <option value="" disabled selected>เลือก</option>
+    <option value="เป็นสมการเชิงเส้นสองตัวแปร">เป็น</option>
+    <option value="ไม่เป็นสมการเชิงเส้นสองตัวแปร">ไม่เป็น</option>
+  </select> สมการเชิงเส้นสองตัวแปร
+
+[@cr-example_equation]{hlz="3"} $x+xy=1$ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.506245557"
+  required>
+    <option value="" disabled selected>เลือก</option>
+    <option value="เป็นสมการเชิงเส้นสองตัวแปร">เป็น</option>
+    <option value="ไม่เป็นสมการเชิงเส้นสองตัวแปร">ไม่เป็น</option>
+  </select> สมการเชิงเส้นสองตัวแปร
+
+[@cr-example_equation]{hlz="4"} $x^2-2x+1=y$ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.506245557"
+  required>
+    <option value="" disabled selected>เลือก</option>
+    <option value="เป็นสมการเชิงเส้นสองตัวแปร">เป็น</option>
+    <option value="ไม่เป็นสมการเชิงเส้นสองตัวแปร">ไม่เป็น</option>
+  </select> สมการเชิงเส้นสองตัวแปร
+
+[@cr-example_equation]{hlz="5"} $y=-4$ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.506245557"
+  required>
+    <option value="" disabled selected>เลือก</option>
+    <option value="เป็นสมการเชิงเส้นสองตัวแปร">เป็น</option>
+    <option value="ไม่เป็นสมการเชิงเส้นสองตัวแปร">ไม่เป็น</option>
+  </select> สมการเชิงเส้นสองตัวแปร
+
+::: {#cr-example_equation}
+
+| 1. $5x+y+3=0$
+| 2. $y-1.5x-3=0$
+| 3. $x+xy=1$
+| 4. $x^2-2x+1=y$
+| 5. $y=-4$
+
+:::
+
+[@cr_equation_def]{pan-to="0%,-80%" scale-by="3"} กรณีที่กำหนดสมการเชิงเส้นสองตัวแปรในรูปแบบนี้
+
+[@cr_equation_def]{pan-to="0%,-80%" scale-by="3"} ถ้าไม่ระบุเงื่อนไขของ $x$ และ $y$ 
+
+[@cr_equation_def]{pan-to="0%,-80%" scale-by="3"} ให้ถือว่า $x$ และ $y$ แทนจำนวนใด ๆ และกราฟของสมการเชิงเส้นสองตัวแปรนี้
+
+[@cr_equation_def]{pan-to="0%,-80%" scale-by="3"} จะเป็นเส้นตรงที่เรียกว่า **กราฟเส้นตรง**
+
+::: {#cr_equation_def}
+
+```{mermaid}
+
+flowchart TD
+A[$$Ax+By+C=0$$]
+
+```
+
+:::
+
+ในกรณีทั่ว ๆ ไป [@cr_equation_def]{pan-to="0%,-80%" scale-by="3"} 
+
+เราสามารถเขียนกราฟของสมการนี้ เมื่อ $B\not= 0$ [@cr_equation_def]{pan-to="0%,-80%" scale-by="3"} 
+
+โดยจัดสมการให้อยู่ในรูปที่สะดวกต่อการแทนค่า $x$ เพื่อหาค่า $y$
+
+[@cr_equation_def_y_mx]{pan-to="0%,-80%" scale-by="3"} ได้ดังรูปนี้
+
+::: {#cr_equation_def_y_mx}
+
+```{mermaid}
+
+flowchart TD
+A[$$y=mx+b$$]
+
+```
+
+:::
+
+[@cr_equation_def2]{scale-by="3"} หรือกล่าวโดยสรุป
+
+::: {#cr_equation_def2}
+
+```{mermaid}
+
+flowchart TD
+A[$$Ax+By+C=0$$]
+B[$$y=mx+b$$]
+
+A -- จัดรูป --> B
+
+```
 
 :::
 
