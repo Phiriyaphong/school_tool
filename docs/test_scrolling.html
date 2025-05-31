@@ -120,13 +120,13 @@ window.Quarto = {
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-narrative-text-color-sidebar: FD0000;
---cr-narrative-background-color-sidebar: FD0000;
---cr-narrative-background-color-overlay: #FFFEFF;
+          --cr-narrative-text-color-overlay: #000000;
 --cr-section-background-color: #FFFEFF;
---cr-narrative-font-size: 2em;
+--cr-narrative-background-color-sidebar: FD0000;
 --cr-narrative-border-radius: 1px;
---cr-narrative-text-color-overlay: #000000;
+--cr-narrative-font-size: 2em;
+--cr-narrative-text-color-sidebar: FD0000;
+--cr-narrative-background-color-overlay: #FFFEFF;
         }
       </style>
     
@@ -203,7 +203,7 @@ Before learning, I would like to know who you are.
 <p>I’ve been reading this short, <audio controls="" src="test_scrolling.m4a"><code>audio</code> element.</audio></p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-poem" data-hlz="cr-suffering">
+<div class="trigger new-trigger" data-hlz="cr-suffering" data-focus-on="cr-poem">
 <div class="narrative">
 <p>wry poem about suffering</p>
 </div>
@@ -232,7 +232,7 @@ Before learning, I would like to know who you are.
 <p>today we are going to talk about monitor scree</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-pan-to="-70%,70%" data-focus-on="cr-monitor" data-scale-by="2.7">
+<div class="trigger new-trigger" data-focus-on="cr-monitor" data-pan-to="-70%,70%" data-scale-by="2.7">
 <div class="narrative">
 <p>we are looking at Q1</p>
 </div>
@@ -409,11 +409,35 @@ Submit
 <p><a href="./test_scrolling2.html"><button class="btn btn-primary">ไปยังหน้า กราฟและความสัมพันธ์เชิงเส้น</button></a></p>
 <p>หรือ</p>
 <p><a href="./test_scrolling2.html">ไปยังหน้า “กราฟและความสัมพันธ์เชิงเส้น”</a></p>
+<!--
 <script>
 window.addEventListener('DOMContentLoaded', function() {
   const now = new Date().toISOString();
   document.getElementById('entry-timein').value = now;
 });
+</script>
+-->
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  const now = new Date();
+
+  // ดึงค่าแต่ละส่วน
+  const day = now.getDate();
+  const month = now.getMonth() + 1; // เดือนใน JS เริ่มที่ 0
+  const year = now.getFullYear();
+  const hour = now.getHours();
+  const minute = now.getMinutes();
+  const second = now.getSeconds();
+
+  // เติม 0 ข้างหน้าถ้าจำเป็น
+  const pad = n => n.toString().padStart(2, '0');
+
+  // สร้าง string ในรูปแบบเดียวกับ Google Form
+  const formatted = `${pad(day)}/${pad(month)}/${year} ${pad(hour)}:${pad(minute)}:${pad(second)}`;
+
+  document.getElementById('entry-timein').value = formatted;
+});
+
 </script>
 
 
