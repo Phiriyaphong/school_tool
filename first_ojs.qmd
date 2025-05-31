@@ -425,3 +425,19 @@ sheet.filter(function(d){
 
 ```
 
+# try hide input box
+```{ojs}
+viewof showInput = Inputs.toggle({ label: "แสดง input", value: true })
+viewof toggleButton = Inputs.button("ซ่อน/แสดง input")
+
+html`<div>
+  ${showInput ? html`<input type="text" style="margin: 8px 0; width: 200px;" placeholder="กรอกข้อมูล">` : ""}
+</div>`
+
+toggleButton
+```
+
+
+
+
+

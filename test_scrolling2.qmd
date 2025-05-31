@@ -3,7 +3,7 @@
 sidebar: false
 format:
   closeread-html:
-    theme: morph
+    theme: cosmo
     css: styles.css
     include-in-header: 
       - text: |
@@ -33,18 +33,41 @@ format:
             }
           </style>
 
+<style>
+  .progress-fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1050; /* ให้ลอยอยู่เหนือทุกอย่าง */
+  }
+  body {
+    padding-top: 40px; /* เผื่อพื้นที่ progress bar ด้านบน (ปรับตามความสูง progress bar) */
+  }
+</style>
+
+<div class="progress progress-fixed-top" style="height: 20px;">
+  <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%; font-weight:bold;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    0%
+  </div>
+</div>
+
+
+
 # คู่อันดับและกราฟ
 
 <form id="myForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdW_nq2BFNCjxIcdt8rYXAhfW9FmLLjSiOxOTvkqsVpajyfxA/formResponse" method="post" target="hidden_iframe">
 
+<!--ปุ่มที่ถูกซ่อน กรอกเวลาเข้าอัตโนมัติ-->
+<input type="hidden" name="entry.598653304" id="entry-timein">
 
-::: {.callout-note icon="true"}
+::: {.callout-note icon="true" style="font-size: 3em;"}
 ## คำชี้แจง
 
 บทเรียนนี้ออกแบบมาให้นักเรียนสามารถเรียนรู้ด้วยตนเองผ่านระบบ **Scrollytelling**  
 เพียงแค่เลื่อนหน้าจอขึ้น-ลง เนื้อหาแต่ละส่วนจะปรากฏเป็นข้อความบรรยายพร้อมภาพประกอบในรูปแบบ “สติ๊กเกอร์” เพื่อช่วยให้เข้าใจเนื้อหาได้ง่ายขึ้น
 
-ระหว่างเรียน นักเรียนจะพบคำถามแทรกอยู่เป็นระยะ กรุณาตอบคำถามให้ครบทุกข้อก่อนกดส่งคำตอบ  
+ระหว่างเรียน นักเรียนจะพบคำถามแทรกอยู่เป็นระยะ กรุณาตอบคำถามให้ครบทุกข้อก่อนกดส่งคำตอบ (30 คะแนน) 
 ขอให้สนุกกับการเรียนรู้ครับ!
 :::
 
@@ -55,6 +78,14 @@ format:
 
 @cr-teacher_talk  อาจารย์อยากทราบข้อมูลส่วนตัวของนักเรียนสักหน่อย
 
+@cr-teacher_talk อีเมล <input
+    style="flex:0 2 70px; min-width:0; max-width:250px; width:250px; display:inline-block;"
+    class="form-control"
+    name="entry.319615652"
+    placeholder="เช่น example@email.com"
+    type="email"
+    required>
+
 @cr-teacher_talk รหัสนักเรียน <input
     style="flex:0 2 70px; min-width:0; max-width:200px; width:130px; display:inline-block;"
     class="form-control"
@@ -63,7 +94,7 @@ format:
     type="text"
     required> 
 
-@cr-teacher_talk เป็นนักเรียน ม.$2$ ห้อง<select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1627216010"
+@cr-teacher_talk เป็นนักเรียน ม.$2$ ห้อง <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1627216010"
   required>
     <option value="" disabled selected>เลือก</option>
     <option value="1">1</option>
@@ -83,7 +114,7 @@ format:
     <option value="15">15</option>
   </select>
 
-@cr-teacher_talk คำนำหน้าชื่อ<select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1601363213"
+@cr-teacher_talk คำนำหน้าชื่อ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1601363213"
   required>
     <option value="" disabled selected>เลือก</option>
     <option value="เด็กชาย">เด็กชาย</option>
@@ -110,7 +141,6 @@ format:
     type="text"
     required>
 </div>
-
 
 @cr-teacher_talk เรามาเริ่มกันเลยดีกว่า
 
@@ -147,7 +177,7 @@ format:
     <option value="40">$40$</option>
     <option value="45">$45$</option>
     <option value="50">$50$</option>
-  </select>
+  </select> (1 point)
 
 ::: {#cr-table1}
 | **จำนวนลูกชิ้น (ไม้)** | **ราคาขาย (บาท)** |
@@ -175,7 +205,7 @@ $2$ คู่กับ $20$ [@cr-table1]{pan-to="0%,80%" scale-by="2.5"}
     <option value="30">$30$</option>
     <option value="40">$40$</option>
     <option value="50">$50$</option>
-  </select> 
+  </select> (1 point)
 
 และ\ [@cr-table1]{pan-to="0%,-100%" scale-by="2.5"}  $4$ คู่กับ <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.2062078663"
   required>
@@ -184,7 +214,7 @@ $2$ คู่กับ $20$ [@cr-table1]{pan-to="0%,80%" scale-by="2.5"}
     <option value="30">$30$</option>
     <option value="40">$40$</option>
     <option value="50">$50$</option>
-  </select> 
+  </select> (1 point)
 
 เราอาจเขียนแผนภาพการจับคู่ระหว่างปริมาณทั้งสองได้ ดังนี้
 
@@ -232,7 +262,7 @@ $4$ คู่กับ $40$ @cr-coor4
     <option value="" disabled selected>เลือก</option>
     <option value="(40,4)">$(40,\ 4)$</option>
     <option value="(4,40)">$(4,\ 40)$</option>
-  </select> 
+  </select> (1 point)
 
 :::{#cr-coor1}
 
@@ -308,7 +338,7 @@ $b$ คือ **สมาชิกตัวที่สอง** ของคู�
 <option value="" disabled selected>เลือก</option>
 <option value="ไม้">ไม้</option>
 <option value="บาท">บาท</option>
-</select>
+</select> (2 point)
 
 
 [@cr-co-1-10]{scale-by="2"} <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.848365343" required>
@@ -319,7 +349,7 @@ $b$ คือ **สมาชิกตัวที่สอง** ของคู�
 <option value="" disabled selected>เลือก</option>
 <option value="ไม้">ไม้</option>
 <option value="บาท">บาท</option>
-</select>
+</select> (2 point)
 
 ::: {#cr-co-1-10}
 $(1,\ 10)$ 
@@ -337,7 +367,7 @@ $(1,\ 10)$
 <option value="" disabled selected>เลือก</option>
 <option value="ไม้">ไม้</option>
 <option value="บาท">บาท</option>
-</select>
+</select> (2 point)
 
 [@cr-co-10-1]{scale-by="2"} <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.514356349" required>
 <option value="" disabled selected>เลือก</option>
@@ -347,7 +377,7 @@ $(1,\ 10)$
 <option value="" disabled selected>เลือก</option>
 <option value="ไม้">ไม้</option>
 <option value="บาท">บาท</option>
-</select>
+</select> (2 point)
 
 
 ::: {#cr-co-10-1}
@@ -401,7 +431,7 @@ theme(plot.margin = margin(t=0,b=0,l=0,r=0,unit="pt"))
 <option value="จุดยอด">จุดยอด</option>
 <option value="จุดกำเนิด">จุดกำเนิด</option>
 <option value="จุดปลาย">จุดปลาย</option>
-</select> 
+</select> (1 point)
 
 ::: {#cr-grid_explore_origin}
 
@@ -436,7 +466,7 @@ size = 16)
 <option value="" disabled selected>เลือก</option>
 <option value="แกน X">แกน X</option>
 <option value="แกน Y">แกน Y</option>
-</select>
+</select> (1 point)
 
 
 
@@ -474,7 +504,7 @@ size = 16)
 <option value="" disabled selected>เลือก</option>
 <option value="แกน X">แกน X</option>
 <option value="แกน Y">แกน Y</option>
-</select>
+</select> (1 point)
 
 ::: {#cr-grid_explore_Y_axis}
 
@@ -548,7 +578,7 @@ size = 16)
 <option value="จตุภาคที่ 2">จตุภาคที่ 2</option>
 <option value="จตุภาคที่ 3">จตุภาคที่ 3</option>
 <option value="จตุภาคที่ 4">จตุภาคที่ 4</option>
-</select>
+</select> (1 point)
 
 
 [@cr-grid_explore_quadrant]{pan-to="50%,50%" scale-by="1.5"} ส่วนที่ $2$ เรียกว่า <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.35682702" required>
@@ -557,7 +587,7 @@ size = 16)
 <option value="จตุภาคที่ 2">จตุภาคที่ 2</option>
 <option value="จตุภาคที่ 3">จตุภาคที่ 3</option>
 <option value="จตุภาคที่ 4">จตุภาคที่ 4</option>
-</select>
+</select> (1 point)
 
 [@cr-grid_explore_quadrant]{pan-to="50%,-50%" scale-by="1.5"} ส่วนที่ $3$ เรียกว่า <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.1628721522" required>
 <option value="" disabled selected>เลือก</option>
@@ -565,7 +595,7 @@ size = 16)
 <option value="จตุภาคที่ 2">จตุภาคที่ 2</option>
 <option value="จตุภาคที่ 3">จตุภาคที่ 3</option>
 <option value="จตุภาคที่ 4">จตุภาคที่ 4</option>
-</select>
+</select> (1 point)
 
 
 [@cr-grid_explore_quadrant]{pan-to="-50%,-50%" scale-by="1.5"} และส่วนที่ $4$ เรียกว่า <select style="flex:1; min-width:0; display:inline-block; width:auto;" class="form-select" name="entry.511410833" required>
@@ -574,7 +604,7 @@ size = 16)
 <option value="จตุภาคที่ 2">จตุภาคที่ 2</option>
 <option value="จตุภาคที่ 3">จตุภาคที่ 3</option>
 <option value="จตุภาคที่ 4">จตุภาคที่ 4</option>
-</select>
+</select> (1 point)
 
 @cr-grid_explore ซึ่งระบบที่แสดงตำแหน่งของจุดต่าง ๆ นี้ เรียกว่า **ระบบพิกัดฉาก (rectangular system)**
 
@@ -644,7 +674,7 @@ geom_segment(x=2,y=0,xend=2,yend=4,linetype="dashed",linewidth = 1,col = "#21D15
 <option value="แกน X">บนแกน X</option>
 <option value="แกน Y">บนแกน Y</option>
 <option value="จุดกำเนิด">ที่จุดกำเนิด</option>
-</select>
+</select> (1 point)
 
 ::: {#cr-grid_point3_line}
 
@@ -680,7 +710,7 @@ geom_point(aes(x=2,y=3),size = 6, col ="red")
 <option value="แกน X">บนแกน X</option>
 <option value="แกน Y">บนแกน Y</option>
 <option value="จุดกำเนิด">ที่จุดกำเนิด</option>
-</select>
+</select> (1 point)
 
 ::: {#cr-grid_point2}
 
@@ -751,7 +781,7 @@ size = 5)
 <option value="แกน X">บนแกน X</option>
 <option value="แกน Y">บนแกน Y</option>
 <option value="จุดกำเนิด">ที่จุดกำเนิด</option>
-</select>
+</select> (1 point)
 
 
 ::: {#cr-grid_point_on_axis1}
@@ -792,7 +822,7 @@ size = 5)
 <option value="แกน X">บนแกน X</option>
 <option value="แกน Y">บนแกน Y</option>
 <option value="จุดกำเนิด">ที่จุดกำเนิด</option>
-</select>
+</select> (1 point)
 
 
 ::: {#cr-grid_point_on_axis2}
@@ -834,7 +864,7 @@ size = 5)
 <option value="แกน X">บนแกน X</option>
 <option value="แกน Y">บนแกน Y</option>
 <option value="จุดกำเนิด">ที่จุดกำเนิด</option>
-</select>
+</select> (1 point)
 
 
 ::: {#cr-grid_point_on_axis3}
@@ -980,7 +1010,7 @@ size = 8)
 <option value="(-2,-6)">(-2,-6)</option>
 <option value="(-1,5)">(-1,5)</option>
 <option value="(5,-1)">(5,-1)</option>
-</select>
+</select> (1 point)
 
 
 ::: {#cr-grid_point3_A}
@@ -1038,7 +1068,7 @@ size = 8)
 <option value="(-2,-6)">(-2,-6)</option>
 <option value="(-1,5)">(-1,5)</option>
 <option value="(5,-1)">(5,-1)</option>
-</select>
+</select> (1 point)
 
 
 ::: {#cr-grid_point3_B}
@@ -1097,7 +1127,7 @@ size = 8)
 <option value="(-2,-6)">(-2,-6)</option>
 <option value="(-1,5)">(-1,5)</option>
 <option value="(5,-1)">(5,-1)</option>
-</select>
+</select> (1 point)
 
 
 ::: {#cr-grid_point3_C}
@@ -1156,7 +1186,7 @@ size = 8)
 <option value="(-2,-6)">(-2,-6)</option>
 <option value="(-1,5)">(-1,5)</option>
 <option value="(5,-1)">(5,-1)</option>
-</select>
+</select> (1 point)
 
 
 ::: {#cr-grid_point3_D}
@@ -1215,7 +1245,7 @@ size = 8)
 <option value="(-2,-6)">(-2,-6)</option>
 <option value="(-1,5)">(-1,5)</option>
 <option value="(5,-1)">(5,-1)</option>
-</select>
+</select> (1 point)
 
 
 ::: {#cr-grid_point3_E}
@@ -1274,7 +1304,7 @@ size = 8)
 <option value="(-2,-6)">(-2,-6)</option>
 <option value="(-1,5)">(-1,5)</option>
 <option value="(5,-1)">(5,-1)</option>
-</select>
+</select> (1 point)
 
 
 ::: {#cr-grid_point3_F}
@@ -1354,14 +1384,14 @@ size = 8)
 
 ::::
 
-::: {.callout-warning}
+::: {.callout-warning style="font-size: 1.5em;"}
 
 ถ้ากดปุ่ม "ส่งคำตอบ" แล้วไม่มีการตอบสนอง แสดงว่ายังตอบไม่ครบ ให้กลับไปดูใหม่นะครับ
 
 
 :::
 
-
+<!-- ซ่อนหน้านี้ เมื่อกดส่งแล้่ว-->
 </form>
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
@@ -1374,6 +1404,8 @@ size = 8)
 </div>
 
 
+
+<!--ใช้เมื่อไม่มีการตั้งเวลาปิดฟอร์ม-->
 <script>
   // เมื่อฟอร์มถูก submit
   document.getElementById('myForm').onsubmit = function() {
@@ -1423,7 +1455,56 @@ size = 8)
 
 
 
-[ไปบทเรียนต่อไป](test_scrolling3.qmd)
+<!-- progress bar-->
+<script>
+  // ระบุ id ของฟอร์ม
+  const form = document.getElementById('myForm');
+  // เลือก input และ select ทั้งหมดในฟอร์ม (ที่ต้องกรอก)
+  const requiredFields = form.querySelectorAll('input[required], select[required]');
+  const progressBar = document.getElementById('progress-bar');
+
+  function updateProgressBar() {
+    let filled = 0;
+    requiredFields.forEach(field => {
+      // สำหรับ select ให้เช็คว่า value ไม่ใช่ค่าว่าง
+      if (
+        (field.tagName === "SELECT" && field.value !== "" && field.value !== null) ||
+        (field.tagName === "INPUT" && field.value.trim() !== "")
+      ) {
+        filled += 1;
+      }
+    });
+    const percent = Math.round((filled / requiredFields.length) * 100);
+    progressBar.style.width = percent + "%";
+    progressBar.setAttribute('aria-valuenow', percent);
+    progressBar.textContent = percent + "%";
+    // เพิ่มสีเมื่อครบ 100%
+    if(percent === 100){
+      progressBar.classList.add("bg-success");
+    } else {
+      progressBar.classList.remove("bg-success");
+    }
+  }
+
+  // อัปเดต progress ทุกครั้งที่กรอกข้อมูล
+  requiredFields.forEach(field => {
+    field.addEventListener('input', updateProgressBar);
+    field.addEventListener('change', updateProgressBar);
+  });
+
+  // เรียกครั้งแรกเมื่อโหลดหน้า
+  updateProgressBar();
+</script>
+
+
+<!--เอาไว้ใช้เวลาอยากได้ว่าเริ่มทำกี่โมง-->
+<!--ใช้กับ input id="entry-timein"-->
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+  const now = new Date().toISOString();
+  document.getElementById('entry-timein').value = now;
+});
+</script>
 
 
 
